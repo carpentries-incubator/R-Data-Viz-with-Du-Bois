@@ -40,7 +40,7 @@ source: 'https://github.com/carpentries/workbench-template-rmd' # FIXME
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
+contact: 'eaton.charlie@gmail.com' # FIXME
 
 # Navigation ------------------------------------------------
 #
