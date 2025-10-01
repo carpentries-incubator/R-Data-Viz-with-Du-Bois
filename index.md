@@ -4,6 +4,10 @@ site: sandpaper::sandpaper_site
 
 This is a new lesson built with [The Carpentries Workbench][workbench]. 
 
+**Resources**
+1. R-Social Sci Index Reference
+- https://github.com/datacarpentry/r-socialsci/blob/main/index.md
+
 # Context
 
 - Learning Objective 1: Explain why data visualization and creativity are vital tools in scientific research.
