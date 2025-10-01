@@ -22,5 +22,12 @@ This is a new lesson built with [The Carpentries Workbench][workbench].
 - Learning Objective 7: Use ggplot to visualize tabular data as a function within R
 - Learning Objective 8: Use color to improve legibility of findings from tabular data
 
+::: prereq
+
+- prereq 1
+- prereq 2
+
+::::::::::
+
 [workbench]: https://carpentries.github.io/sandpaper-docs
 
