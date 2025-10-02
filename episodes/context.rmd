@@ -22,6 +22,33 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::::::::::::::::::::::::::::::::::::: challenge
+
+### Exercise 1
+This is a `challenge` exercise.
+It has a solution.
+
+
+::::::::::::::::::::::::::::::::::::: hint
+
+This is an expandable hint
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: solution
+
+### Solution 1
+This is the solution to exercise 1.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+### Disucssion
+This is a discussion. It has no solution.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Use `.md` files for episodes when you want static content
