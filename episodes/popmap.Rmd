@@ -9,12 +9,11 @@ exercises: 2
 - Question
 - How do you write a lesson using R Markdown and `{sandpaper}`?
 
-
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ::::::::::::::::::::::::::::::::::::: objectives
-
-::::::::::::::::::::::::::::::::::::::::::::::::
+- Learn the pandas for spatial data
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -36,14 +35,10 @@ Carpentries lesson template:
  3. `keypoints` are displayed at the end of the episode to reinforce the
     objectives.
 
-::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::: keypoints
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- Learn ```pd````
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::::::::::::::
 [r-markdown]: https://rmarkdown.rstudio.com/
