@@ -28,6 +28,7 @@ exercises: 10
 This is a `challenge` exercise.
 It has a solution.
 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: hint
 
@@ -51,10 +52,7 @@ This is a discussion. It has no solution.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
+- These should be our own keypoints.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
