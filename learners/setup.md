@@ -2,8 +2,17 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
+::: instructor
+
+- The main goal here is to help the learners be comfortable with the RStudio
+  interface.
+- Go very slowly in the "Getting set up" section. Make sure everyone is following
+  along (remind learners to use the stickies). Plan with the helpers at this
+  point to go around the room, and be available to help. It's important to make
+  sure that learners are in the correct working directory, and that they create
+  a `data` (all lowercase) subfolder.
+
+::::::::::::
 
 ## Data Sets
 
