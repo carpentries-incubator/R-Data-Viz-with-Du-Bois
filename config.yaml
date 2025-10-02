@@ -67,8 +67,9 @@ contact: 'eaton.charlie@gmail.com' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.Rmd
-- context.rmd
+- context.Rmd
 - creativity_exercise.Rmd
+- popmap.Rmd
 
 # Information for Learners
 learners: 
