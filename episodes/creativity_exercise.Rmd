@@ -1,3 +1,4 @@
+---
 title: "Recreating Bar Graphs with Du Bois Red Lining Data"
 teaching: 15
 exercises: 1
