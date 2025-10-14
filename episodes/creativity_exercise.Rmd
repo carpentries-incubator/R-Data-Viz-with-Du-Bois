@@ -28,6 +28,10 @@ exercises: 1
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+If you are using Jupyter on the Du Bois cloud for this exercise (no installation required),
+you can open the Notebook for this exercise on your web browser [here](https://dubois.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FHigherEdData%2FDu-Bois-STEM&urlpath=tree%2FDu-Bois-STEM%2Fr_literacy_biodiversity_dubois.ipynb&branch=main)
+
+To continue the exercise using R Studio on your own computer, continue below.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
