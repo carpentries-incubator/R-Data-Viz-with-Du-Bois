@@ -1,5 +1,5 @@
 ---
-title: "Recreating Bar Graphs with Du Bois Red Lining Data"
+title: "Recreating a Black Literacy Bar Graph"
 teaching: 15
 exercises: 1
 ---
