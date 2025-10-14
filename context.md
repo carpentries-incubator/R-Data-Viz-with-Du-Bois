@@ -4,6 +4,17 @@ teaching: 10
 exercises: 10
 ---
 
+:::: instructor
+
+- This lesson works better with slides that include 1) photos from the production
+of the Du Bois charts and the Paris World Expo, and 2) Du 
+  You can modify [this Google Slides deck](https://docs.google.com/presentation/d/1A9abypFdFp8urAe9z7GCMjFr4aPeIb8mZAtJA2F7H0w/edit#slide=id.g652714585f_0_114) and use it for your workshop.
+- For this lesson make sure that learners are comfortable using pipes.
+- There is also sometimes some confusion on what the arguments of `group_by`
+  should be, and when to use `filter()` and `select()`.
+
+::::::::::::
+
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How can data visualization and creativity help answer important scientific questions?
