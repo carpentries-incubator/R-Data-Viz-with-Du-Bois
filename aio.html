@@ -267,7 +267,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="creativity_exercise.html">3. Recreating a Black Literacy Bar Graph</a>
+        <a href="creativity_exercise.html">3. Implement a Du Bois Bar Graph with R: Black Literacy After Emancipation</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -433,7 +433,7 @@ visualizations of Black life for the exposition?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Why visualizations instead of a written report?</p>
 </div>
@@ -445,7 +445,7 @@ visualizations of Black life for the exposition?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution 1 </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Du Bois used rigorous yet accessible methods to challenge
 subsequently discredited claims associated with scientific racism that
@@ -1001,7 +1001,7 @@ episode, but we will install it now in the console:</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-creativity_exercise"><p>Content from <a href="creativity_exercise.html">Recreating a Black Literacy Bar Graph</a></p>
+</section></section><section id="aio-creativity_exercise"><p>Content from <a href="creativity_exercise.html">Implement a Du Bois Bar Graph with R: Black Literacy After Emancipation</a></p>
 <hr>
 <p>Last updated on 2025-10-15 |
 
@@ -1035,52 +1035,132 @@ visualizations?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Learning Objective 1: Create bar graph variations based on
-historical and contemporary tabular data</li>
-<li>Learning Objective 2: Create R code that generates consistent and
-accurate visualizations based on different tabular data sets</li>
-<li>Learning Objective 3: Maintain a transparent, legible, and shareable
-record of how you created your own unique data visualizations</li>
-<li>Learning Objective 4: Implement your own creative ideas through data
-visualization based on tabular data sets</li>
-<li>Learning Objective 5: Re-create historical data visualizations into
-a digital environment with R coding</li>
-<li>Learning Objective 6: Improve the legibility and accessibility of
-data visualizations</li>
-<li>Learning Objective 7: Use ggplot to visualize tabular data as a
-function within R</li>
-<li>Learning Objective 8: Use color to improve legibility of findings
-from tabular data</li>
+<li>Learning Objective 1: Re-create bar graph variations based on
+historical and contemporary tabular data.</li>
+<li>Learning Objective 2: Maintain transparent, legible, and shareable
+record of how you created your own unique data visualizations.</li>
+<li>Learning Objective 3: Export an HTML file of your completed Notebook
+that your instructor may ask you to submit.</li>
+<li>Learning Objective 4: Use color to improve legibility of findings
+from tabular data.</li>
+<li>Learning Objective 5: Implement your own creative ideas through data
+visualization.</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div id="jupyter-lab-notebook" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<span class="callout-header">Prerequisite</span>
+<div id="jupyter-lab-notebook" class="callout-inner">
+<h3 class="callout-title">JUPYTER LAB NOTEBOOK</h3>
+<div class="callout-content">
 <p>If you are using Jupyter on the Du Bois cloud for this exercise (no
 installation required), you can open the Notebook for this exercise on
 your web browser <a href="https://dubois.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FHigherEdData%2FDu-Bois-STEM&amp;urlpath=tree%2FDu-Bois-STEM%2Fr_literacy_biodiversity_dubois.ipynb&amp;branch=main" class="external-link">here</a></p>
 <p>To continue the exercise using R Studio on your own computer,
 continue below.</p>
-<div id="keypoints1" class="callout keypoints">
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="you-will-learn-how-to-use-the-r-statistical-programming-language-by-creating-two-graphs">You will learn how to use the <em>R</em> statistical programming
+language by creating two graphs:<a class="anchor" aria-label="anchor" href="#you-will-learn-how-to-use-the-r-statistical-programming-language-by-creating-two-graphs"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>You will recreate Du Bois’ visualization of Black illiteracy
+rates in the US compared to illiteracy rates in other countries. Du Bois
+created the visualization in 1900.</p></li>
+<li><p>You will reproduce Du Bois’ visualization using data on Black
+college attainment in the US today. This aligns with how Du Bois saw
+mass education as one important strategy for furthering and deepining
+emancipation for Black Americans and others.</p></li>
+<li><p>An important context of Du Bois’s graph of Black illiteracy is
+that literacy was illegal for enslaved people in the U.S. until
+emancipation and the Confederacy’s defeat during the Civil War.
+Illiteracy then declined rapidly as Black Americans sought to empower
+themselves through education. The Du Bois plotted this decline in
+illiteracy among Black residents in the state of Georgia in the figure
+below. They used decennial US census illiteracy rates for Georgia from
+1860 to 1890 that are available <strong><a href="https://babel.hathitrust.org/cgi/pt?id=njp.32101025729177&amp;seq=49" class="external-link">here</a></strong>.
+They likely wrote “50%?” for the 1900 illiteracy rate because the Census
+did not publish 1900 illiteracy rates (available <strong><a href="https://www2.census.gov/library/publications/decennial/1900/bulletins/demographic/8-negroes-in-us-part-1.pdf" class="external-link">here</a></strong>)
+until several months after the Paris Exposition.</p></li>
+</ol>
+<div>
+<figure><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate14/original-plate-14.jpg?raw=true" width="700" class="figure mx-auto d-block"></figure>
+</div>
+</div>
+<div class="section level3">
+<h3 id="how-to-use-this-interactive-jupyter-notebook">How to use this interactive <strong>Jupyter Notebook</strong>
+<a class="anchor" aria-label="anchor" href="#how-to-use-this-interactive-jupyter-notebook"></a>
+</h3>
+<p>If you know how to use R on your own computer with R Studio you can
+copy, paste, and edit code in R Studio to do the exercise. If you have
+Jupyter Lab, you can also download this Notebook to use it on your own
+computer. You can download the Notebook or view a non-interactive
+version of this Notebook by clicking <strong><a href="https://github.com/HigherEdData/Du-Bois-STEM/blob/main/r_literacy_dubois.ipynb" class="external-link">here</a></strong>.</p>
+<div id="coding-in-jupyter-lab-notebooks" class="callout challenge">
 <div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
+<i class="callout-icon" data-feather="zap"></i>
 </div>
-<span class="callout-header">Key Points</span>
-<div class="callout-inner">
+<span class="callout-header">Challenge</span>
+<div id="coding-in-jupyter-lab-notebooks" class="callout-inner">
+<h3 class="callout-title">Coding in Jupyter Lab Notebooks</h3>
 <div class="callout-content">
-<ul>
-<li>Use <code>.md</code> files for episodes when you want static
-content</li>
-<li>Use <code>.Rmd</code> files for episodes when you need to generate
-output</li>
-<li>Run <code>sandpaper::check_lesson()</code> to identify any issues
-with your lesson</li>
-<li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
-locally</li>
-</ul>
+<p>To use this Notebook interactively, Grey cells in the
+<em>Notebook</em> like the one below are <strong>code cells</strong>
+where you will write and edit <strong>R</strong> Code. To try it
+out:</p>
+<ol style="list-style-type: decimal">
+<li>Click your cursor on the grey cell below. After you click on it, it
+will change to white to indicate you are editing it.</li>
+<li>After you click on the cell below and it turns white. Type 2+2 to
+use R as a calculator.</li>
+<li>After typing 2+2, click the play button at the top of the notebook
+page.</li>
+</ol>
 </div>
 </div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1">
+  HINT (hint)
+  </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>If you are getting an error, make sure there are no spaces or other
+symbols between 2+2.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  SOLUTION
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>If everything is working correctly, you should be given a reported
+value of 4.</p>
+</div>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </div></section><section id="aio-popmap"><p>Content from <a href="popmap.html">Popmap</a></p>
 <hr>
 <p>Last updated on 2025-10-02 |
@@ -1204,7 +1284,7 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/aio.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/aio.html",
-  "dateCreated": "2025-10-14",
+  "dateCreated": "2025-10-15",
   "dateModified": "2025-10-15",
   "datePublished": "2025-10-15"
 }
