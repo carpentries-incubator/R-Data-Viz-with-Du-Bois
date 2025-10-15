@@ -45,11 +45,10 @@ images.
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
 This slide has two images; the 1st image is of WEB Du Bois and the second is of his Paris exhibit. Du Bois was trained at Fisk University, a HBCU in Nashville, TN. He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.  
-
 Also discussed is the venue where the visuals were first shown, the Exhibition of the American Negro, within the 1900 Paris Exposition. The Paris Exposition was a world fair that was supposed to showcase achievements of the last century and move into developments for the next century” To better understand the times when the visuals were created, influential events leading to the Exposition are discussed.
 
 <div>
-<img src="https://github.com/carpentries-incubator/R-Data-Viz-with-Du-Bois/blob/main/episodes/files/Context_worldsfair.jpg"
+<img src="https://github.com/carpentries-incubator/R-Data-Viz-with-Du-Bois/blob/main/episodes/files/Context_worldsfair.jpg?raw=true"
 width="400" />
 </div>
 
