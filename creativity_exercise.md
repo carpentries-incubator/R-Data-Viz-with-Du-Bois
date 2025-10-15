@@ -4,6 +4,8 @@ teaching: 15
 exercises: 1
 ---
 
+
+
 ::::::::::::::::::: instructor
 
 ### INSTRUCTOR NOTE (`on creativity in this exercise`)
@@ -83,6 +85,30 @@ If you are getting an error, make sure there are no spaces or other symbols betw
 ### SOLUTION
 
 If everything is working correctly, you should be given a reported value of 4.
+
+Here is the code executed unsuccessfully because it includes an equal sign.
+
+``` r
+2+2=
+```
+
+``` error
+Error in parse(text = input): <text>:2:0: unexpected end of input
+1: 2+2=
+   ^
+```
+
+Here is the code executed successfully.
+
+
+``` r
+2+2
+```
+
+``` output
+[1] 4
+```
+
 
 ::::::::::::::::::::::::::
 
