@@ -25,11 +25,11 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Learning Objective 1: Re-create bar graph variations based on historical and contemporary tabular data.
-- Learning Objective 2: Maintain transparent, legible, and shareable record of how you created your own unique data visualizations.
-- Learning Objective 3: Export an HTML file of your completed Notebook that your instructor may ask you to submit.
-- Learning Objective 4: Use color to improve legibility of findings from tabular data.
-- Learning Objective 5: Implement your own creative ideas through data visualization.
+- Re-create bar graph variations based on historical and contemporary tabular data.
+- Maintain transparent, legible, and shareable record of how you created your own unique data visualizations.
+- Export an HTML file of your completed Notebook that your instructor may ask you to submit.
+- Use color to improve legibility of findings from tabular data.
+- Implement your own creative ideas through data visualization.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
