@@ -1,5 +1,5 @@
 ---
-title: "Recreating a Black Literacy Bar Graph"
+title: "Implement a Du Bois Bar Graph using R"
 teaching: 15
 exercises: 1
 ---
@@ -18,21 +18,23 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How to create bar graphs with historical and contemporary data?
-- What R Code can create bar graphs with tabular data?
-- How to maintain a reproducible record of your data visualizations?
-- How to engage your own creativty in creating data visualizations?
-- How to use ggplot to visualize tabular data sets?
-- How to use color to improve accessibility of data visualizations?
+- How can I read tabular data to plot a bar graph in R?
+- How can I use ggplot to organize and format a bar graph in R?
+- What are the characteristics of Du Bois data visualizations?
+- How can I maintain a reproducible record of my data visualizations?
+- How can I use color to improve accessibility of data visualizations?
+- How can I engage my own creativity in data visualizations?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Re-create bar graph variations based on historical and contemporary tabular data.
-- Maintain transparent, legible, and shareable record of how you created your own unique data visualizations.
-- Export an HTML file of your completed Notebook that your instructor may ask you to submit.
-- Use color to improve legibility of findings from tabular data.
+- Create bar graph variations based on historical and contemporary tabular data.
+- Develop basic R code to create bar graphs.
+- Examine the characteristics of the data visualization from 1900 exhibitions.  
+- Use transparent, legible, and shareable record of how you created your own unique data visualizations.
+- Create an exported HTML file of your completed Notebook that your instructor may ask you to submit.
+- Differentiate color usage to improve legibility of findings from tabular data.
 - Implement your own creative ideas through data visualization.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
