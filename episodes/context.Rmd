@@ -1,12 +1,12 @@
 ---
-title: "Context: Why Learn Data Visualization from Du Bois?"
+title: 'Context: Why Learn Data Visualization from Du Bois?'
 teaching: 10
 exercises: 10
 ---
 
 :::: instructor
 
-We find that this lesson site is pedagogically most effective when used as 
+We find that this lesson site is pedagogically very effective when used as 
 lecture notes and learning activity instructions. We do not recommend lecturing 
 with a screen share of the lesson site or projection of the lesson site.
 This combination of text, activity prompts, and verbal narration tends to exceed effective
