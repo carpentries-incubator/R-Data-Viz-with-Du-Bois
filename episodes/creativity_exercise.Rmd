@@ -39,6 +39,52 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+### Black Literacy After Emancipation
+
+<div>
+<img src="https://camo.githubusercontent.com/c38273c834787fc9ea22aadc1d980f0ff28a627bf4d3852dd4034b9f75fcc4bd/68747470733a2f2f6769746875622e636f6d2f4869676865724564446174612f44752d426f69732d5354454d2f626c6f622f6d61696e2f72656164696e67732d696d616765732f6f726967696e616c2d706c6174652d34372e6a70673f7261773d74727565" width="700" />
+</div>
+
+::::::::::::::::: callout
+
+This interactive exercise is inspired by the annual #DuBoisChallenge. The #DuBoisChallenge is a call to scientists, students, and community members to recreate, adapt, and share on social media the data visualzations created by W.E.B. Du Bois and his collaborators in 1900. Before doing the interactive exercise, please read this article about the Du Bois Challenge: https://nightingaledvs.com/the-dubois-challenge/
+
+:::::::::::::::::
+
+### How can I input tabular data to plot a bar graph in R?
+
+The first step for data visualization in R is to read data into an R dataframe. This is like double clicking a file to open it in other computer programs. But with R, we use code.
+
+For this exercise, we're going to read in data from a website. And we're going to place the data into a dataframe named d_literacy_country.
+
+The R code to do this uses an ```<-``` arrow pointed at the name of the data frame and a read.csv function command followed by the web address within paraentheses where a csv (comma separated values) data file is located. It looks like this:
+
+```
+d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")
+```
+
+:::::::::::::::::::::: challenge
+
+After writing this code, we can write the name of the data frame d_literacy_country again on a separate line. This will list all of the data in the data frame.
+
+To do this yourself, replace the ____ portion of the code below to add the read function and then press the code below to add the read function and then press the above.
+
+::::::::::::::::::::::
+
+### Creating a Bar Graph
+After successfully listing the data above, you should be able to see that it has data in two columns. Each column is a variable:
+
+country is a country name for 10 countries with Black people in the U.S. treated as a country.
+illiteracy containts percent of people in each country who are illiterate.
+As a first step, we will create a bar graph of the data using the shortest code possible. The code will:
+
+repeat the code below that we wrote above to read in the Du Bois illiteracy data.
+add a line of code to load the ggplot2 package of functions into our Library that we will use to generate our graph: library(ggplot2)
+Add a line of code to tell Jupyter and R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 2 so that it doesn't display too big: options(repr.plot.width=22/3, repr.plot.height=28/3)
+Finally, we add a ggplot function followed by open parenthese to tell R that we will plot data from the d_literacy_country data frame with an "aesthetic mapping" aes specification that maps one column of data on the x axis and another column of data on the y axis.
+After the close parentheses that tells ggplot we want to plot d_emancipation_dubois data with one variable on the x axis, and another on the y axis, we add a + and then a new line of code geom_col() that tells ggplot we want a bar graph based on summary statistics in the dataframe.
+After looking at Du Bois' version of the graph above, replace the _____ characters in the code cell below to plot the correct variable on the x-axis and the correct variable on the y-axis.
+
 ::::::::::::::::: prereq
 
 ### JUPYTER LAB NOTEBOOK
