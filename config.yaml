@@ -68,6 +68,7 @@ contact: 'eaton.charlie@gmail.com' # FIXME
 episodes:
 - context.Rmd
 - introduction.Rmd
+- chart.Rmd
 - creativity_exercise.Rmd
 - popmap.Rmd
 
