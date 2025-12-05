@@ -75,6 +75,7 @@
 </li>
       </div>
 
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -268,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="creativity_exercise.html">3. Recreating a Black Literacy Bar Graph</a>
+        <a href="creativity_exercise.html">3. Implement a Du Bois Bar Graph using R</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -528,7 +529,7 @@ this episode.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <ul>
 <li>The main goal here is to help the learners be comfortable with the
@@ -986,7 +987,7 @@ the tidyverse installed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Scroll through packages tab down to ‘tidyverse’. You can also type a
 few characters into the searchbox. The ‘tidyverse’ package is really a
@@ -1052,9 +1053,9 @@ episode, but we will install it now in the console:</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-creativity_exercise"><p>Content from <a href="creativity_exercise.html">Recreating a Black Literacy Bar Graph</a></p>
+</section></section><section id="aio-creativity_exercise"><p>Content from <a href="creativity_exercise.html">Implement a Du Bois Bar Graph using R</a></p>
 <hr>
-<p>Last updated on 2025-11-11 |
+<p>Last updated on 2025-12-05 |
 
         <a href="https://github.com/HigherEdData/DuBois_R/edit/main/episodes/creativity_exercise.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 16 minutes</p>
@@ -1090,15 +1091,14 @@ their own terms.</p>
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul>
-<li>How to create bar graphs with historical and contemporary data?</li>
-<li>What R Code can create bar graphs with tabular data?</li>
-<li>How to maintain a reproducible record of your data
+<li>How can I read tabular data to plot a bar graph in R?</li>
+<li>How can I use ggplot to organize and format a bar graph in R?</li>
+<li>What are the characteristics of Du Bois data visualizations?</li>
+<li>How can I maintain a reproducible record of my data
 visualizations?</li>
-<li>How to engage your own creativty in creating data
+<li>How can I use color to improve accessibility of data
 visualizations?</li>
-<li>How to use ggplot to visualize tabular data sets?</li>
-<li>How to use color to improve accessibility of data
-visualizations?</li>
+<li>How can I engage my own creativity in data visualizations?</li>
 </ul>
 </div>
 </div>
@@ -1108,13 +1108,18 @@ visualizations?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Re-create bar graph variations based on historical and contemporary
+<li>Create bar graph variations based on historical and contemporary
 tabular data.</li>
-<li>Maintain transparent, legible, and shareable record of how you
-created your own unique data visualizations.</li>
-<li>Export an HTML file of your completed Notebook that your instructor
-may ask you to submit.</li>
-<li>Use color to improve legibility of findings from tabular data.</li>
+<li>Develop basic R code to create bar graphs.</li>
+<li>Examine the characteristics of the data visualization from 1900
+exhibitions.<br>
+</li>
+<li>Use transparent, legible, and shareable record of how you created
+your own unique data visualizations.</li>
+<li>Create an exported HTML file of your completed Notebook that your
+instructor may ask you to submit.</li>
+<li>Differentiate color usage to improve legibility of findings from
+tabular data.</li>
 <li>Implement your own creative ideas through data visualization.</li>
 </ul>
 </div>
@@ -1122,6 +1127,89 @@ may ask you to submit.</li>
 </div>
 </div>
 </div>
+<div class="section level3">
+<h3 id="black-literacy-after-emancipation">Black Literacy After Emancipation<a class="anchor" aria-label="anchor" href="#black-literacy-after-emancipation"></a>
+</h3>
+<div>
+<figure><img src="https://camo.githubusercontent.com/c38273c834787fc9ea22aadc1d980f0ff28a627bf4d3852dd4034b9f75fcc4bd/68747470733a2f2f6769746875622e636f6d2f4869676865724564446174612f44752d426f69732d5354454d2f626c6f622f6d61696e2f72656164696e67732d696d616765732f6f726967696e616c2d706c6174652d34372e6a70673f7261773d74727565" width="700" class="figure mx-auto d-block"></figure>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>This interactive exercise is inspired by the annual #DuBoisChallenge.
+The #DuBoisChallenge is a call to scientists, students, and community
+members to recreate, adapt, and share on social media the data
+visualzations created by W.E.B. Du Bois and his collaborators in 1900.
+Before doing the interactive exercise, please read this article about
+the Du Bois Challenge: <a href="https://nightingaledvs.com/the-dubois-challenge/" class="external-link uri">https://nightingaledvs.com/the-dubois-challenge/</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="how-can-i-input-tabular-data-to-plot-a-bar-graph-in-r">How can I input tabular data to plot a bar graph in R?<a class="anchor" aria-label="anchor" href="#how-can-i-input-tabular-data-to-plot-a-bar-graph-in-r"></a>
+</h3>
+<p>The first step for data visualization in R is to read data into an R
+dataframe. This is like double clicking a file to open it in other
+computer programs. But with R, we use code.</p>
+<p>For this exercise, we’re going to read in data from a website. And
+we’re going to place the data into a dataframe named
+d_literacy_country.</p>
+<p>The R code to do this uses an <code>&lt;-</code> arrow pointed at the
+name of the data frame and a read.csv function command followed by the
+web address within paraentheses where a csv (comma separated values)
+data file is located. It looks like this:</p>
+<pre><code><span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"web_address_with_data/data_file_name.csv"</span><span class="op">)</span></span></code></pre>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>After writing this code, we can write the name of the data frame
+d_literacy_country again on a separate line. This will list all of the
+data in the data frame.</p>
+<p>To do this yourself, replace the ____ portion of the code below to
+add the read function and then press the code below to add the read
+function and then press the above.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="creating-a-bar-graph">Creating a Bar Graph<a class="anchor" aria-label="anchor" href="#creating-a-bar-graph"></a>
+</h3>
+<p>After successfully listing the data above, you should be able to see
+that it has data in two columns. Each column is a variable:</p>
+<p>country is a country name for 10 countries with Black people in the
+U.S. treated as a country. illiteracy containts percent of people in
+each country who are illiterate. As a first step, we will create a bar
+graph of the data using the shortest code possible. The code will:</p>
+<p>repeat the code below that we wrote above to read in the Du Bois
+illiteracy data. add a line of code to load the ggplot2 package of
+functions into our Library that we will use to generate our graph:
+library(ggplot2) Add a line of code to tell Jupyter and R that we want
+the width and height of the graph to have the same ratio that Du Bois
+used, 22 inches wide by 28 inches tall, with each divided by 2 so that
+it doesn’t display too big: options(repr.plot.width=22/3,
+repr.plot.height=28/3) Finally, we add a ggplot function followed by
+open parenthese to tell R that we will plot data from the
+d_literacy_country data frame with an “aesthetic mapping” aes
+specification that maps one column of data on the x axis and another
+column of data on the y axis. After the close parentheses that tells
+ggplot we want to plot d_emancipation_dubois data with one variable on
+the x axis, and another on the y axis, we add a + and then a new line of
+code geom_col() that tells ggplot we want a bar graph based on summary
+statistics in the dataframe. After looking at Du Bois’ version of the
+graph above, replace the _____ characters in the code cell below to plot
+the correct variable on the x-axis and the correct variable on the
+y-axis.</p>
 <div id="jupyter-lab-notebook" class="callout prereq">
 <div class="callout-square">
 <i class="callout-icon" data-feather="check"></i>
@@ -1135,6 +1223,7 @@ installation required), you can open the Notebook for this exercise on
 your web browser <a href="https://dubois.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FHigherEdData%2FDu-Bois-STEM&amp;urlpath=tree%2FDu-Bois-STEM%2Fr_literacy_biodiversity_dubois.ipynb&amp;branch=main" class="external-link">here</a></p>
 <p>To continue the exercise using R Studio on your own computer,
 continue below.</p>
+</div>
 </div>
 </div>
 </div>
@@ -1226,10 +1315,10 @@ symbols between 2+2.</p>
 value of 4.</p>
 <p>Here is the code executed unsuccessfully because it includes an equal
 sign.</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span><span class="ot">=</span></span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span><span class="ot">=</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1239,7 +1328,7 @@ sign.</p>
    ^</code></pre>
 </div>
 <p>Here is the code executed successfully.</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -1353,15 +1442,17 @@ any links that you are not going to use.
 	
         | <a href="https://github.com/HigherEdData/DuBois_R/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/HigherEdData/DuBois_R/" class="external-link">Source</a></p>
-				<p><a href="https://github.com/HigherEdData/DuBois_R/blob/main/CITATION.cff" class="external-link">Cite</a> | <a href="mailto:eaton.charlie@gmail.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
-			</div>
-			<div class="col-md-6">
+        <p>
+        <a href="../citation.html">Cite</a>
+        | <a href="mailto:eaton.charlie@gmail.com">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+		</div>
+		<div class="col-md-6">
 
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.1" class="external-link">sandpaper (0.17.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.7" class="external-link">varnish (1.0.7)</a></p>
-			</div>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.17.3" class="external-link">sandpaper (0.17.3)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.9" class="external-link">varnish (1.0.9)</a></p>
+		</div>
 		</footer>
 </div> <!-- / div.container -->
 	<div id="to-top">
@@ -1382,9 +1473,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/instructor/aio.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/instructor/aio.html",
-  "dateCreated": "2025-10-22",
-  "dateModified": "2025-12-02",
-  "datePublished": "2025-12-02"
+  "dateCreated": "2025-12-05",
+  "dateModified": "2025-12-05",
+  "datePublished": "2025-12-05"
 }
 
   </script><script>
