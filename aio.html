@@ -268,7 +268,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="creativity_exercise.html">3. Implement a Du Bois Bar Graph using R</a>
+        <a href="chart.html">3. Reading and Interpreting STEM Charts</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -280,7 +280,19 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="popmap.html">4. Popmap</a>
+        <a href="creativity_exercise.html">4. Implement a Du Bois Bar Graph using R</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="popmap.html">5. Popmap</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -1002,6 +1014,151 @@ episode, but we will install it now in the console:</p>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</section></section><section id="aio-chart"><p>Content from <a href="chart.html">Reading and Interpreting STEM Charts</a></p>
+<hr>
+<p>Last updated on 2026-01-08 |
+
+        <a href="https://github.com/HigherEdData/DuBois_R/edit/main/episodes/chart.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How can data visualization and creativity help answer important
+scientific questions?</li>
+<li>Why did data visualization become predominant in the social sciences
+earlier than for physical and natural sciences?</li>
+<li>How did Du Bubois use data visualization to challenge false
+biological theories of racial inequality?</li>
+<li>How did team science help Du Bois’ team to create impactful
+visualizations for the 1900 Paris exposition?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<p>Understand which of the four chart types used by Du Bois and
+contemporary scientists are best suited for different types of data and
+multivariate analyses.</p>
+<p>Interpret how Du Bois used one of these chart types for an analysis
+that contradicted false, biologically-based theories of racial
+inequality.</p>
+<p>Identify best practices for making charts accessible and engaging for
+broad audiences that are either present or missing from a Du Bois
+chart.</p>
+<p>Ground your ability to to read and understand STEM charts by hand
+drawing a chart.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In this section we will explore charts developed for the 1900 Paris
+Exposition by Du Bois and his collaborators, as examples of effective
+analysis and storytelling.</p>
+<p>We will examine types of data and the various chart types in some
+detail.</p>
+<section><h2 class="section-heading" id="chart-types">Chart Types<a class="anchor" aria-label="anchor" href="#chart-types"></a>
+</h2>
+<hr class="half-width">
+<p>We use different types of graphs based on the types of data and
+relationships we are analyzing. Du Bois used variants of most of the
+major graph types that are still used today: (pie, bar, line charts, and
+statistical maps). <img src="files/fanchart.jpg" alt="fanchart" class="figure"></p>
+<figure><img src="files/barchart.jpg" alt="barchart" class="figure mx-auto d-block"><div class="figcaption">barchart</div>
+</figure><figure><img src="files/linechart.jpg" alt="linechart" class="figure mx-auto d-block"><div class="figcaption">linechart</div>
+</figure><figure><img src="files/statmap.jpg" alt="maps" class="figure mx-auto d-block"><div class="figcaption">maps</div>
+</figure><p>You can also explore more complex adaptations of these charts using
+the [Du Bois Resources repository for this lesson:] (<a href="https://github.com/HigherEdData/Du-Bois-STEM" class="external-link uri">https://github.com/HigherEdData/Du-Bois-STEM</a>)</p>
+<p>The types include the fanciful Du Bois spiral, stacked bar graphs,
+and integrated photographs.</p>
+<figure><img src="files/spiral.jpg" alt="spiral" class="figure mx-auto d-block"><div class="figcaption">spiral</div>
+</figure><figure><img src="files/expenditure.jpg" alt="expend" class="figure mx-auto d-block"><div class="figcaption">expend</div>
+</figure><figure><img src="files/conjugal.jpg" alt="conjugal" class="figure mx-auto d-block"><div class="figcaption">conjugal</div>
+</figure><div id="exercise-1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-1" class="callout-inner">
+<h3 class="callout-title">Exercise 1</h3>
+<div class="callout-content">
+<p>Why do you think Du Bois created a series of graphs and data
+visualizations of Black life for the exposition?</p>
+</div>
+</div>
+</div>
+<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
+  <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
+</button>
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div class="accordion-body">
+<p>Why visualizations instead of a written report?</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Solution 1 </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>Du Bois used rigorous yet accessible methods to challenge
+subsequently discredited claims associated with scientific racism that
+devalued and assumed Black communities as inferior. The visualizations
+helped show some of the systemic barriers impeding the progress for
+black Americans as compared to a deficit approach that would suggest
+black people were somehow innately less capable. This is a paradigm
+shift in showing how social science can work together with other STEM
+fields to produce the most accurate science and impressive
+visualizations.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="disucssion" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="disucssion" class="callout-inner">
+<h3 class="callout-title">Disucssion</h3>
+<div class="callout-content">
+<p>What effect did the venue have on the design of the visuals?</p>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<span class="callout-header">Key Points</span>
+<div class="callout-inner">
+<div class="callout-content">
+<ul>
+<li>This is a place for writing key points that students have learned in
+this episode.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
 </section></section><section id="aio-creativity_exercise"><p>Content from <a href="creativity_exercise.html">Implement a Du Bois Bar Graph using R</a></p>
 <hr>
 <p>Last updated on 2025-12-05 |
@@ -1221,7 +1378,7 @@ page.</li>
   HINT (hint)
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>If you are getting an error, make sure there are no spaces or other
 symbols between 2+2.</p>
@@ -1236,7 +1393,7 @@ symbols between 2+2.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If everything is working correctly, you should be given a reported
 value of 4.</p>
@@ -1399,9 +1556,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/aio.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/aio.html",
-  "dateCreated": "2025-12-05",
-  "dateModified": "2025-12-05",
-  "datePublished": "2025-12-05"
+  "dateCreated": "2026-01-08",
+  "dateModified": "2026-01-08",
+  "datePublished": "2026-01-08"
 }
 
   </script><script>
