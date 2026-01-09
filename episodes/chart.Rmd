@@ -71,37 +71,221 @@ The types include the fanciful Du Bois spiral, stacked bar graphs, and integrate
 
 ![conjugal](files/conjugal.jpg)
 
+### Chart Types: Pie Charts
+
+![fanchart](files/fanchart.jpg)
+
+Pie graphs illustrate the
+percentages of categories (like
+occupations) within a larger
+unit (like a population) where
+all the percentages add up to
+100%.
+
+This analyzes a
+one-dimensional distribution
+across one categorical
+variable.
+
+### Chart Types: Bar Charts
+
+![barchart](files/barchart.jpg)
+
+Bar graphs compare
+frequencies or percentages of
+one category (like literacy)
+among other categories (like
+race or nation).
+
+This helps us analyze
+two-dimensional
+relationships, typically
+between *two categorical
+variables.*
+
+### Chart Types: Line Charts
+
+![linechart](files/linechart.jpg)
+
+Line graphs plot frequencies or
+percentages of a continuous
+interval-ratio variable (like total
+population) on a y-axis among
+categories represented by
+different lines (like racial groups)
+over a third category of another
+ordinal or interval ratio variable
+on an x-axis (like year).
+
+This analyzes three dimensional
+relationships between *three
+different variables, including
+interval ratio variables.*
+
+Time series line graphs, with
+time on the x-axis, are the
+most common type of line
+graph.
+
+### Chart Types: Statistical Maps
+
+![maps](files/statmap.jpg)
+
+Statistical maps graph
+geo-spatial distributions of
+continuous interval-ratio
+variables (like the Black
+population of the U.S.).
+
+This allows us to graph a
+multi-dimensional
+relationship including
+two-dimensional spatial
+locations.
+
+## Design Aesthetics and Accessibility
+
+While Du Bois sought to make his visualizations accessible to broad
+audiences, advances in universal design practices do even more to
+make visualizations accessible to people with diverse visual,
+cognitive, auditory, or motor strengths and needs. Practices include:
+
+* Keeping visuals as simple as possible, presenting only
+information necessary for analysis.
+
+* Color-blind friendly use of color and contrast, avoiding
+over-reliance on color
+
+* Alternative text (alt text) that screen readers can use to provide
+an audio description of images.
+
+* Descriptive titles and labels
+* Offering both visual and non-visual formats
+
+* Including narrative text with context and summaries
+
+## Exploring Charts: a worked example
+
+![barchart](files/barchart.jpg)
+
+[Illiteracy of American Negroes compared with that of other nations: Paris Exposition, 1900](https://github.com/ajstarks/dubois-data-portraits/blob/master/plate14/data.csv)
+
+
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
+![barchart](files/barchart.jpg)
+
+
 ### Exercise 1
-Why do you think Du Bois created a series of graphs and data visualizations of Black life for the exposition?
+
+What type of graph is this?
+
+ * What variables are plotted?
+ * Are the variables categorical, ordinal, or interval / ratio?
+ * What statistics are plotted?
+ * Which elements are highlighted
+
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: hint
 
-Why visualizations instead of a written report?
+How does Black illiteracy (the red bar) compare with other countries
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: solution
 
+![barchart](files/barchart.jpg)
+
+
 ### Solution 1
-Du Bois used rigorous yet accessible methods to challenge subsequently discredited claims associated with scientific racism that devalued and assumed Black communities as inferior. The visualizations helped show some of the systemic barriers impeding the progress for black Americans as compared to a deficit approach that would suggest black people were somehow innately less capable. This is a paradigm shift in showing how social science can work together with other STEM fields to produce the most accurate science and impressive visualizations. 
+ * What variables are plotted: Country, Illiteracy rate
+ * Variable types :ordinal
+ * Statistics plotted: Illitercy rate, (percent illiterate, by country, ordered highest to lowest)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
 ### Disucssion
-What effect did the venue have on the design of the visuals?
+
+* How does Black illiteracy
+compare to literacy in other
+countries on the chart?
+
+* What is similar about the
+countries with higher illiteracy
+than Black illiteracy in the US?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
+## Design Aesthetics and Accessibility
+
+![barchart](files/barchart.jpg)
+
+
+What makes this graph easy or
+difficult to understand?
+
+How is the graph aesthetically
+appealing? How could could it be
+more appealing?
+
+How does this graph take its
+audience into consideration?
+
+What tools would you need to create
+this graph by hand?
+
+This visual, a conventional bar graph,
+uses spot color to highlight the data
+for Black Americans compared to
+other countries, showing the
+illiteracy rate to be at the midpoint
+compared to other nations.
+
+The chart portion is a large
+percentage of the canvas, simply
+showing the message.
+
+Note the bilingual labels and titles (a
+nod to the venue and audience).
+
+
+## Context and Data Story
+
+Du Bois presented his graph for illiteracy among Black Americans and other
+nations (left), together with the graph of Black illiteracy in Georgia from 1865
+to 1900. What data story do these 2 graphs tell together?
+
+![barchart](files/barchart.jpg)
+
+![ill2](files/ill2.jpg)
+
+# Example: Re-Create with Modern Data and Accessible Design
+
+![mod-data-chart](files/mod-data-chart.png)
+
+Activity: Hand draw a recreation of
+Du Bois’ graph using the data below
+on college attainment today.
+
+Building on the graph to the left,
+what accessible design
+improvements can you make?
+
+Data: 
+
+![mod-data](files/mod-data.jpg)
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- This is a place for writing key points that students have learned in this episode.
+- Even simple chart types can convey interesting meaning. Color man be used to emphasize points
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
