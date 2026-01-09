@@ -170,9 +170,6 @@ an audio description of images.
 
 [Illiteracy of American Negroes compared with that of other nations: Paris Exposition, 1900](https://github.com/ajstarks/dubois-data-portraits/blob/master/plate14/data.csv)
 
-
-
-
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ![barchart](files/barchart.jpg)
@@ -182,7 +179,7 @@ an audio description of images.
 
 What type of graph is this?
 
- * What variables are plotted?
+ * What variables are plotted on the chart?
  * Are the variables categorical, ordinal, or interval / ratio?
  * What statistics are plotted?
  * Which elements are highlighted
