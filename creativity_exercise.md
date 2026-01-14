@@ -10,6 +10,8 @@ exercises: 1
 
 ### INSTRUCTOR NOTE (`on creativity in this exercise`)
 
+test of new text
+
 Part of this work will invovle creative attempts at making changes to data visualizations. While the first few exercises are intended to help students become familiar with the basic steps, the final independent exercise is meant to introduce more gaps. If possible, emphasize to students that if they struggle on the final independent exercise it is not about making a perfect graph, but learning how to make changes on their own terms.
 
 ::::::::::::::::::::::::::::::
