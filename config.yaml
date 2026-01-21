@@ -69,7 +69,7 @@ episodes:
 - context.Rmd
 - introduction.Rmd
 - chart.Rmd
-- creativity_exercise.Rmd
+- recreate_bar.Rmd
 - popmap.Rmd
 
 # Information for Learners
