@@ -1,5 +1,5 @@
 ---
-title: "Implement a Du Bois Bar Graph using R"
+title: "Recreate a Du Bois Bar Chart"
 teaching: 15
 exercises: 1
 ---

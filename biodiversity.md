@@ -1,5 +1,5 @@
 ---
-title: "Implement a Du Bois Bar Graph using R"
+title: "Use Your Creativity: Biodiversity and Redlining Bar Chart"
 teaching: 15
 exercises: 1
 ---
