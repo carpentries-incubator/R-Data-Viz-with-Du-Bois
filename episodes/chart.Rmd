@@ -52,24 +52,24 @@ We will examine types of data and the various chart types in some detail.
 ## Chart Types
 
 We use different types of graphs based on the types of data and relationships we are analyzing. Du Bois used variants of most of the major graph types that are still used today: (pie, bar, line charts, and statistical maps).
-![fanchart](files/fanchart.jpg)
 
-![barchart](files/barchart.jpg)
-
-![linechart](files/linechart.jpg)
-
-![maps](files/statmap.jpg)
+<div>
+	<img src="files/fanchart.jpg" width="200"/>
+	<img src="files/barchart.jpg" width="200"/>
+	<img src="files/linechart.jpg" width="200"/>
+	<img src="files/statmap.jpg"   width="200/>
+</div>
 
 You can also explore more complex adaptations of these charts using the [Du Bois Resources repository for this lesson:] 
  (https://github.com/HigherEdData/Du-Bois-STEM)
 
 The types include the fanciful Du Bois spiral, stacked bar graphs, and integrated photographs.
 
-![spiral](files/spiral.jpg)
-
-![expend](files/expenditure.jpg)
-
-![conjugal](files/conjugal.jpg)
+<div>
+	<img src="files/spiral.jpg" width="300"/>
+	<img src="files/expenditure.jpg" width="300"/>
+	<img src="files/conjugal.jpg" width="300/>"
+</div>
 
 ### Chart Types: Pie Charts
 
@@ -278,7 +278,22 @@ improvements can you make?
 
 Data: 
 
-![mod-data](files/mod-data.jpg)
+```
+Country		College
+
+Russia		60
+Ireland		54
+Sweden		49
+France		42
+Black U.S. 
+Residents	36
+Austria		36
+Hungary		29
+Serbia		28
+Romania		20
+Italy		20
+```
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
