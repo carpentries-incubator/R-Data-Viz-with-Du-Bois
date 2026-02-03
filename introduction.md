@@ -157,7 +157,8 @@ freely available to extend R's native capabilities.
 
 
 ``` error
-Error in knitr::include_graphics("fig/r-manual.jpeg"): Cannot find the file(s): "fig/r-manual.jpeg"
+Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "fig/r-manual.jpeg"
 ```
 
 </div>
@@ -166,7 +167,8 @@ Error in knitr::include_graphics("fig/r-manual.jpeg"): Cannot find the file(s): 
 
 
 ``` error
-Error in knitr::include_graphics("fig/r-automatic.jpeg"): Cannot find the file(s): "fig/r-automatic.jpeg"
+Error in `knitr::include_graphics()`:
+! Cannot find the file(s): "fig/r-automatic.jpeg"
 ```
 
 </div>
