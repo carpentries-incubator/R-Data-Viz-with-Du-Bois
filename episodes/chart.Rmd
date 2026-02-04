@@ -59,15 +59,14 @@ We use different types of graphs based on the types of data and relationships we
 
 ![linechart](files/linechart.jpg)
 
-![map](statmap.jpg)
-
+![Statistical Map](files/statmap.jpg)
 
 You can also explore more complex adaptations of these charts using the [Du Bois Resources repository for this lesson:] 
  (https://github.com/HigherEdData/Du-Bois-STEM)
 
 The types include the fanciful Du Bois spiral, 
 
-![spiral]{files/spiral}
+![spiral](files/spiral)
 
 stacked bar graphs,
 
