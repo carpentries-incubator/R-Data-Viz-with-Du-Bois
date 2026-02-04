@@ -49,105 +49,348 @@ This interactive exercise is inspired by the annual #DuBoisChallenge. The #DuBoi
 
 :::::::::::::::::
 
+### Why use R to create graphics?
+
+Data can usually be presented in a table or in a tabular format. You have probably seen tabular data in a spreadsheet software like Excel and to interact with the tabular data, you can click directly onto the table. While graphic user interface (GUI) programs such as Excel are commonly used, they can be limited in their user output. GUIs are often limited to a set of style parameters for creating graphics. Coding programs like R have more capabilities including graphics. In R, a data frame is is a data type that stores/holds tabular data. The first step to creating data visualization in R is to read tabular data into an R dataframe. This is like double clicking a file to open it in other computer programs like in Excel. But with R, we use code.
+
+<div>
+<img src="https://static.wixstatic.com/media/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg/v1/fill/w_1000,h_575,al_c,q_85,usm_0.66_1.00_0.01/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg" width="700" />
+</div>
+
+The R code to do this uses an <- arrow pointed at the name of the data frame and a read.csv function command followed by the web address within paraentheses where a csv (comma separated values) data file is located.
+
+### Presentation of the historical cross-national literacy data
+
+Du Bois’ created many data portraits to share the story of Black Americans post-emancipation. The “Black Literacy After Emancipation” graphic at the top of this page shows mass education as one important strategy for furthering and deepining emancipation for Black Americans and others. In this workbook, you will recreate two bar plots: 1) Du Bois’ visualization of Black illiteracy rates in the US compared to illiteracy rates in other countries using 1900 data; and 2) Du Bois’ visualization using data on Black college attainment in the US today.
+
+An important context of Du Bois’s graph of Black illiteracy is that literacy was illegal for enslaved people in the U.S. until emancipation and the Confederacy’s defeat during the Civil War. Illiteracy then declined rapidly as Black Americans sought to empower themselves through education. The Du Bois plotted this decline in illiteracy among Black residents in the state of Georgia in the figure below. They used decennial US census illiteracy rates for Georgia from 1860 to 1890 that are available here. They likely wrote “50%?” for the 1900 illiteracy rate because the Census did not publish 1900 illiteracy rates (available here) until several months after the Paris Exposition.
+For this exercise, we’re going to read in data from a website. And we’re going to place the data into a dataframe named d_literacy_country and d_college_country.
+
+d_literacy_country
+| column_name | Description |
+|---|---|---|
+| country | Name of country |
+| illiteracy | illiteracy percentage |
+
+d_college_country
+| column_name | Description |
+|---|---|---|
+| country | Name of country |
+| college | college percentage |
+
 ### How can I input tabular data to plot a bar graph in R?
 
 The first step for data visualization in R is to read data into an R dataframe. This is like double clicking a file to open it in other computer programs. But with R, we use code.
 
-For this exercise, we're going to read in data from a website. And we're going to place the data into a dataframe named d_literacy_country.
+For this exercise, we’re going to read in data from a website. And we’re going to place the data into a dataframe named d_literacy_country.
 
-The R code to do this uses an ```<-``` arrow pointed at the name of the data frame and a read.csv function command followed by the web address within paraentheses where a csv (comma separated values) data file is located. It looks like this:
+There is no record of the exact data used by the Du Bois team for this bar graph. And the Du Bois graph curiously does not include tick marks with a labeled axis scale to show what exact values each bar represents. Why? Perhaps the Du Bois team wanted to emphasize that the bar graph was a rough comparison of illiteracy rates because of varied timing, methods, and national boundaries for measuring illiteracy rates at the time. The length of the “Negroes U.S.A” bar likely represents the national Black illiteracy rate of 57.1% reported by the 1890 US Census (see reported “Russie” (Russia) bar correspond to the national US Black illiteracy rate in the 1890 US Census (see here). So our data derives illiteracy rates for other countries based on the length of each country’s bar relative to “Negroes U.S.A.” bar, presuming the “Negroes U.S.A.” bar represents 57.1%.
+
+The R code to read in this data this uses an ```<-``` arrow pointed at the name of the data frame and a read.csv function command followed by the web address within parentheses where a csv (comma separated values) data file is located. It looks like this:
+
+```d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")```
+After writing this code, we can write the name of the data frame 
+
+```d_literacy_country``` again on a separate line. This will list all of the data in the data frame.
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 1: Reading the data
+
+If everything is working correctly, you should be given a table.
+Here is the code executed unsuccessfully because the blank.
+
+```d_literacy_country <- _____.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
+
+d_literacy_country
+
+Show me the solution
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Recreating a Bar Graph
+
+After successfully listing the data above, you should be able to see that it has data in two columns. 
+
+Each column is a variable:
+
+* country is a country name for 10 countries with Black people in the U.S. treated as a country.
+
+* illiteracy contains percent of people in each country who are illiterate.
+
+Before creating a bar graph of the data, we need read the library ggplot2. 
+
+```r
+library(ggplot2)
+
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+```
+
+Depending on our intention or circumstance, we adapt the size of a graph. The second line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
+
+The third line tells R to use a specific Du Bois style. Examining Du Bois data portraits, we can see a style of format, color, and font text.
 
 ```
-d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")
+ggplot(d_literacy_country, aes( 
+  x = country, 
+  y = illiteracy)) +
+  geom_col()
 ```
 
-:::::::::::::::::::::: challenge
+The code to create a simple bar graph is using the ```ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()```. Within this expression, we set the parameters of which variable to be placed across the horizonal (using ```x=variable```) and vertical axes (using ```y=variable```). Typically, bar graphs have categories on the horizonal axis and the values as the vertical axis. 
 
-After writing this code, we can write the name of the data frame d_literacy_country again on a separate line. This will list all of the data in the data frame.
+::::::::::::::::::::::::::::::::::::: challenge 
 
-To do this yourself, replace the ____ portion of the code below to add the read function and then press the code below to add the read function and then press the above.
+## Challenge 2: Horizonal Bar graph
 
-::::::::::::::::::::::
+Given that within the code above the variable is identify as ```x``` is horizonzatlly places and ```y``` is vertically placed. Knowing that, what can we expect if we exchange the placement of the code above?
 
-### Creating a Bar Graph
-After successfully listing the data above, you should be able to see that it has data in two columns. Each column is a variable:
+```
+ggplot(d_literacy_country, aes( 
+  x = _____, 
+  y = _____)) +
+  geom_col() 
+```
 
-country is a country name for 10 countries with Black people in the U.S. treated as a country.
-illiteracy containts percent of people in each country who are illiterate.
-As a first step, we will create a bar graph of the data using the shortest code possible. The code will:
+:::::::::::::::::::::::: solution 
 
-repeat the code below that we wrote above to read in the Du Bois illiteracy data.
-add a line of code to load the ggplot2 package of functions into our Library that we will use to generate our graph: library(ggplot2)
-Add a line of code to tell Jupyter and R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 2 so that it doesn't display too big: options(repr.plot.width=22/3, repr.plot.height=28/3)
-Finally, we add a ggplot function followed by open parenthese to tell R that we will plot data from the d_literacy_country data frame with an "aesthetic mapping" aes specification that maps one column of data on the x axis and another column of data on the y axis.
+## Output
+ 
+```
+ggplot(d_literacy_country, aes(
+    x = illiteracy,
+    y = country +
+    geom_col() 
+```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+Now, our plot is starting to look more like the Du Bois original data creation. In the code from challenge 2, the categories are on x-axis (horizonal) and the rate/numbers are expressed on the y-axis (vertical axis). In the challenge above, we use the ggplot function to plot a horizonal bar graph of illiteracy rates across the observations (countries and Black Americans).
+
+In the challenge above, we add a ggplot function followed by open parentheses to tell R that we will plot data from the d_literacy_country data frame with an “aesthetic mapping” aes specification that maps one column of data on the x axis and another column of data on the y axis.
+
 After the close parentheses that tells ggplot we want to plot d_emancipation_dubois data with one variable on the x axis, and another on the y axis, we add a + and then a new line of code geom_col() that tells ggplot we want a bar graph based on summary statistics in the dataframe.
-After looking at Du Bois' version of the graph above, replace the _____ characters in the code cell below to plot the correct variable on the x-axis and the correct variable on the y-axis.
 
-::::::::::::::::: prereq
+After looking at Du Bois’ version of the graph above, replace the _____ characters in the code cell below to plot the correct variable on the x-axis and the correct variable on the y-axis.
 
-### JUPYTER LAB NOTEBOOK
+### Sort the values & Adding color
 
-If you are using Jupyter on the Du Bois cloud for this exercise (no installation required),
-you can open the Notebook for this exercise on your web browser [here](https://dubois.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FHigherEdData%2FDu-Bois-STEM&urlpath=tree%2FDu-Bois-STEM%2Fr_literacy_biodiversity_dubois.ipynb&branch=main)
+In the bar graph you created above, can you tell what order the bars for each country are sorted by?
 
-To continue the exercise using R Studio on your own computer, continue below.
+Du Bois sorts the bar for each country by its illiteracy rate from highest to lowest.
 
-::::::::::::::::::::::::
+Du Bois also graphs illiteracy rate for Black Americans in a different color to make it easier to compare to other countries.
 
-### You will learn how to use the *R* statistical programming language by creating two graphs:
-
-1. You will recreate Du Bois' visualization of Black illiteracy rates in the US compared to illiteracy rates in other countries. Du Bois created the visualization in 1900.
-
-2. You will reproduce Du Bois' visualization using data on Black college attainment in the US today. This aligns with how Du Bois saw mass education as one important strategy for furthering and deepining emancipation for Black Americans and others.
-
-3. An important context of Du Bois's graph of Black illiteracy is that literacy was illegal for enslaved people in the U.S. until emancipation and the Confederacy's defeat during the Civil War. Illiteracy then declined rapidly as Black Americans sought to empower themselves through education. The Du Bois plotted this decline in illiteracy among Black residents in the state of Georgia in the figure below. They used decennial US census illiteracy rates for Georgia from 1860 to 1890 that are available **[here](https://babel.hathitrust.org/cgi/pt?id=njp.32101025729177&seq=49)**. They likely wrote "50%?" for the 1900 illiteracy rate because the Census did not publish 1900 illiteracy rates (available **[here](https://www2.census.gov/library/publications/decennial/1900/bulletins/demographic/8-negroes-in-us-part-1.pdf)**) until several months after the Paris Exposition.
-
-<div>
-<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate14/original-plate-14.jpg?raw=true" width="700" />
-</div>
-
-### How to use this interactive **Jupyter Notebook**
-
-If you know how to use R on your own computer with R Studio you can copy, paste, and edit code in R Studio to do the exercise. If you have Jupyter Lab, you can also download this Notebook to use it on your own computer. You can download the Notebook or view a non-interactive version of this Notebook by clicking **[here](https://github.com/HigherEdData/Du-Bois-STEM/blob/main/r_literacy_dubois.ipynb)**.
-
-::::::::::::::::::::::::::::::::: challenge
-
-### Coding in Jupyter Lab Notebooks
-
-To use this Notebook interactively, Grey cells in the *Notebook* like the one below are **code cells** where you will write and edit **R** Code. To try it out:
-
-1. Click your cursor on the grey cell below. After you click on it, it will change to white to indicate you are editing it.
-2. After you click on the cell below and it turns white. Type 2+2 to use R as a calculator.
-3. After typing 2+2, click the play button at the top of the notebook page.
-
-::::::::::::::::: hint
-
-### HINT (`hint`)
-
-If you are getting an error, make sure there are no spaces or other symbols between 2+2.
-
-::::::::::::::::::::::
-
-::::::::::::::::: solution
-
-### SOLUTION
-
-If everything is working correctly, you should be given a reported value of 4.
-
-Here is the code executed unsuccessfully because it includes an equal sign.
-```{r calculator break}
-2+2=
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy))) +
+    geom_col()
 ```
 
-Here is the code executed successfully.
+Compare the code above with challenge 2, what do you notice? The code above uses the reorder function to reorganize the country names on the vertical axis based on illiteracy.
 
-```{r calculator fix}
-2+2
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Ireland"
+  )) +
+  geom_col()
 ```
 
+Next, we have adapted the code to highlight a specific country: Ireland.
 
-::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 3: Reorder and specify bar color
+
+Observing the PLate 02, what name is suppose to stand out? Update the below.
+
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Ireland"
+  )) +
+  geom_col()
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+  )) +
+  geom_col()
+```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+## Adding Du Bois Theme
+
+The style of our current figure does not quite match the original Plate 02. Can you identify 1-2 style characteristics missing? 
+
+Next, we will adapt the code to match the style, specifically: bar width, background color, legend, and other default ggplot elements ar different than those employed by Du Bois.
+
+### Bar width
+
+We can easily edit the bar width by inputting numeric values within the ```geom_col(width = #)``` Try inputting .1 and .9.
+
+Additionally, we can add ```theme_dubois()``` within ```geom_col(width = #) + theme_dubois()```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 4: Bar width and Du Bois theme
+
+Add the changes we covered above.
+
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col()
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col(width=.5) +
+  theme_dubois()
+```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Changing bar color and font to match Du Bois theme
+
+
+The function ```scale_fill_manual()``` allows users to adapt the colors of the fill based on values. Remember earlier, the legend printed colors based on TRUE/FALSE of country == "Negroes, U.S.A.". We will on that previous knowledge to adapt the code: ```scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))```
+
+Changing the font to ```theme(text = element_text('serif'))```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 5: Changing colors and font style
+
+Add the changes we covered above.
+
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col(width=.5) +
+  theme_dubois()
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col(width=.5) +
+  theme_dubois() +
+  scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
+  theme(text = element_text('serif'))
+```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+### Labels
+
+To add titles and subtitles to the graph, we use the ```labs``` function for ggplot2. We use the title and subtitle specifications with labs. 
+
+The title text needs to be enclosed in quotation marks. We use the code ```\n``` to tell R to put a "new line" break at different places in the title based on Du Bois' titling.
+
+Fill in the blank with your name in the title code below to show that the graph was recreated by you?
+
+```
+labs(
+	title="Graph title"
+	subtitle="2026"
+)
+```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 6: Adding labels
+
+Based on the Plate 02, update the title, subtitle, and your name.
+
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col(width=.5) +
+  theme_dubois() +
+  scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
+  theme(text = element_text('serif'))
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  geom_col(width=.5) +
+  theme_dubois() +
+  scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
+  theme(text = element_text('serif')) +
+    labs(
+        title = "\nIlliteracy of the American Negroes compared with that of other nations.\n",
+        subtitle = "Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n
+        Done by Atlanta University.\n\ngit ad
+        Recreated by STUDENT NAME HERE\n\n"
+    )
+```
+
+:::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
 
 [r-markdown]: https://rmarkdown.rstudio.com/
