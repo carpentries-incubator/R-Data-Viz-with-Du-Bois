@@ -66,7 +66,7 @@ You can also explore more complex adaptations of these charts using the [Du Bois
 
 The types include the fanciful Du Bois spiral, 
 
-![spiral](files/spiral)
+![spiral](files/spiral.jpg)
 
 stacked bar graphs,
 
