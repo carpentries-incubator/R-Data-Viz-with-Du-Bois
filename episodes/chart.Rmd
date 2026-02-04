@@ -22,9 +22,6 @@ Alternatively, you can copy and modify [this Google Slides deck](https://docs.go
 Subsequent episodes will have links to separate Google Slide Decks with their 
 images.
 
-Here is a video covering this content:
-
-![](https://drive.google.com/file/d/17cWhDfVO-j9B21eGbM-xyK0VtOI-zjSu/view?usp=drive_link)
 
 
 ::::::::::::
@@ -53,6 +50,11 @@ In this section we will explore charts developed for the 1900 Paris Exposition b
 of effective analysis and storytelling.
 
 We will examine types of data and the various chart types in some detail.
+
+Here is a video covering this content:
+
+![](https://drive.google.com/file/d/17cWhDfVO-j9B21eGbM-xyK0VtOI-zjSu/view?usp=drive_link)
+
 
 ## Chart Types
 
