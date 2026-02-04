@@ -234,12 +234,19 @@
 <div class="accordion accordion-flush" id="accordionFlushcurrent">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-headingcurrent">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsecurrent" aria-expanded="true" aria-controls="flush-collapsecurrent">
         <span class="visually-hidden">Current Chapter</span>
         <span class="current-chapter">
         4. Recreate a Du Bois Bar Chart
         </span>
-      
+      </button>
     </div><!--/div.accordion-header-->
+
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+      <div class="accordion-body">
+        <ul><li><a href="#adding-du-bois-theme">Adding Du Bois Theme</a></li>
+        </ul></div><!--/div.accordion-body-->
+    </div><!--/div.accordion-collapse-->
 
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
@@ -392,6 +399,55 @@ the Du Bois Challenge: <a href="https://nightingaledvs.com/the-dubois-challenge/
 </div>
 </div>
 <div class="section level3">
+<h3 id="why-use-r-to-create-graphics">Why use R to create graphics?<a class="anchor" aria-label="anchor" href="#why-use-r-to-create-graphics"></a></h3>
+<p>Data can usually be presented in a table or in a tabular format. You
+have probably seen tabular data in a spreadsheet software like Excel and
+to interact with the tabular data, you can click directly onto the
+table. While graphic user interface (GUI) programs such as Excel are
+commonly used, they can be limited in their user output. GUIs are often
+limited to a set of style parameters for creating graphics. Coding
+programs like R have more capabilities including graphics. In R, a data
+frame is is a data type that stores/holds tabular data. The first step
+to creating data visualization in R is to read tabular data into an R
+dataframe. This is like double clicking a file to open it in other
+computer programs like in Excel. But with R, we use code.</p>
+<div>
+<figure><img src="https://static.wixstatic.com/media/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg/v1/fill/w_1000,h_575,al_c,q_85,usm_0.66_1.00_0.01/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg" width="700" class="figure mx-auto d-block"></figure></div>
+<p>The R code to do this uses an &lt;- arrow pointed at the name of the
+data frame and a read.csv function command followed by the web address
+within paraentheses where a csv (comma separated values) data file is
+located.</p>
+</div>
+<div class="section level3">
+<h3 id="presentation-of-the-historical-cross-national-literacy-data">Presentation of the historical cross-national literacy data<a class="anchor" aria-label="anchor" href="#presentation-of-the-historical-cross-national-literacy-data"></a></h3>
+<p>Du Bois’ created many data portraits to share the story of Black
+Americans post-emancipation. The “Black Literacy After Emancipation”
+graphic at the top of this page shows mass education as one important
+strategy for furthering and deepining emancipation for Black Americans
+and others. In this workbook, you will recreate two bar plots: 1) Du
+Bois’ visualization of Black illiteracy rates in the US compared to
+illiteracy rates in other countries using 1900 data; and 2) Du Bois’
+visualization using data on Black college attainment in the US
+today.</p>
+<p>An important context of Du Bois’s graph of Black illiteracy is that
+literacy was illegal for enslaved people in the U.S. until emancipation
+and the Confederacy’s defeat during the Civil War. Illiteracy then
+declined rapidly as Black Americans sought to empower themselves through
+education. The Du Bois plotted this decline in illiteracy among Black
+residents in the state of Georgia in the figure below. They used
+decennial US census illiteracy rates for Georgia from 1860 to 1890 that
+are available here. They likely wrote “50%?” for the 1900 illiteracy
+rate because the Census did not publish 1900 illiteracy rates (available
+here) until several months after the Paris Exposition. For this
+exercise, we’re going to read in data from a website. And we’re going to
+place the data into a dataframe named d_literacy_country and
+d_college_country.</p>
+<p>d_literacy_country | column_name | Description | |—|—|—| | country |
+Name of country | | illiteracy | illiteracy percentage |</p>
+<p>d_college_country | column_name | Description | |—|—|—| | country |
+Name of country | | college | college percentage |</p>
+</div>
+<div class="section level3">
 <h3 id="how-can-i-input-tabular-data-to-plot-a-bar-graph-in-r">How can I input tabular data to plot a bar graph in R?<a class="anchor" aria-label="anchor" href="#how-can-i-input-tabular-data-to-plot-a-bar-graph-in-r"></a></h3>
 <p>The first step for data visualization in R is to read data into an R
 dataframe. This is like double clicking a file to open it in other
@@ -399,138 +455,40 @@ computer programs. But with R, we use code.</p>
 <p>For this exercise, we’re going to read in data from a website. And
 we’re going to place the data into a dataframe named
 d_literacy_country.</p>
-<p>The R code to do this uses an <code>&lt;-</code> arrow pointed at the
-name of the data frame and a read.csv function command followed by the
-web address within paraentheses where a csv (comma separated values)
-data file is located. It looks like this:</p>
-<pre><code><span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"web_address_with_data/data_file_name.csv"</span><span class="op">)</span></span></code></pre>
-<div id="discussion1" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
-<div class="callout-content">
-<p>After writing this code, we can write the name of the data frame
-d_literacy_country again on a separate line. This will list all of the
-data in the data frame.</p>
-<p>To do this yourself, replace the ____ portion of the code below to
-add the read function and then press the code below to add the read
-function and then press the above.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="creating-a-bar-graph">Creating a Bar Graph<a class="anchor" aria-label="anchor" href="#creating-a-bar-graph"></a></h3>
-<p>After successfully listing the data above, you should be able to see
-that it has data in two columns. Each column is a variable:</p>
-<p>country is a country name for 10 countries with Black people in the
-U.S. treated as a country. illiteracy containts percent of people in
-each country who are illiterate. As a first step, we will create a bar
-graph of the data using the shortest code possible. The code will:</p>
-<p>repeat the code below that we wrote above to read in the Du Bois
-illiteracy data. add a line of code to load the ggplot2 package of
-functions into our Library that we will use to generate our graph:
-library(ggplot2) Add a line of code to tell Jupyter and R that we want
-the width and height of the graph to have the same ratio that Du Bois
-used, 22 inches wide by 28 inches tall, with each divided by 2 so that
-it doesn’t display too big: options(repr.plot.width=22/3,
-repr.plot.height=28/3) Finally, we add a ggplot function followed by
-open parenthese to tell R that we will plot data from the
-d_literacy_country data frame with an “aesthetic mapping” aes
-specification that maps one column of data on the x axis and another
-column of data on the y axis. After the close parentheses that tells
-ggplot we want to plot d_emancipation_dubois data with one variable on
-the x axis, and another on the y axis, we add a + and then a new line of
-code geom_col() that tells ggplot we want a bar graph based on summary
-statistics in the dataframe. After looking at Du Bois’ version of the
-graph above, replace the _____ characters in the code cell below to plot
-the correct variable on the x-axis and the correct variable on the
-y-axis.</p>
-<div id="jupyter-lab-notebook" class="callout prereq">
-<div class="callout-square">
-<i class="callout-icon" data-feather="check"></i>
-</div>
-<span class="callout-header">Prerequisite</span>
-<div id="jupyter-lab-notebook" class="callout-inner">
-<h3 class="callout-title">JUPYTER LAB NOTEBOOK</h3>
-<div class="callout-content">
-<p>If you are using Jupyter on the Du Bois cloud for this exercise (no
-installation required), you can open the Notebook for this exercise on
-your web browser <a href="https://dubois.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FHigherEdData%2FDu-Bois-STEM&amp;urlpath=tree%2FDu-Bois-STEM%2Fr_literacy_biodiversity_dubois.ipynb&amp;branch=main" class="external-link">here</a></p>
-<p>To continue the exercise using R Studio on your own computer,
-continue below.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="you-will-learn-how-to-use-the-r-statistical-programming-language-by-creating-two-graphs">You will learn how to use the <em>R</em> statistical programming
-language by creating two graphs:<a class="anchor" aria-label="anchor" href="#you-will-learn-how-to-use-the-r-statistical-programming-language-by-creating-two-graphs"></a></h3>
-<ol style="list-style-type: decimal"><li><p>You will recreate Du Bois’ visualization of Black illiteracy
-rates in the US compared to illiteracy rates in other countries. Du Bois
-created the visualization in 1900.</p></li>
-<li><p>You will reproduce Du Bois’ visualization using data on Black
-college attainment in the US today. This aligns with how Du Bois saw
-mass education as one important strategy for furthering and deepining
-emancipation for Black Americans and others.</p></li>
-<li><p>An important context of Du Bois’s graph of Black illiteracy is
-that literacy was illegal for enslaved people in the U.S. until
-emancipation and the Confederacy’s defeat during the Civil War.
-Illiteracy then declined rapidly as Black Americans sought to empower
-themselves through education. The Du Bois plotted this decline in
-illiteracy among Black residents in the state of Georgia in the figure
-below. They used decennial US census illiteracy rates for Georgia from
-1860 to 1890 that are available <strong><a href="https://babel.hathitrust.org/cgi/pt?id=njp.32101025729177&amp;seq=49" class="external-link">here</a></strong>.
-They likely wrote “50%?” for the 1900 illiteracy rate because the Census
-did not publish 1900 illiteracy rates (available <strong><a href="https://www2.census.gov/library/publications/decennial/1900/bulletins/demographic/8-negroes-in-us-part-1.pdf" class="external-link">here</a></strong>)
-until several months after the Paris Exposition.</p></li>
-</ol><div>
-<figure><img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate14/original-plate-14.jpg?raw=true" width="700" class="figure mx-auto d-block"></figure></div>
-</div>
-<div class="section level3">
-<h3 id="how-to-use-this-interactive-jupyter-notebook">How to use this interactive <strong>Jupyter Notebook</strong>
-<a class="anchor" aria-label="anchor" href="#how-to-use-this-interactive-jupyter-notebook"></a></h3>
-<p>If you know how to use R on your own computer with R Studio you can
-copy, paste, and edit code in R Studio to do the exercise. If you have
-Jupyter Lab, you can also download this Notebook to use it on your own
-computer. You can download the Notebook or view a non-interactive
-version of this Notebook by clicking <strong><a href="https://github.com/HigherEdData/Du-Bois-STEM/blob/main/r_literacy_dubois.ipynb" class="external-link">here</a></strong>.</p>
-<div id="coding-in-jupyter-lab-notebooks" class="callout challenge">
+<p>There is no record of the exact data used by the Du Bois team for
+this bar graph. And the Du Bois graph curiously does not include tick
+marks with a labeled axis scale to show what exact values each bar
+represents. Why? Perhaps the Du Bois team wanted to emphasize that the
+bar graph was a rough comparison of illiteracy rates because of varied
+timing, methods, and national boundaries for measuring illiteracy rates
+at the time. The length of the “Negroes U.S.A” bar likely represents the
+national Black illiteracy rate of 57.1% reported by the 1890 US Census
+(see reported “Russie” (Russia) bar correspond to the national US Black
+illiteracy rate in the 1890 US Census (see here). So our data derives
+illiteracy rates for other countries based on the length of each
+country’s bar relative to “Negroes U.S.A.” bar, presuming the “Negroes
+U.S.A.” bar represents 57.1%.</p>
+<p>The R code to read in this data this uses an <code>&lt;-</code> arrow
+pointed at the name of the data frame and a read.csv function command
+followed by the web address within parentheses where a csv (comma
+separated values) data file is located. It looks like this:</p>
+<p><code>d_literacy_country &lt;- read.csv("web_address_with_data/data_file_name.csv")</code>
+After writing this code, we can write the name of the data frame</p>
+<p><code>d_literacy_country</code> again on a separate line. This will
+list all of the data in the data frame.</p>
+<div id="challenge-1-reading-the-data" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
 <span class="callout-header">Challenge</span>
-<div id="coding-in-jupyter-lab-notebooks" class="callout-inner">
-<h3 class="callout-title">Coding in Jupyter Lab Notebooks</h3>
+<div id="challenge-1-reading-the-data" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Reading the data</h3>
 <div class="callout-content">
-<p>To use this Notebook interactively, Grey cells in the
-<em>Notebook</em> like the one below are <strong>code cells</strong>
-where you will write and edit <strong>R</strong> Code. To try it
-out:</p>
-<ol style="list-style-type: decimal"><li>Click your cursor on the grey cell below. After you click on it, it
-will change to white to indicate you are editing it.</li>
-<li>After you click on the cell below and it turns white. Type 2+2 to
-use R as a calculator.</li>
-<li>After typing 2+2, click the play button at the top of the notebook
-page.</li>
-</ol></div>
-</div>
-</div>
-<div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1">
-  HINT (hint)
-  </h4>
-</button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
-<div class="accordion-body">
-<p>If you are getting an error, make sure there are no spaces or other
-symbols between 2+2.</p>
-</div>
+<p>If everything is working correctly, you should be given a table. Here
+is the code executed unsuccessfully because the blank.</p>
+<p><code>d_literacy_country &lt;- _____.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")</code></p>
+<p>d_literacy_country</p>
+<p>Show me the solution</p>
 </div>
 </div>
 </div>
@@ -538,39 +496,338 @@ symbols between 2+2.</p>
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">
-  SOLUTION
+  Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<p>If everything is working correctly, you should be given a reported
-value of 4.</p>
-<p>Here is the code executed unsuccessfully because it includes an equal
-sign.</p>
-<div class="codewrapper sourceCode" id="cb2">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="dv">2</span><span class="sc">+</span><span class="dv">2</span><span class="ot">=</span></span></code></pre>
+<p><code>d_literacy_country &lt;- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")</code></p>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">ERROR<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="error" tabindex="0"><code>Error in parse(text = input): &lt;text&gt;:2:0: unexpected end of input
-1: 2+2=
-   ^</code></pre>
 </div>
-<p>Here is the code executed successfully.</p>
-<div class="codewrapper sourceCode" id="cb4">
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="recreating-a-bar-graph">Recreating a Bar Graph<a class="anchor" aria-label="anchor" href="#recreating-a-bar-graph"></a></h3>
+<p>After successfully listing the data above, you should be able to see
+that it has data in two columns.</p>
+<p>Each column is a variable:</p>
+<ul><li><p>country is a country name for 10 countries with Black people in
+the U.S. treated as a country.</p></li>
+<li><p>illiteracy contains percent of people in each country who are
+illiterate.</p></li>
+</ul><p>Before creating a bar graph of the data, we need read the library
+ggplot2.</p>
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fl">2</span><span class="op">+</span><span class="fl">2</span></span></code></pre>
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span></code></pre>
 </div>
-<div class="codewrapper">
-<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="output" tabindex="0"><code>[1] 4</code></pre>
+<p>Depending on our intention or circumstance, we adapt the size of a
+graph. The second line of code tells R that we want the width and height
+of the graph to have the same ratio that Du Bois used, 22 inches wide by
+28 inches tall, with each divided by 3 so that it doesn’t display too
+big.</p>
+<p>The third line tells R to use a specific Du Bois style. Examining Du
+Bois data portraits, we can see a style of format, color, and font
+text.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">country</span>,</span>
+<span>  y <span class="op">=</span> <span class="va">illiteracy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<p>The code to create a simple bar graph is using the
+<code>ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()</code>.
+Within this expression, we set the parameters of which variable to be
+placed across the horizonal (using <code>x=variable</code>) and vertical
+axes (using <code>y=variable</code>). Typically, bar graphs have
+categories on the horizonal axis and the values as the vertical
+axis.</p>
+<div id="challenge-2-horizonal-bar-graph" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
 </div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-2-horizonal-bar-graph" class="callout-inner">
+<h3 class="callout-title">Challenge 2: Horizonal Bar graph</h3>
+<div class="callout-content">
+<p>Given that within the code above the variable is identify as
+<code>x</code> is horizonzatlly places and <code>y</code> is vertically
+placed. Knowing that, what can we expect if we exchange the placement of
+the code above?</p>
+<pre><code>ggplot(d_literacy_country, aes(
+  x = _____,
+  y = _____)) +
+  geom_col() </code></pre>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<pre><code>ggplot(d_literacy_country, aes(
+    x = illiteracy,
+    y = country +
+    geom_col() </code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Now, our plot is starting to look more like the Du Bois original data
+creation. In the code from challenge 2, the categories are on x-axis
+(horizonal) and the rate/numbers are expressed on the y-axis (vertical
+axis). In the challenge above, we use the ggplot function to plot a
+horizonal bar graph of illiteracy rates across the observations
+(countries and Black Americans).</p>
+<p>In the challenge above, we add a ggplot function followed by open
+parentheses to tell R that we will plot data from the d_literacy_country
+data frame with an “aesthetic mapping” aes specification that maps one
+column of data on the x axis and another column of data on the y
+axis.</p>
+<p>After the close parentheses that tells ggplot we want to plot
+d_emancipation_dubois data with one variable on the x axis, and another
+on the y axis, we add a + and then a new line of code geom_col() that
+tells ggplot we want a bar graph based on summary statistics in the
+dataframe.</p>
+<p>After looking at Du Bois’ version of the graph above, replace the
+_____ characters in the code cell below to plot the correct variable on
+the x-axis and the correct variable on the y-axis.</p>
+</div>
+<div class="section level3">
+<h3 id="sort-the-values-adding-color">Sort the values &amp; Adding color<a class="anchor" aria-label="anchor" href="#sort-the-values-adding-color"></a></h3>
+<p>In the bar graph you created above, can you tell what order the bars
+for each country are sorted by?</p>
+<p>Du Bois sorts the bar for each country by its illiteracy rate from
+highest to lowest.</p>
+<p>Du Bois also graphs illiteracy rate for Black Americans in a
+different color to make it easier to compare to other countries.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<p>Compare the code above with challenge 2, what do you notice? The code
+above uses the reorder function to reorganize the country names on the
+vertical axis based on illiteracy.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Ireland"</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+<p>Next, we have adapted the code to highlight a specific country:
+Ireland.</p>
+<div id="challenge-3-reorder-and-specify-bar-color" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-3-reorder-and-specify-bar-color" class="callout-inner">
+<h3 class="callout-title">Challenge 3: Reorder and specify bar
+color</h3>
+<div class="callout-content">
+<p>Observing the PLate 02, what name is suppose to stand out? Update the
+below.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Ireland"</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div class="accordion-body">
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="adding-du-bois-theme">Adding Du Bois Theme<a class="anchor" aria-label="anchor" href="#adding-du-bois-theme"></a></h2>
+<hr class="half-width"><p>The style of our current figure does not quite match the original
+Plate 02. Can you identify 1-2 style characteristics missing?</p>
+<p>Next, we will adapt the code to match the style, specifically: bar
+width, background color, legend, and other default ggplot elements ar
+different than those employed by Du Bois.</p>
+<div class="section level3">
+<h3 id="bar-width">Bar width<a class="anchor" aria-label="anchor" href="#bar-width"></a></h3>
+<p>We can easily edit the bar width by inputting numeric values within
+the <code>geom_col(width = #)</code> Try inputting .1 and .9.</p>
+<p>Additionally, we can add <code>theme_dubois()</code> within
+<code>geom_col(width = #) + theme_dubois()</code></p>
+<div id="challenge-4-bar-width-and-du-bois-theme" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-4-bar-width-and-du-bois-theme" class="callout-inner">
+<h3 class="callout-title">Challenge 4: Bar width and Du Bois theme</h3>
+<div class="callout-content">
+<p>Add the changes we covered above.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div class="accordion-body">
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="changing-bar-color-and-font-to-match-du-bois-theme">Changing bar color and font to match Du Bois theme<a class="anchor" aria-label="anchor" href="#changing-bar-color-and-font-to-match-du-bois-theme"></a></h3>
+<p>The function <code>scale_fill_manual()</code> allows users to adapt
+the colors of the fill based on values. Remember earlier, the legend
+printed colors based on TRUE/FALSE of country == “Negroes, U.S.A.”. We
+will on that previous knowledge to adapt the code:
+<code>scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))</code></p>
+<p>Changing the font to
+<code>theme(text = element_text('serif'))</code></p>
+<div id="challenge-5-changing-colors-and-font-style" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-5-changing-colors-and-font-style" class="callout-inner">
+<h3 class="callout-title">Challenge 5: Changing colors and font
+style</h3>
+<div class="callout-content">
+<p>Add the changes we covered above.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+<div id="accordionSolution5" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
+  <h4 class="accordion-header" id="headingSolution5">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div class="accordion-body">
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"red"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"darkgreen"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="labels">Labels<a class="anchor" aria-label="anchor" href="#labels"></a></h3>
+<p>To add titles and subtitles to the graph, we use the
+<code>labs</code> function for ggplot2. We use the title and subtitle
+specifications with labs.</p>
+<p>The title text needs to be enclosed in quotation marks. We use the
+code <code>\n</code> to tell R to put a “new line” break at different
+places in the title based on Du Bois’ titling.</p>
+<p>Fill in the blank with your name in the title code below to show that
+the graph was recreated by you?</p>
+<pre><code>labs(
+	title="Graph title"
+	subtitle="2026"
+)</code></pre>
+<div id="challenge-6-adding-labels" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<span class="callout-header">Challenge</span>
+<div id="challenge-6-adding-labels" class="callout-inner">
+<h3 class="callout-title">Challenge 6: Adding labels</h3>
+<div class="callout-content">
+<p>Based on the Plate 02, update the title, subtitle, and your name.</p>
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"red"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"darkgreen"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+<div id="accordionSolution6" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution6" aria-expanded="false" aria-controls="collapseSolution6">
+  <h4 class="accordion-header" id="headingSolution6">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div class="accordion-body">
+<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
+<span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
+<span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"red"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"darkgreen"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>    <span class="fu">labs</span><span class="op">(</span></span>
+<span>        title <span class="op">=</span> <span class="st">"\nIlliteracy of the American Negroes compared with that of other nations.\n"</span>,</span>
+<span>        subtitle <span class="op">=</span> <span class="st">"Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n</span></span>
+<span><span class="st">        Done by Atlanta University.\n\ngit ad</span></span>
+<span><span class="st">        Recreated by STUDENT NAME HERE\n\n"</span></span>
+<span>    <span class="op">)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -580,10 +837,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
 </div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="chart.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="biodiversity.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
