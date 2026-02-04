@@ -51,9 +51,6 @@ of effective analysis and storytelling.
 
 We will examine types of data and the various chart types in some detail.
 
-Here is a video covering this content:
-
-![](https://youtu.be/z77Icn64w5c)
 
 ## Chart Types
 
