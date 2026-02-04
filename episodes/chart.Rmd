@@ -22,6 +22,11 @@ Alternatively, you can copy and modify [this Google Slides deck](https://docs.go
 Subsequent episodes will have links to separate Google Slide Decks with their 
 images.
 
+Here is a video covering this content:
+
+![](https://drive.google.com/file/d/17cWhDfVO-j9B21eGbM-xyK0VtOI-zjSu/view?usp=drive_link)
+
+
 ::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: questions 
