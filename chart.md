@@ -53,8 +53,7 @@ We will examine types of data and the various chart types in some detail.
 
 Here is a video covering this content:
 
-![](https://drive.google.com/file/d/17cWhDfVO-j9B21eGbM-xyK0VtOI-zjSu/view?usp=drive_link)
-
+![](https://youtu.be/z77Icn64w5c)
 
 ## Chart Types
 
