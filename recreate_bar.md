@@ -2,6 +2,7 @@
 title: "Recreate a Du Bois Bar Chart"
 teaching: 15
 exercises: 1
+output: pdf_document
 ---
 
 
@@ -39,9 +40,6 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ### Black Literacy After Emancipation
 
-<div>
-<img src="https://camo.githubusercontent.com/c38273c834787fc9ea22aadc1d980f0ff28a627bf4d3852dd4034b9f75fcc4bd/68747470733a2f2f6769746875622e636f6d2f4869676865724564446174612f44752d426f69732d5354454d2f626c6f622f6d61696e2f72656164696e67732d696d616765732f6f726967696e616c2d706c6174652d34372e6a70673f7261773d74727565" width="700" />
-</div>
 
 ::::::::::::::::: callout
 
