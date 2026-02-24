@@ -2,7 +2,9 @@
 title: "Recreate a Du Bois Bar Chart"
 teaching: 15
 exercises: 1
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
@@ -42,6 +44,9 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ### Black Literacy After Emancipation
 
+<div>
+<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg" width="700" />
+</div>
 
 ::::::::::::::::: callout
 
@@ -49,7 +54,7 @@ This interactive exercise is inspired by the annual #DuBoisChallenge. The #DuBoi
 
 :::::::::::::::::
 
-### Why use R to create graphics?
+## Why use R to create graphics?
 
 Data can usually be presented in a table or in a tabular format. You have probably seen tabular data in a spreadsheet software like Excel and to interact with the tabular data, you can click directly onto the table. While graphic user interface (GUI) programs such as Excel are commonly used, they can be limited in their user output. GUIs are often limited to a set of style parameters for creating graphics. Coding programs like R have more capabilities including graphics. In R, a data frame is is a data type that stores/holds tabular data. The first step to creating data visualization in R is to read tabular data into an R dataframe. This is like double clicking a file to open it in other computer programs like in Excel. But with R, we use code.
 
@@ -68,17 +73,11 @@ For this exercise, we’re going to read in data from a website. And we’re goi
 
 d_literacy_country
 | column_name | Description |
-|---|---|---|
+|---|---|
 | country | Name of country |
 | illiteracy | illiteracy percentage |
 
-d_college_country
-| column_name | Description |
-|---|---|---|
-| country | Name of country |
-| college | college percentage |
-
-### How can I input tabular data to plot a bar graph in R?
+## How can I input tabular data to plot a bar graph in R?
 
 The first step for data visualization in R is to read data into an R dataframe. This is like double clicking a file to open it in other computer programs. But with R, we use code.
 
@@ -88,19 +87,24 @@ There is no record of the exact data used by the Du Bois team for this bar graph
 
 The R code to read in this data this uses an ```<-``` arrow pointed at the name of the data frame and a read.csv function command followed by the web address within parentheses where a csv (comma separated values) data file is located. It looks like this:
 
-```d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")```
+```r
+d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")
+```
 After writing this code, we can write the name of the data frame 
 
-```d_literacy_country``` again on a separate line. This will list all of the data in the data frame.
+```r
+d_literacy_country
+```
+Typing just the name of the dataframe will list all of the data in the data frame.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Challenge 1: Reading the data
 
 If everything is working correctly, you should be given a table.
-Here is the code executed unsuccessfully because the blank.
+Review the code and correct for errors.
 
-```d_literacy_country <- _____.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
+```d_literacy_country <- reading.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
 
 d_literacy_country
 
@@ -116,7 +120,7 @@ Show me the solution
 
 :::::::::::::::::::::::::::::::::::::
 
-### Recreating a Bar Graph
+## Recreating a Bar Graph
 
 After successfully listing the data above, you should be able to see that it has data in two columns. 
 
@@ -126,7 +130,7 @@ Each column is a variable:
 
 * illiteracy contains percent of people in each country who are illiterate.
 
-Before creating a bar graph of the data, we need read the library ggplot2. 
+Before creating a bar graph of the data, we need to read the library ggplot2 and set up a couple parameters. 
 
 ```r
 library(ggplot2)
@@ -136,30 +140,29 @@ options(repr.plot.width=22/3, repr.plot.height=28/3)
 source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 ```
 
-Depending on our intention or circumstance, we adapt the size of a graph. The second line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
+The first line of code opens the library of ```ggplot2```. Depending on our intention or circumstance, we adapt the size of a graph. The second line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
 
 The third line tells R to use a specific Du Bois style. Examining Du Bois data portraits, we can see a style of format, color, and font text.
+
+The following code creates a simple bar graph using 
+
+```r
+ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()
+```
+
+Within this expression, we set the parameters of which variable to be placed across the horizonal (using ```x=variable```) and vertical axes (using ```y=variable```). Typically, bar graphs have categories on the horizonal axis and the values as the vertical axis. However, there are instances where we want to create a horizonal bar graph where categorical values are on the vertical axis and the values are on the horizonal axis. Which bar graph did Du Bois used in Plate 47 presented at the top of the page?
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 2: Horizonal Bar graph
+
+Below is the code to make a traditional bar graph. How can you modify the code in order to make it a horizonal bar graph?
 
 ```
 ggplot(d_literacy_country, aes( 
   x = country, 
   y = illiteracy)) +
   geom_col()
-```
-
-The code to create a simple bar graph is using the ```ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()```. Within this expression, we set the parameters of which variable to be placed across the horizonal (using ```x=variable```) and vertical axes (using ```y=variable```). Typically, bar graphs have categories on the horizonal axis and the values as the vertical axis. 
-
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 2: Horizonal Bar graph
-
-Given that within the code above the variable is identify as ```x``` is horizonzatlly places and ```y``` is vertically placed. Knowing that, what can we expect if we exchange the placement of the code above?
-
-```
-ggplot(d_literacy_country, aes( 
-  x = _____, 
-  y = _____)) +
-  geom_col() 
 ```
 
 :::::::::::::::::::::::: solution 
@@ -177,15 +180,13 @@ ggplot(d_literacy_country, aes(
 
 :::::::::::::::::::::::::::::::::::::
 
-Now, our plot is starting to look more like the Du Bois original data creation. In the code from challenge 2, the categories are on x-axis (horizonal) and the rate/numbers are expressed on the y-axis (vertical axis). In the challenge above, we use the ggplot function to plot a horizonal bar graph of illiteracy rates across the observations (countries and Black Americans).
+Now, our plot is starting to look more like the Du Bois original data creation. In the code from challenge 2, the categories are on x-axis (horizonal) and the rate/numbers are expressed on the y-axis (vertical axis). In the challenge above, we use the ```ggplot2``` function to plot a horizonal bar graph of illiteracy rates across the observations (countries and Black Americans).
 
-In the challenge above, we add a ggplot function followed by open parentheses to tell R that we will plot data from the d_literacy_country data frame with an “aesthetic mapping” aes specification that maps one column of data on the x axis and another column of data on the y axis.
+In the challenge code above, we add a ```ggplot2``` function followed by open parentheses to tell R that we will plot data from the ```d_literacy_country``` data frame with an “aesthetic mapping” ```aes()``` specification that maps one column of data on the x axis and another column of data on the y axis.
 
-After the close parentheses that tells ggplot we want to plot d_emancipation_dubois data with one variable on the x axis, and another on the y axis, we add a + and then a new line of code geom_col() that tells ggplot we want a bar graph based on summary statistics in the dataframe.
+After the close parentheses that tells ggplot we want to plot d_emancipation_dubois data with one variable on the x axis, and another on the y axis, we add a ```+``` and then a new line of code ```geom_col()``` that tells ggplot we want a bar graph based on summary statistics in the dataframe.
 
-After looking at Du Bois’ version of the graph above, replace the _____ characters in the code cell below to plot the correct variable on the x-axis and the correct variable on the y-axis.
-
-### Sort the values & Adding color
+## Sort the values & Adding color
 
 In the bar graph you created above, can you tell what order the bars for each country are sorted by?
 
@@ -193,7 +194,7 @@ Du Bois sorts the bar for each country by its illiteracy rate from highest to lo
 
 Du Bois also graphs illiteracy rate for Black Americans in a different color to make it easier to compare to other countries.
 
-```
+```r
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy))) +
@@ -202,7 +203,7 @@ ggplot(d_literacy_country, aes(
 
 Compare the code above with challenge 2, what do you notice? The code above uses the reorder function to reorganize the country names on the vertical axis based on illiteracy.
 
-```
+```r
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -248,13 +249,17 @@ ggplot(d_literacy_country, aes(
 
 ## Adding Du Bois Theme
 
-The style of our current figure does not quite match the original Plate 02. Can you identify 1-2 style characteristics missing? 
+The style of our current figure does not quite match the original Plate 47. Can you identify 1-2 style characteristics missing? 
 
 Next, we will adapt the code to match the style, specifically: bar width, background color, legend, and other default ggplot elements ar different than those employed by Du Bois.
 
 ### Bar width
 
-We can easily edit the bar width by inputting numeric values within the ```geom_col(width = #)``` Try inputting .1 and .9.
+We can easily edit the bar width by inputting numeric values within the 
+```r
+geom_col(width = #)
+```
+Try inputting .1 and .9.
 
 Additionally, we can add ```theme_dubois()``` within ```geom_col(width = #) + theme_dubois()```
 
@@ -291,10 +296,13 @@ ggplot(d_literacy_country, aes(
 
 :::::::::::::::::::::::::::::::::::::
 
-### Changing bar color and font to match Du Bois theme
+## Changing bar color and font to match Du Bois theme
 
+The function ```scale_fill_manual()``` allows users to adapt the colors of the fill based on values. Remember earlier, the legend printed colors based on TRUE/FALSE of country == "Negroes, U.S.A.". We will build on that previous knowledge to adapt the code:
 
-The function ```scale_fill_manual()``` allows users to adapt the colors of the fill based on values. Remember earlier, the legend printed colors based on TRUE/FALSE of country == "Negroes, U.S.A.". We will on that previous knowledge to adapt the code: ```scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))```
+```r
+scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))
+```
 
 Changing the font to ```theme(text = element_text('serif'))```
 
