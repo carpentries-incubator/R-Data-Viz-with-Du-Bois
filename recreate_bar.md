@@ -43,7 +43,7 @@ Part of this work will invovle creative attempts at making changes to data visua
 ### Black Literacy After Emancipation
 
 <div>
-<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg" width="700" />
+<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg?raw=true" width="700" />
 </div>
 
 ::::::::::::::::: callout
@@ -70,8 +70,9 @@ An important context of Du Bois’s graph of Black illiteracy is that literacy w
 For this exercise, we’re going to read in data from a website. And we’re going to place the data into a dataframe named d_literacy_country and d_college_country.
 
 d_literacy_country
+
 | column_name | Description |
-|---|---|
+| --- | --- |
 | country | Name of country |
 | illiteracy | illiteracy percentage |
 
@@ -170,7 +171,7 @@ ggplot(d_literacy_country, aes(
 ```
 ggplot(d_literacy_country, aes(
     x = illiteracy,
-    y = country +
+    y = country)) +
     geom_col() 
 ```
 
@@ -184,13 +185,11 @@ In the challenge code above, we add a ```ggplot2``` function followed by open pa
 
 After the close parentheses that tells ggplot we want to plot d_emancipation_dubois data with one variable on the x axis, and another on the y axis, we add a ```+``` and then a new line of code ```geom_col()``` that tells ggplot we want a bar graph based on summary statistics in the dataframe.
 
-## Sort the values & Adding color
+## Sorting the values & Adding color
 
-In the bar graph you created above, can you tell what order the bars for each country are sorted by?
+In the bar graph you created above, can you tell what order the bars for each country are sorted by? It is ordered in alphabetical order. When we observe Du Bois PLate 47, we see Du Bois sorts the bar for each country by its illiteracy rate from highest to lowest.
 
-Du Bois sorts the bar for each country by its illiteracy rate from highest to lowest.
-
-Du Bois also graphs illiteracy rate for Black Americans in a different color to make it easier to compare to other countries.
+Additionally, Du Bois also graphs illiteracy rate for Black Americans in a different color to make it easier to compare to other countries.
 
 ```r
 ggplot(d_literacy_country, aes( 
@@ -199,7 +198,7 @@ ggplot(d_literacy_country, aes(
     geom_col()
 ```
 
-Compare the code above with challenge 2, what do you notice? The code above uses the reorder function to reorganize the country names on the vertical axis based on illiteracy.
+Compare the code above with challenge 2, what do you notice? The code above uses the ```reorder``` function to reorganize the country names on the vertical axis based on illiteracy.
 
 ```r
 ggplot(d_literacy_country, aes( 
@@ -210,14 +209,13 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-Next, we have adapted the code to highlight a specific country: Ireland.
-
+Next, we the ```fill``` function to highlight a specific country: Ireland.
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Challenge 3: Reorder and specify bar color
 
-Observing the PLate 02, what name is suppose to stand out? Update the below.
+Observing the PLate 47, what name is suppose to stand out? Update the below.
 
 ```
 ggplot(d_literacy_country, aes( 
@@ -247,11 +245,11 @@ ggplot(d_literacy_country, aes(
 
 ## Adding Du Bois Theme
 
-The style of our current figure does not quite match the original Plate 47. Can you identify 1-2 style characteristics missing? 
+The style of our current figure does not quite match the original Plate 47. Can you identify 1-2 style characteristics missing? A few features missing are: bar colors, background color, and title.
 
 Next, we will adapt the code to match the style, specifically: bar width, background color, legend, and other default ggplot elements ar different than those employed by Du Bois.
 
-### Bar width
+## Bar width
 
 We can easily edit the bar width by inputting numeric values within the 
 ```r
@@ -308,7 +306,7 @@ Changing the font to ```theme(text = element_text('serif'))```
 
 ## Challenge 5: Changing colors and font style
 
-Add the changes we covered above.
+Below the bar graph uses purple to high Black Americans. What color is used in Plate 47? Update the code.
 
 ```
 ggplot(d_literacy_country, aes( 
@@ -317,7 +315,9 @@ ggplot(d_literacy_country, aes(
   fill = country == "Negroes, U.S.A."
 )) +
   geom_col(width=.5) +
-  theme_dubois()
+  theme_dubois() +
+  scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "darkgreen"))+
+  theme(text = element_text('serif'))
 ```
 
 :::::::::::::::::::::::: solution 
@@ -340,9 +340,9 @@ ggplot(d_literacy_country, aes(
 
 :::::::::::::::::::::::::::::::::::::
 
-### Labels
+## Titles
 
-To add titles and subtitles to the graph, we use the ```labs``` function for ggplot2. We use the title and subtitle specifications with labs. 
+To add titles and subtitles to the graph, we use the ```labs``` function in ggplot2. We use the title and subtitle specifications with labs. 
 
 The title text needs to be enclosed in quotation marks. We use the code ```\n``` to tell R to put a "new line" break at different places in the title based on Du Bois' titling.
 
@@ -359,7 +359,7 @@ labs(
 
 ## Challenge 6: Adding labels
 
-Based on the Plate 02, update the title, subtitle, and your name.
+Based on the Plate 47, update with your name.
 
 ```
 ggplot(d_literacy_country, aes( 
@@ -370,7 +370,13 @@ ggplot(d_literacy_country, aes(
   geom_col(width=.5) +
   theme_dubois() +
   scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
-  theme(text = element_text('serif'))
+  theme(text = element_text('serif'))+
+    labs(
+        title = "\nIlliteracy of the American Negroes compared with that of other nations.\n",
+        subtitle = "Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n
+        Done by Atlanta University.\n\ngit ad
+        Recreated by STUDENT NAME HERE\n\n"
+    )
 ```
 
 :::::::::::::::::::::::: solution 
@@ -398,5 +404,14 @@ ggplot(d_literacy_country, aes(
 :::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: keypoints
+
+- Learn about early Du Bois data visualization
+- Use R to read tabular data
+- Use ggplot2 to create graphs
+- Use modern features to recreate Plate 27
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 [r-markdown]: https://rmarkdown.rstudio.com/
