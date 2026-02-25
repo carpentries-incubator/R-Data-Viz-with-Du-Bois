@@ -64,6 +64,8 @@ We use different types of graphs based on the types of data and relationships we
 
 <img src="files/fanchart.jpg" width="220" height="260"/>
 
+<img src="files/barchart.jpg" width="220" height="260"/>
+
 ![fanchart](files/fanchart.jpg)
 
 ![barchart](files/barchart.jpg)
