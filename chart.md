@@ -51,12 +51,18 @@ of effective analysis and storytelling.
 
 We will examine types of data and the various chart types in some detail.
 
+
+Here is a video overview:
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z77Icn64w5c?si=KzlYNPA-kaA8-qjO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 ## Chart Types
 
 We use different types of graphs based on the types of data and relationships we are analyzing. Du Bois used variants of most of the major graph types that are still used today: (pie, bar, line charts, and statistical maps).
+
+<img src="files/fanchart.jpg" width="220" height="260"/>
 
 ![fanchart](files/fanchart.jpg)
 
