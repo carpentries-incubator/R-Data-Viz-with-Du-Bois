@@ -59,11 +59,12 @@ We will examine types of data and the various chart types in some detail.
 
 We use different types of graphs based on the types of data and relationships we are analyzing. Du Bois used variants of most of the major graph types that are still used today: (pie, bar, line charts, and statistical maps).
 
-
-<img src="files/fanchart.jpg width="220" height="280"/>
-
-<img src="files/barchart.jpg width="220" height="280"/>
-
+<figure>
+<div>
+<img src="files/fanchart.jpg" width="40%"/>
+<img src="files/barchart.jpg" width="40%"/>
+</div>
+</figure>
 
 ![fanchart](files/fanchart.jpg)
 
