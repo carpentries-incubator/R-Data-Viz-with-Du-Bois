@@ -85,7 +85,7 @@ The types include the fanciful Du Bois spiral, stacked bar graphs, and integrate
 <div>
 <img src="files/spiral.jpg" width="30%"/>
 <img src="files/conjugal.jpg" width="30%"/>
-<img src="files/expenditure.jpg" width="30%"/>
+<img src="files/expenditure.jpg" width="40%"/>
 <figcaption>Spiral, stacked bar, proportional bar with photos</figcaption>
 </div>
 </figure>
