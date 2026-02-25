@@ -59,15 +59,7 @@ We will examine types of data and the various chart types in some detail.
 
 We use different types of graphs based on the types of data and relationships we are analyzing. Du Bois used variants of most of the major graph types that are still used today: (pie, bar, line charts, and statistical maps).
 
-<figure>
-	<div class="row">
-	```{r rstudio-analogy, echo=FALSE, fig.show="hold", out.width="100%", fig.alt="Du Bois Style Fanchart"}
-knitr::include_graphics("files/fanchart.jpg")
-``{r rstudio-analogy, echo=FALSE, fig.show="hold", out.width="100%", fig.alt="Du Bois Style Barchart"}
-knitr::include_graphics("files/barchart.jpg")
-	</div>
-```
-</figure>
+
 
 ![test](files/R_00_Rstudio_01.png)
 
