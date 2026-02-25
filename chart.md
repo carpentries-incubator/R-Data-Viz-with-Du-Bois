@@ -63,16 +63,18 @@ We use different types of graphs based on the types of data and relationships we
 <div>
 <img src="files/fanchart.jpg" width="40%"/>
 <img src="files/barchart.jpg" width="40%"/>
+<figcaption>Fan and Bar charts</figcaption>
 </div>
 </figure>
 
-![fanchart](files/fanchart.jpg)
+<figure>
+<div>
+<img src="files/linechart.jpg" width="40%"/>
+<img src="files/statmap.jpg" width="40%"/>
+<figcaption>Line Chart and Statistical Map</figcaption>
+</div>
+</figure>
 
-![barchart](files/barchart.jpg)
-
-![linechart](files/linechart.jpg)
-
-![Statistical Map](files/statmap.jpg)
 
 You can also explore more complex adaptations of these charts using the [Du Bois Resources repository for this lesson:] 
  (https://github.com/HigherEdData/Du-Bois-STEM)
