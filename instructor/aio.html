@@ -1181,12 +1181,13 @@ Line Chart and Statistical Map
 </div>
 </figure><p>You can also explore more complex adaptations of these charts using
 the [Du Bois Resources repository for this lesson:] (<a href="https://github.com/HigherEdData/Du-Bois-STEM" class="external-link uri">https://github.com/HigherEdData/Du-Bois-STEM</a>)</p>
-<p>The types include the fanciful Du Bois spiral,</p>
-<figure><img src="../files/spiral.jpg" alt="spiral" class="figure mx-auto d-block"><div class="figcaption">spiral</div>
-</figure><p>stacked bar graphs,</p>
-<figure><img src="../files/conjugal.jpg" alt="conjgal" class="figure mx-auto d-block"><div class="figcaption">conjgal</div>
-</figure><p>and integrated photographs.</p>
-<figure><img src="../files/expenditure.jpg" alt="spending" class="figure mx-auto d-block"><div class="figcaption">spending</div>
+<p>The types include the fanciful Du Bois spiral, stacked bar graphs,
+and integrated photographs.</p>
+<figure><div>
+<img src="../files/spiral.jpg" width="30%" class="figure"><img src="../files/conjugal.jpg" width="30%" class="figure"><img src="../files/expenditure.jpg" width="30%" class="figure"><figcaption>
+Spiral, stacked bar, proportional bar with photos
+</figcaption>
+</div>
 </figure><div class="section level3">
 <h3 id="chart-types-pie-charts">Chart Types: Pie Charts<a class="anchor" aria-label="anchor" href="#chart-types-pie-charts"></a>
 </h3>
@@ -1410,7 +1411,7 @@ any links that you are not going to use.
   INSTRUCTOR NOTE (on creativity in this exercise)
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Part of this work will invovle creative attempts at making changes to
 data visualizations. While the first few exercises are intended to help
@@ -1618,7 +1619,7 @@ Review the code and correct for errors.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><code>d_literacy_country &lt;- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")</code></p>
 </div>
@@ -1697,7 +1698,7 @@ the code in order to make it a horizonal bar graph?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1785,7 +1786,7 @@ below.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1844,7 +1845,7 @@ the</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1902,7 +1903,7 @@ is used in Plate 47? Update the code.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1966,7 +1967,7 @@ the graph was recreated by you?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -2024,7 +2025,7 @@ any links that you are not going to use.
   INSTRUCTOR NOTE (on creativity in this exercise)
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>test of new text</p>
 <p>Part of this work will invovle creative attempts at making changes to
@@ -2249,7 +2250,7 @@ page.</li>
   HINT (hint)
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>If you are getting an error, make sure there are no spaces or other
 symbols between 2+2.</p>
@@ -2264,7 +2265,7 @@ symbols between 2+2.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If everything is working correctly, you should be given a reported
 value of 4.</p>
