@@ -79,17 +79,17 @@ We use different types of graphs based on the types of data and relationships we
 You can also explore more complex adaptations of these charts using the [Du Bois Resources repository for this lesson:] 
  (https://github.com/HigherEdData/Du-Bois-STEM)
 
-The types include the fanciful Du Bois spiral, 
+The types include the fanciful Du Bois spiral, stacked bar graphs, and integrated photographs.
 
-![spiral](files/spiral.jpg)
+<figure>
+<div>
+<img src="files/spiral.jpg" width="30%"/>
+<img src="files/conjugal.jpg" width="30%"/>
+<img src="files/expenditure.jpg" width="30%"/>
+<figcaption>Spiral, stacked bar, proportional bar with photos</figcaption>
+</div>
+</figure>
 
-stacked bar graphs,
-
-![conjgal](files/conjugal.jpg)
-
-and integrated photographs.
-
-![spending](files/expenditure.jpg)
 
 ### Chart Types: Pie Charts
 
