@@ -458,7 +458,7 @@ visualizations of Black life for the exposition?</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Why visualizations instead of a written report?</p>
 </div>
@@ -470,7 +470,7 @@ visualizations of Black life for the exposition?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Solution 1 </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Du Bois used rigorous yet accessible methods to challenge
 subsequently discredited claims associated with scientific racism that
@@ -1091,7 +1091,10 @@ detail.</p>
 relationships we are analyzing. Du Bois used variants of most of the
 major graph types that are still used today: (pie, bar, line charts, and
 statistical maps).</p>
-<figure><img src="files/R_00_Rstudio_01.png" alt="test" class="figure mx-auto d-block"><div class="figcaption">test</div>
+<figure><div>
+<p>&lt;img src=“files/fanchart.jpg width=”40%“/&gt; &lt;img
+src=”files/barchart.jpg width=“40%”/&gt;</p>
+</div>
 </figure><figure><img src="files/fanchart.jpg" alt="fanchart" class="figure mx-auto d-block"><div class="figcaption">fanchart</div>
 </figure><figure><img src="files/barchart.jpg" alt="barchart" class="figure mx-auto d-block"><div class="figcaption">barchart</div>
 </figure><figure><img src="files/linechart.jpg" alt="linechart" class="figure mx-auto d-block"><div class="figcaption">linechart</div>
@@ -1198,7 +1201,7 @@ Exposition, 1900</a></p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>How does Black illiteracy (the red bar) compare with other
 countries</p>
@@ -1211,7 +1214,7 @@ countries</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <figure><img src="files/barchart.jpg" alt="barchart" class="figure mx-auto d-block"><div class="figcaption">barchart</div>
 </figure><div class="section level3">
@@ -1513,7 +1516,7 @@ Review the code and correct for errors.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p><code>d_literacy_country &lt;- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")</code></p>
 </div>
@@ -1592,7 +1595,7 @@ the code in order to make it a horizonal bar graph?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1680,7 +1683,7 @@ below.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1739,7 +1742,7 @@ the</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1797,7 +1800,7 @@ is used in Plate 47? Update the code.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1861,7 +1864,7 @@ the graph was recreated by you?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -2121,7 +2124,7 @@ page.</li>
   HINT (hint)
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>If you are getting an error, make sure there are no spaces or other
 symbols between 2+2.</p>
@@ -2136,7 +2139,7 @@ symbols between 2+2.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If everything is working correctly, you should be given a reported
 value of 4.</p>
