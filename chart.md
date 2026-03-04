@@ -90,7 +90,6 @@ The types include the fanciful Du Bois spiral, stacked bar graphs, and integrate
 </div>
 </figure>
 
-
 ### Chart Types: Pie Charts
 
 ![fanchart](files/fanchart.jpg)
