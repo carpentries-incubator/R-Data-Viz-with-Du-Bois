@@ -48,16 +48,6 @@ images.
 
 ![](files/expo0.jpg)
 
-<!--
-<figure caption="Context">
-<div>
-	<img src="files/dubois-1900.png" width="40%"/>
-	<img src="files/expo0.jpg" width="40%"/>
-</div>
-</caption>
--->
-
-
 
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
@@ -143,35 +133,25 @@ segregation under the "separate but equal" doctrine.
  1900 Georgia averaged more than one mob killing per month.
 
 ![Slave Cosplay](files/BA-happy-days.jpg)
+
 ![Plessy v. Ferguson](files/homer-plessy.jpg)
+
 ![The Philadelelphia Negros](files/philly12.jpg)
+
 ![Wilmington Takeover](files/white-mans-day.jpg)
+
 ![Lynching](files/mob.jpg)
 
-<!--
-<figure>
-	<div>
-		<img src="files/BA-happy-days.jpg" width="15%"/>
-		<img src="files/homer-plessy.jpg" width="15%"/>
-		<img src="files/philly12.jpg" width="15%"/>
-		<img src="files/white-mans-day.jpg" width="15%"/>
-		<img src="files/mob.jpg" width="15%"/>
-	</div>
-</figure>
--->
 
 # 1900 Paris Exposition
 
 The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
 
-<figure>
-	<div>
-		<img src="files/expo-poster.jpg" width="20%"/>
-		<img src="files/paris-expo.jpg" width="50%"/>
-		<img src="files/expo0jpg" width="20%"/>
-	</div>
-</figure>
+![poster](files/expo-poster.jpg)
 
+![venue](files/paris-expo.jpg)
+
+![expo](files/expo0.jpg)
 
 # Background
 
