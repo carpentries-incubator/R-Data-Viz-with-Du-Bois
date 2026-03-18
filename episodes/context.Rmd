@@ -101,11 +101,11 @@ What effect did the venue have on the design of the visuals?
 
 <figure>
 <div>
-<img src="files/BA-happy-days.jpg" width="15%"/>
-<img src="files/homer-plessy.jpg" width="15%"/>
-<img src="files/philly12.jpg" width="15%"/>
-<img src="files/white-mans-day.jpg" width="15%"/>
-<img src="files/mob.jpg" width="15%"/>
+<img src="files/BA-happy-days.jpg" width="20%"/>
+<img src="files/homer-plessy.jpg" width="10%"/>
+<img src="files/philly12.jpg" width="20%"/>
+<img src="files/white-mans-day.jpg" width="20%"/>
+<img src="files/mob.jpg" width="20%"/>
 </div>
 </figure>
 
