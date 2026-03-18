@@ -113,6 +113,11 @@ within categories for another variable (race).
 
 ![](files/fanchart.jpg){width=500px}
 
+This diagram about many variations of (chart types for different types of data and analyses:)[https://github.com/HigherEdData/Du-Bois-STEM]
+
+![](files/chart-types.png)
+
+
 
 ### Chart Types: Bar Charts
 
@@ -233,10 +238,9 @@ than Black illiteracy in the US?
 
 ## Design Aesthetics and Accessibility
 
-![barchart](files/barchart.jpg)
+:::::::::::::::::::::::::::::::::::::: questions 
 
-
-What makes this graph easy or
+What makes the bar chart above  graph easy or
 difficult to understand?
 
 How is the graph aesthetically
@@ -248,6 +252,11 @@ audience into consideration?
 
 What tools would you need to create
 this graph by hand?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+::::::::::::::::::::::::::::::::::::: discussion
 
 This visual, a conventional bar graph,
 uses spot color to highlight the data
@@ -263,6 +272,7 @@ showing the message.
 Note the bilingual labels and titles (a
 nod to the venue and audience).
 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Context and Data Story
 
@@ -270,13 +280,19 @@ Du Bois presented his graph for illiteracy among Black Americans and other
 nations (left), together with the graph of Black illiteracy in Georgia from 1865
 to 1900. What data story do these 2 graphs tell together?
 
-![barchart](files/barchart.jpg)
-
-![ill2](files/ill2.jpg)
+<figure>
+<div>
+<img src="files/barchart.jpg" width="40%"/>
+<img src="files/ill2.jpg" width="40%"/>
+</div>
+</figure>
 
 # Example: Re-Create with Modern Data and Accessible Design
 
-![mod-data-chart](files/mod-data-chart.png)
+![mod-data-chart](files/hand-drawn-bar20.jpg)
+
+
+:::::::::::::::::::::::::::::::::::: discussion
 
 Activity: Hand draw a recreation of
 Du Bois’ graph using the data below
@@ -303,6 +319,9 @@ Serbia		28
 Romania		20
 Italy		20
 ```
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
