@@ -106,27 +106,39 @@ What effect did the venue have on the design of the visuals?
 
 # Context: Five Years Before Paris
 
-To provide context for the events that led up to the Paris exposition in 1900, here are several events that led to the event.
+To provide context for the events that led up to the Paris exposition
+in 1900, here are several events that led to the event.
 
 
-*During the summer of 1895*, in a Brooklyn park, there was a cotton plantation complete with five hundred Black workers reenacting slavery for the "pleasure" of the crowds. The show was called "Black America, 1985".
+*During the summer of 1895*, in a Brooklyn park, there was a cotton
+ plantation complete with five hundred Black workers reenacting
+ slavery for the "pleasure" of the crowds. The show was called "Black
+ America, 1985".
 
-In *1896* the Supreme Court of the US handed down the Plessey vs. Ferguson ruling that upheld the constitutionality of racial segregation under the "separate but equal" doctrine.
+In *1896* the Supreme Court of the US handed down the Plessey vs.
+Ferguson ruling that upheld the constitutionality of racial
+segregation under the "separate but equal" doctrine.
 
-*In 1897*, Du Bois embarked upon a study called "The Philadelphia Negro" he described it as "This inquiry extended over fifteen months, and sought to ascertain something of the geographical distribution of this race, their organizations, and above all their relation to their million white fellow-citizens"
+*In 1897*, Du Bois embarked upon a study called "The Philadelphia
+ Negro" he described it as "This inquiry extended over fifteen
+ months, and sought to ascertain something of the geographical
+ distribution of this race, their organizations, and above all their
+ relation to their million white fellow-citizens"
 
-*In 1898* the duly elected people in Wilmington NC was violently overthrown by whites.
-The coup occurred after the state's white Southern Democrats conspired and led a mob of
- 2,000 white men to overthrow the legitimately-elected local Fusionist government.
-They expelled opposition black and white political leaders from the city, destroyed
-the property and businesses of black citizens built up since the Civil War,
-including the only black newspaper in the city, and killed an estimated 60 to
-more than 300 people
+*In 1898* the duly elected people in Wilmington NC was violently
+ overthrown by whites. The coup occurred after the state's white
+ Southern Democrats conspired and led a mob of 2,000 white men to
+ overthrow the legitimately-elected local Fusionist government. They
+ expelled opposition black and white political leaders from the city,
+ destroyed the property and businesses of black citizens built up
+ since the Civil War, including the only black newspaper in the city,
+ and killed an estimated 60 to more than 300 people
 
-*1899:* Georgia's toll of 458 lynch victims was exceeded only by Mississippi's toll of 538.
-During the 1880s and 1890s, instances of lethal mob violence increased steadily,
-peaking in 1899 when twenty-seven Georgians fell victim to lynch mobs.
-Between 1890 and 1900 Georgia averaged more than one mob killing per month.
+*1899:* Georgia's toll of 458 lynch victims was exceeded only by
+ Mississippi's toll of 538. During the 1880s and 1890s, instances of
+ lethal mob violence increased steadily, peaking in 1899 when
+ twenty-seven Georgians fell victim to lynch mobs. Between 1890 and
+ 1900 Georgia averaged more than one mob killing per month.
 
 <figure>
 	<div>
