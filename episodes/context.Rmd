@@ -140,6 +140,13 @@ segregation under the "separate but equal" doctrine.
  twenty-seven Georgians fell victim to lynch mobs. Between 1890 and
  1900 Georgia averaged more than one mob killing per month.
 
+![Slave Cosplay](files/BA-happy-days.jpg)
+![Plessy v. Ferguson](files/homer-plessy.jpg)
+![The Philadelelphia Negros](files/philly12.jpg)
+![Wilmington Takeover](files/white-mans-day.jpg)
+![Lynching](files/mob.jpg)
+
+<!--
 <figure>
 	<div>
 		<img src="files/BA-happy-days.jpg" width="15%"/>
@@ -149,6 +156,7 @@ segregation under the "separate but equal" doctrine.
 		<img src="files/mob.jpg" width="15%"/>
 	</div>
 </figure>
+-->
 
 # 1900 Paris Exposition
 
