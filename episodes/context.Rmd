@@ -51,10 +51,11 @@ images.
 
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
-This slide has two images; the 1st image is of WEB Du Bois and the second is of his Paris exhibit. Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
+Note the two images below: The first if Du Bois in Paris, and the second is the venue for the "Exposition of the American Negro", part of the Paris Expostion of 1900.
+
+ Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
 
 ![Du Bois at Fisk](files/dubois-fisk.jpg)
-
 
 He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.
 
@@ -98,11 +99,18 @@ What effect did the venue have on the design of the visuals?
 
 # Context: Five Years Before Paris
 
+<figure>
+<div>
+<img src="files/fanchart.jpg" width="40%"/>
+<img src="files/barchart.jpg" width="40%"/>
+</div>
+</figure>
+
 To provide context for the events that led up to the Paris exposition
 in 1900, here are several events that led to the event.
 
 
-*During the summer of 1895*, in a Brooklyn park, there was a cotton
+During the summer of *1895*, in a Brooklyn park, there was a cotton
  plantation complete with five hundred Black workers reenacting
  slavery for the "pleasure" of the crowds. The show was called "Black
  America, 1985".
