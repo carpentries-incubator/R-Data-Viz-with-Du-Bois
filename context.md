@@ -44,9 +44,9 @@ images.
 
 # Context
 
-![](files/dubois-1900.png)
+![Du Bois in Paris, 1900](files/dubois-1900.png)
 
-![](files/expo0.jpg)
+![Exposition of the American Negro, Paris, 1900](files/expo0.jpg)
 
 
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
@@ -147,11 +147,11 @@ segregation under the "separate but equal" doctrine.
 
 The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
 
-![poster](files/expo-poster.jpg)
+![Expo Poster](files/expo-poster.jpg)
 
-![venue](files/paris-expo.jpg)
+![Paris Venue](files/paris-expo.jpg)
 
-![expo](files/expo0.jpg)
+![Expo](files/expo0.jpg)
 
 # Background
 
@@ -159,9 +159,9 @@ The Exposition Universelle of 1900, meant to to celebrate the achievements of th
 
 # The visuals
 
-![original-plate-01](original-plate-01.jpg)
+![original-plate-01](files/original-plate-01.jpg)
 
-![Expo Venue](expo0.jpg)
+![Expo Venue](files/expo0.jpg)
 
 
 ::::::::::::::::::::::::::::::::::::: discussion
