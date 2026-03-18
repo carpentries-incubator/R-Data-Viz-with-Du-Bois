@@ -156,9 +156,9 @@ The Exposition Universelle of 1900, meant to to celebrate the achievements of th
 
 <figure>
 <div>
-<img src="files/expo-poster.jpg" width="30%"/>
-<img src="files/paris-expo.jpg" width="30%"/>
-<img src="files/expo0.jpg" width="30%"/>
+<img src="files/expo-poster.jpg" width="25%"/>
+<img src="files/paris-expo.jpg" width="50%"/>
+<img src="files/expo0.jpg" width="25%"/>
 </div>
 </figure>
 
@@ -168,10 +168,12 @@ The Exposition Universelle of 1900, meant to to celebrate the achievements of th
 
 # The visuals
 
-![original-plate-01](files/original-plate-01.jpg)
-
-![Expo Venue](files/expo0.jpg)
-
+<figure>
+<div>
+<img src="files/original-plate-01.jpg" width="50%"/>
+<img src="files/expo0.jpg" width="50%"/>
+</div>
+</figure>
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
