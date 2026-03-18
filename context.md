@@ -44,24 +44,16 @@ images.
 
 # Context
 
-<figure caption="Context">
-<div>
-	<img src="files/dubois-1900.png" width="40%"/>
-	<img src="files/expo0.jpg" width="40%"/>
-</div>
-</caption>
+![](files/dubois-1900.png)
 
+![](files/expo0.jpg)
 
 
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
 This slide has two images; the 1st image is of WEB Du Bois and the second is of his Paris exhibit. Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
 
-<figure caption="Du Bois at Fisk">
-	<div>
-		<img src="files/dubois-fisk.jpg" width="50%"/>
-	</div>
-</figure>
+![Du Bois at Fisk](files/dubois-fisk.jpg)
 
 
 He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.
@@ -140,28 +132,26 @@ segregation under the "separate but equal" doctrine.
  twenty-seven Georgians fell victim to lynch mobs. Between 1890 and
  1900 Georgia averaged more than one mob killing per month.
 
-<figure>
-	<div>
-		<img src="files/BA-happy-days.jpg" width="15%"/>
-		<img src="files/homer-plessy.jpg" width="15%"/>
-		<img src="files/philly12.jpg" width="15%"/>
-		<img src="files/white-mans-day.jpg" width="15%"/>
-		<img src="files/mob.jpg" width="15%"/>
-	</div>
-</figure>
+![Slave Cosplay](files/BA-happy-days.jpg)
+
+![Plessy v. Ferguson](files/homer-plessy.jpg)
+
+![The Philadelelphia Negros](files/philly12.jpg)
+
+![Wilmington Takeover](files/white-mans-day.jpg)
+
+![Lynching](files/mob.jpg)
+
 
 # 1900 Paris Exposition
 
 The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
 
-<figure>
-	<div>
-		<img src="files/expo-poster.jpg" width="20%"/>
-		<img src="files/paris-expo.jpg" width="50%"/>
-		<img src="files/expo0jpg" width="20%"/>
-	</div>
-</figure>
+![poster](files/expo-poster.jpg)
 
+![venue](files/paris-expo.jpg)
+
+![expo](files/expo0.jpg)
 
 # Background
 
