@@ -44,21 +44,20 @@ images.
 
 # Context
 
+
+
+
+
+Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
+
+Note the two images below: The first if Du Bois in Paris, and the second is the venue for the "Exposition of the American Negro", part of the Paris Expostion of 1900.
+
 <figure>
 <div>
 <img src="files/dubois-1900.png" width="50%"/>
 <img src="files/expo0.jpg" width="50%"/>
 </div>
 </figure>
-
-![Du Bois in Paris, 1900](files/dubois-1900.png)
-
-![Exposition of the American Negro, Paris, 1900](files/expo0.jpg)
-
-
-Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
-
-Note the two images below: The first if Du Bois in Paris, and the second is the venue for the "Exposition of the American Negro", part of the Paris Expostion of 1900.
 
  Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
 
@@ -150,26 +149,18 @@ segregation under the "separate but equal" doctrine.
  twenty-seven Georgians fell victim to lynch mobs. Between 1890 and
  1900 Georgia averaged more than one mob killing per month.
 
-![Slave Cosplay](files/BA-happy-days.jpg)
-
-![Plessy v. Ferguson](files/homer-plessy.jpg)
-
-![The Philadelelphia Negros](files/philly12.jpg)
-
-![Wilmington Takeover](files/white-mans-day.jpg)
-
-![Lynching](files/mob.jpg)
-
-
 # 1900 Paris Exposition
 
 The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
 
-![Expo Poster](files/expo-poster.jpg)
 
-![Paris Venue](files/paris-expo.jpg)
-
-![Expo](files/expo0.jpg)
+<figure>
+<div>
+<img src="files/expo-poster.jpg" width="30%"/>
+<img src="files/paris-expo.jpg" width="30%"/>
+<img src="files/expo0.jpg" width="30%"/>
+</div>
+</figure>
 
 # Background
 
