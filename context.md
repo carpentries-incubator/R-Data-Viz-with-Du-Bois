@@ -159,12 +159,10 @@ The Exposition Universelle of 1900, meant to to celebrate the achievements of th
 
 # The visuals
 
-<figure>
-	<div>
-		<image src="original-plate-01.jpg" width="40%"/>
-		<image src="expo0.jpg" width="40%"/>
-	</div>
-</figure>
+![original-plate-01](original-plate-01.jpg)
+
+![Expo Venue](expo0.jpg)
+
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
