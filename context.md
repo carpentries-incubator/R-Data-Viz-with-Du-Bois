@@ -44,6 +44,13 @@ images.
 
 # Context
 
+<figure>
+<div>
+<img src="files/dubois-1900.png" width="50%"/>
+<img src="files/expo0.jpg" width="50%"/>
+</div>
+</figure>
+
 ![Du Bois in Paris, 1900](files/dubois-1900.png)
 
 ![Exposition of the American Negro, Paris, 1900](files/expo0.jpg)
