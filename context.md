@@ -42,15 +42,33 @@ images.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+# Context
+
+<figure caption="Context">
+<div>
+	<img src="files/dubois-1900.png" width="40%"/>
+	<img src="files/expo0.jpg" width="40%"/>
+</div>
+</caption>
+
+
+
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
-This slide has two images; the 1st image is of WEB Du Bois and the second is of his Paris exhibit. Du Bois was trained at Fisk University, a HBCU in Nashville, TN. He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.  
+This slide has two images; the 1st image is of WEB Du Bois and the second is of his Paris exhibit. Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
+
+<figure caption="Du Bois at Fisk">
+	<div>
+		<img src="files/dubois-fisk.jpg" width="50%"/>
+	</div>
+</figure>
+
+
+He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.
+
 Also discussed is the venue where the visuals were first shown, the Exhibition of the American Negro, within the 1900 Paris Exposition. The Paris Exposition was a world fair that was supposed to showcase achievements of the last century and move into developments for the next century” To better understand the times when the visuals were created, influential events leading to the Exposition are discussed.
 
-<div>
-<img src="https://github.com/carpentries-incubator/R-Data-Viz-with-Du-Bois/blob/main/episodes/files/Context_worldsfair.jpg?raw=true"
-width="400" />
-</div>
+
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -84,5 +102,104 @@ What effect did the venue have on the design of the visuals?
 - This is a place for writing key points that students have learned in this episode.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Context: Five Years Before Paris
+
+To provide context for the events that led up to the Paris exposition in 1900, here are several events that led to the event.
+
+
+*During the summer of 1895*, in a Brooklyn park, there was a cotton plantation complete with five hundred Black workers reenacting slavery for the "pleasure" of the crowds. The show was called "Black America, 1985".
+
+In *1896* the Supreme Court of the US handed down the Plessey vs. Ferguson ruling that upheld the constitutionality of racial segregation under the "separate but equal" doctrine.
+
+*In 1897*, Du Bois embarked upon a study called "The Philadelphia Negro" he described it as "This inquiry extended over fifteen months, and sought to ascertain something of the geographical distribution of this race, their organizations, and above all their relation to their million white fellow-citizens"
+
+ *In 1898* the duly elected people in Wilmington NC was violently overthrown by whites.
+ The coup occurred after the state's white Southern Democrats conspired and led a mob of
+ 2,000 white men to overthrow the legitimately-elected local Fusionist government.
+They expelled opposition black and white political leaders from the city, destroyed
+the property and businesses of black citizens built up since the Civil War,
+including the only black newspaper in the city, and killed an estimated 60 to
+more than 300 people
+
+
+*1899:* Georgia's toll of 458 lynch victims was exceeded only by Mississippi's toll of 538.
+During the 1880s and 1890s, instances of lethal mob violence increased steadily,
+peaking in 1899 when twenty-seven Georgians fell victim to lynch mobs.
+Between 1890 and 1900 Georgia averaged more than one mob killing per month.
+
+	
+
+
+<figure caption="Events leading to the Paris Exposition">
+	<div>
+		<img src="files/BA-happy-days.jpg" width="15%"/>
+		<img src="files/homer-plessy.jpg" width="15%"/>
+		<img src="files/philly12.jpg" width="15%"/>
+		<img src="files/white-mans-day.jpg" width="15%"/>
+		<img src="files/mob.jpg" width="15%"/>
+	</div>
+</figure>
+
+# 1900 Paris Exposition
+
+The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
+
+<figure caption="The Paris Exposition: Poster, Site, Venue for Du Bois's Expo">
+	<div>
+		<img src="files/expo-poster.jpg" width="20%"/>
+		<img src="files/paris-expo.jpg" width="50%"/>
+		<img src="files/expo0jpg" width="20%"/>
+	</div>
+</figure>
+
+
+# Background
+
+# Why Visualize Data?
+
+# The visuals
+
+<figure>
+	<div>
+		<image src="original-plate-01.jpg" width="40%"/>
+		<image src="expo0.jpg" width="40%"/>
+	</div>
+</figure>
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+Why do you think Du Bois created a series of graphs and data visualizations of Black life for the exposition?
+
+Why visualizations instead of a written report?
+
+What effect did the venue have on the design of the visuals?
+
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+# References
+
+1. (Paris Exposition of 1900 (Exposition Universelle))
+[https://en.wikipedia.org/wiki/Exposition_Universelle_(1900)]
+
+2. (Black America, 1895)
+[https://publicdomainreview.org/essay/black-america-1895]
+
+3. (Plessy v. Ferguson)
+[https://www.britannica.com/event/Plessy-v-Ferguson-1896]
+
+4. (The Philadelphia Negro)
+[https://www.google.com/books/edition/_/sqwJAAAAIAAJ]
+
+5. (Wilmington Insurrection of 1898)
+[https://en.wikipedia.org/wiki/Wilmington_insurrection_of_1898]
+
+6. (The Lynching of Sam Hose)
+[https://en.wikipedia.org/wiki/Lynching_of_Sam_Hose]
+
+
+
+
 
 [r-markdown]: https://rmarkdown.rstudio.com/
