@@ -553,7 +553,7 @@ this episode.</li>
 <button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
   <h3 class="accordion-header" id="headingInstructor1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div> Instructor Note </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <ul>
 <li>The main goal here is to help the learners be comfortable with the
@@ -1011,7 +1011,7 @@ the tidyverse installed.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Scroll through packages tab down to ‘tidyverse’. You can also type a
 few characters into the searchbox. The ‘tidyverse’ package is really a
@@ -1079,7 +1079,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-chart"><p>Content from <a href="chart.html">Reading and Interpreting STEM Charts</a></p>
 <hr>
-<p>Last updated on 2026-03-14 |
+<p>Last updated on 2026-03-18 |
 
         <a href="https://github.com/HigherEdData/DuBois_R/edit/main/episodes/chart.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
@@ -1246,7 +1246,9 @@ population, with all the percentages adding up to 100%.</li>
 distributions of people across one categorical variable (occupations)
 within categories for another variable (race).</li>
 </ul>
-<figure><img src="../files/fanchart.jpg" width="500" class="figure mx-auto d-block"></figure>
+<figure><img src="../files/fanchart.jpg" width="500" class="figure mx-auto d-block"></figure><p>This diagram about many variations of (chart types for different
+types of data and analyses:)[<a href="https://github.com/HigherEdData/Du-Bois-STEM" class="external-link uri">https://github.com/HigherEdData/Du-Bois-STEM</a>]</p>
+<figure><img src="../files/chart-types.png" class="figure mx-auto d-block"></figure>
 </div>
 <div class="section level3">
 <h3 id="chart-types-bar-charts">Chart Types: Bar Charts<a class="anchor" aria-label="anchor" href="#chart-types-bar-charts"></a>
@@ -1398,12 +1400,47 @@ Black illiteracy in the US?</p></li>
 </section><section><h2 class="section-heading" id="design-aesthetics-and-accessibility-1">Design Aesthetics and Accessibility<a class="anchor" aria-label="anchor" href="#design-aesthetics-and-accessibility-1"></a>
 </h2>
 <hr class="half-width">
-<figure><img src="../files/barchart.jpg" alt="barchart" class="figure mx-auto d-block"><div class="figcaption">barchart</div>
-</figure><p>What makes this graph easy or difficult to understand?</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<p>What makes the bar chart above graph easy or difficult to
+understand?</p>
 <p>How is the graph aesthetically appealing? How could could it be more
 appealing?</p>
 <p>How does this graph take its audience into consideration?</p>
 <p>What tools would you need to create this graph by hand?</p>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Understand which chart types are best suited for data with different
+levels of measurement (nominal, ordinal, continous).</li>
+<li>Read and interpret the analysis in one of the Du Bois charts.</li>
+<li>Identify best practices for chart accessibity and impact in a Du
+Bois chart.</li>
+<li>Draw a STEM chart by hand using statistics that describe real
+data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
 <p>This visual, a conventional bar graph, uses spot color to highlight
 the data for Black Americans compared to other countries, showing the
 illiteracy rate to be at the midpoint compared to other nations.</p>
@@ -1411,6 +1448,9 @@ illiteracy rate to be at the midpoint compared to other nations.</p>
 the message.</p>
 <p>Note the bilingual labels and titles (a nod to the venue and
 audience).</p>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="context-and-data-story">Context and Data Story<a class="anchor" aria-label="anchor" href="#context-and-data-story"></a>
 </h2>
 <hr class="half-width">
@@ -1418,13 +1458,21 @@ audience).</p>
 other nations (left), together with the graph of Black illiteracy in
 Georgia from 1865 to 1900. What data story do these 2 graphs tell
 together?</p>
-<figure><img src="../files/barchart.jpg" alt="barchart" class="figure mx-auto d-block"><div class="figcaption">barchart</div>
-</figure><figure><img src="../files/ill2.jpg" alt="ill2" class="figure mx-auto d-block"><div class="figcaption">ill2</div>
+<figure><div>
+<p><img src="../files/barchart.jpg" width="40%" class="figure"><img src="../files/ill2.jpg" width="40%" class="figure"></p>
+</div>
 </figure></section><div class="section level1">
 <h1 id="example-re-create-with-modern-data-and-accessible-design">Example: Re-Create with Modern Data and Accessible Design<a class="anchor" aria-label="anchor" href="#example-re-create-with-modern-data-and-accessible-design"></a>
 </h1>
-<figure><img src="../files/mod-data-chart.png" alt="mod-data-chart" class="figure mx-auto d-block"><div class="figcaption">mod-data-chart</div>
-</figure><p>Activity: Hand draw a recreation of Du Bois’ graph using the data
+<figure><img src="../files/hand-drawn-bar20.jpg" alt="mod-data-chart" class="figure mx-auto d-block"><div class="figcaption">mod-data-chart</div>
+</figure><div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>Activity: Hand draw a recreation of Du Bois’ graph using the data
 below on college attainment today.</p>
 <p>Building on the graph to the left, what accessible design
 improvements can you make?</p>
@@ -1442,6 +1490,9 @@ Hungary		29
 Serbia		28
 Romania		20
 Italy		20</code></pre>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1477,7 +1528,7 @@ any links that you are not going to use.
   INSTRUCTOR NOTE (on creativity in this exercise)
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Part of this work will invovle creative attempts at making changes to
 data visualizations. While the first few exercises are intended to help
@@ -1685,7 +1736,7 @@ Review the code and correct for errors.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p><code>d_literacy_country &lt;- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")</code></p>
 </div>
@@ -1764,7 +1815,7 @@ the code in order to make it a horizonal bar graph?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1852,7 +1903,7 @@ below.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1911,7 +1962,7 @@ the</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -1969,7 +2020,7 @@ is used in Plate 47? Update the code.</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -2033,7 +2084,7 @@ the graph was recreated by you?</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
+<div id="collapseSolution6" class="accordion-collapse collapse" aria-labelledby="headingSolution6" data-bs-parent="#accordionSolution6">
 <div class="accordion-body">
 <pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
@@ -2091,7 +2142,7 @@ any links that you are not going to use.
   INSTRUCTOR NOTE (on creativity in this exercise)
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>test of new text</p>
 <p>Part of this work will invovle creative attempts at making changes to
@@ -2316,7 +2367,7 @@ page.</li>
   HINT (hint)
   </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
 <p>If you are getting an error, make sure there are no spaces or other
 symbols between 2+2.</p>
@@ -2331,7 +2382,7 @@ symbols between 2+2.</p>
   SOLUTION
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>If everything is working correctly, you should be given a reported
 value of 4.</p>
@@ -2495,9 +2546,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/instructor/aio.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/instructor/aio.html",
-  "dateCreated": "2026-03-14",
-  "dateModified": "2026-03-17",
-  "datePublished": "2026-03-17"
+  "dateCreated": "2026-03-18",
+  "dateModified": "2026-03-18",
+  "datePublished": "2026-03-18"
 }
 
   </script><script>
