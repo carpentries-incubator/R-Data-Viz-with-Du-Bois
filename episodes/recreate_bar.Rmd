@@ -23,10 +23,8 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 - How can I read tabular data to plot a bar graph in R?
 - How can I use ggplot to organize and format a bar graph in R?
-- What are the characteristics of Du Bois data visualizations?
 - How can I maintain a reproducible record of my data visualizations?
 - How can I use color to improve accessibility of data visualizations?
-- How can I engage my own creativity in data visualizations?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -34,15 +32,12 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 - Create bar graph variations based on historical and contemporary tabular data.
 - Develop basic R code to create bar graphs.
-- Examine the characteristics of the data visualization from 1900 exhibitions.  
 - Use transparent, legible, and shareable record of how you created your own unique data visualizations.
-- Create an exported HTML file of your completed Notebook that your instructor may ask you to submit.
 - Differentiate color usage to improve legibility of findings from tabular data.
-- Implement your own creative ideas through data visualization.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Black Literacy After Emancipation
+## Black Literacy After Emancipation
 
 <div>
 <img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg?raw=true" width="700" />
@@ -54,17 +49,8 @@ This interactive exercise is inspired by the annual #DuBoisChallenge. The #DuBoi
 
 :::::::::::::::::
 
-## Why use R to create graphics?
 
-Data can usually be presented in a table or in a tabular format. You have probably seen tabular data in a spreadsheet software like Excel and to interact with the tabular data, you can click directly onto the table. While graphic user interface (GUI) programs such as Excel are commonly used, they can be limited in their user output. GUIs are often limited to a set of style parameters for creating graphics. Coding programs like R have more capabilities including graphics. In R, a data frame is is a data type that stores/holds tabular data. The first step to creating data visualization in R is to read tabular data into an R dataframe. This is like double clicking a file to open it in other computer programs like in Excel. But with R, we use code.
-
-<div>
-<img src="https://static.wixstatic.com/media/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg/v1/fill/w_1000,h_575,al_c,q_85,usm_0.66_1.00_0.01/e92683_9d309b2cc9824d1c8681ce947fd2b597~mv2.jpg" width="700" />
-</div>
-
-The R code to do this uses an <- arrow pointed at the name of the data frame and a read.csv function command followed by the web address within paraentheses where a csv (comma separated values) data file is located.
-
-### Presentation of the historical cross-national literacy data
+## Presentation of the historical cross-national literacy data
 
 Du Bois’ created many data portraits to share the story of Black Americans post-emancipation. The “Black Literacy After Emancipation” graphic at the top of this page shows mass education as one important strategy for furthering and deepining emancipation for Black Americans and others. In this workbook, you will recreate two bar plots: 1) Du Bois’ visualization of Black illiteracy rates in the US compared to illiteracy rates in other countries using 1900 data; and 2) Du Bois’ visualization using data on Black college attainment in the US today.
 
@@ -102,22 +88,23 @@ Typing just the name of the dataframe will list all of the data in the data fram
 
 ## Challenge 1: Reading the data
 
-If everything is working correctly, you should be given a table.
-Review the code and correct for errors.
+The web address of the data is: https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv
+Update the code below using the web address above.
 
-```d_literacy_country <- reading.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
+```d_literacy_country <- reading.csv("web_address_with_data/data_file_name.csv")
 
 d_literacy_country
+```
 
-Show me the solution
+::::::::::::::::: solution
 
-:::::::::::::::::::::::: solution 
+```r
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
-## Output
- 
-```d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")```
+d_literacy_country
+```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
@@ -151,6 +138,17 @@ The following code creates a simple bar graph using
 ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()
 ```
 
+```{r}
+library(ggplot2)
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
+ggplot(d_literacy_country, aes( 
+  x = country, 
+  y = illiteracy)) +
+  geom_col()
+```
+
 Within this expression, we set the parameters of which variable to be placed across the horizonal (using ```x=variable```) and vertical axes (using ```y=variable```). Typically, bar graphs have categories on the horizonal axis and the values as the vertical axis. However, there are instances where we want to create a horizonal bar graph where categorical values are on the vertical axis and the values are on the horizonal axis. Which bar graph did Du Bois used in Plate 47 presented at the top of the page?
 
 ::::::::::::::::::::::::::::::::::::: challenge 
@@ -166,10 +164,8 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-:::::::::::::::::::::::: solution 
+::::::::::::::::: solution
 
-## Output
- 
 ```
 ggplot(d_literacy_country, aes(
     x = illiteracy,
@@ -177,7 +173,7 @@ ggplot(d_literacy_country, aes(
     geom_col() 
 ```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
@@ -228,9 +224,7 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-:::::::::::::::::::::::: solution 
-
-## Output
+::::::::::::::::: solution
  
 ```
 ggplot(d_literacy_country, aes( 
@@ -241,7 +235,7 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
@@ -276,9 +270,7 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-:::::::::::::::::::::::: solution 
-
-## Output
+::::::::::::::::: solution
  
 ```
 ggplot(d_literacy_country, aes( 
@@ -290,7 +282,7 @@ ggplot(d_literacy_country, aes(
   theme_dubois()
 ```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
@@ -322,9 +314,7 @@ ggplot(d_literacy_country, aes(
   theme(text = element_text('serif'))
 ```
 
-:::::::::::::::::::::::: solution 
-
-## Output
+::::::::::::::::: solution
  
 ```
 ggplot(d_literacy_country, aes( 
@@ -338,7 +328,7 @@ ggplot(d_literacy_country, aes(
   theme(text = element_text('serif'))
 ```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
@@ -381,10 +371,8 @@ ggplot(d_literacy_country, aes(
     )
 ```
 
-:::::::::::::::::::::::: solution 
+::::::::::::::::: solution
 
-## Output
- 
 ```
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
@@ -403,7 +391,7 @@ ggplot(d_literacy_country, aes(
     )
 ```
 
-:::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::
 
