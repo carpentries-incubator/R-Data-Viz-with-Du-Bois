@@ -71,7 +71,6 @@ episodes:
 - chart.Rmd
 - recreate_bar.Rmd
 - biodiversity.Rmd
-- popmap.Rmd
 
 # Information for Learners
 learners:
