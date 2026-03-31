@@ -12,6 +12,7 @@ This is an introduction to data visualization for STEM fields using R and exampl
 Camila Alvarez
 Charlie Eaton
 Andrew Martin
+Anthony Starks
 
 To use this template to start a new lesson repository, 
 make sure you're logged into Github.   
