@@ -18,7 +18,7 @@ carpentry: 'incubator'
 carpentry_description: 'Lesson Description'
 
 # Overall title for pages.
-title: 'STEM Data Visualization and Du Boisian Methods with R' # FIXME
+title: 'STEM Data Visualization with Du Bois + R' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
 created: ~ # 2025-10-01: ( ~ means empty, replace with date formatted as above)
@@ -71,6 +71,7 @@ episodes:
 - chart.Rmd
 - recreate_bar.Rmd
 - biodiversity.Rmd
+- ai.Rmd
 
 # Information for Learners
 learners:
