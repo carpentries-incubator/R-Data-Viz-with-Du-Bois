@@ -3,11 +3,10 @@ site: sandpaper::sandpaper_site
 ---
 
 <div>
-<img src="https://github.com/carpentries-incubator/R-Data-Viz-with-Du-Bois/blob/main/episodes/files/du-bois-title.png?raw=true"
-width="400" />
+<img src="files/dubois + r.jpg">
 </div>
 
-This is a lesson for learning how to create scientific data visualizations in R.
+This is a lesson for learning how to create scientific data visualizations in **R**.
 The lesson uses examples from charts created by Black social scientist W.E.B. 
 Du Bois and a diverse team of collaborators for the 1900 Paris World Expo.
 
@@ -21,15 +20,9 @@ hand drawn charts are preserved in the U.S. Library of Congress.
 The lesson is designed for learners with little or no programming experience. The
 entire lesson can be taught in a two day workshop. Alternatively, selected
 episodes from the lesson can be taught over a period of around 3 hours of lecture
-and lab within a STEM course (see
-[Instructor Notes](https://github.com/carpentries-incubator/R-Data-Viz-with-Du-Bois/instructor/instructor-notes.html)
-for suggested lesson plans). The lesson starts with the social and scientific
-context in which Du Bois created the visualizations. The lesson then introduces
-key chart types for different kinds of data and visualization best practices. 
-Multiple episodes are then offered for recreating or adapting selected Du Bois
-charts with modern data, including bar graphs and statistical maps.
+and lab within a STEM course.
 
-This lesson part of a series of **[STEM Data Visualization and Du Boisian Methods](https://github.com/HigherEdData/Du-Bois-STEM/tree/main)**
+This lesson part of a series of **[Learning STEM Data Visualization with Du Bois](https://github.com/HigherEdData/Du-Bois-STEM/tree/main)**
 modules for learning data visualization in R, Python, Stata, and more. 
 Development and testing of the modules is funded by the National Science Foundation.
 
@@ -38,16 +31,10 @@ Development and testing of the modules is funded by the National Science Foundat
 Each episode of the lesson has more specific learning objectives. The overall
 lesson learning objectives are:
 
-* Understand the social and scientific context of visualizations as a process of
-scientific discovery (observation, hypothesis formation, data collection, analysis).
-* Practice creative and visual thinking as valuable methods for scientific
-discovery and communication.
-* Comprehend major chart types (pie bar, bar chart, line chart, statistical map)
-and their suitability for different levels of measurement and multivariate
-relationships.
-* Apply visualization best including accessible design and data story telling.
-* Create and modify a Du Bois chart using R to experience the value of coding
-to reproduce and adapt data visualizations in STEM.
+* Identify how data visualization promotes scientific discovery.
+* Appreciate early innovations in data visualization by W.E.B. Du Bois and other Black and women scientists in his Atlanta University Laboratory.  
+* Analyze the appropriate types of data visualization charts for different kinds of measurements, relationships, and scientific findings  
+* Engage in a creative process of data visualization in the style of W.E.B. Du Bois using R.
 
 ::::::::::::::::::::::::::::::::::::::::::  prereq
 

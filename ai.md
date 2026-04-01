@@ -1,0 +1,40 @@
+---
+title: "AI assisted plotting with R"
+teaching: 15
+exercises: 1
+---
+
+
+
+::::::::::::::::::: instructor
+
+### INSTRUCTOR NOTE
+
+::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
+- Why would you use AI to assist with visualization in R?
+- How can you use AI in ways that improve your comprehension of visualizations and code?
+- What are risks of using AI to help you do visualizations?
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+- Recreate the biodiversity and racial redlining bar chart from PNAS.
+- Use AI to help you write R code for the visualization.
+- Test and save the code using JupyterLyte..
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+### Biodiversity and redlining bar chart revisited.
+
+We're going to recreate this chart again.
+
+<div>
+<img src="https://github.com/HigherEdData/Du-Bois-STEM/blob/main/readings-images/biodiversity_redlining.png?raw=true" width="700" />
+</div>
+
+
+[r-markdown]: https://rmarkdown.rstudio.com/

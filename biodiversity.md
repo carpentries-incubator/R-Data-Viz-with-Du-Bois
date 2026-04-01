@@ -32,9 +32,7 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Black Literacy After Emancipation
-
-### Biodiversity and Neighborhood Redlining Grades
+### 1. Read in and check biodiversity redlining data
 
 Now that you've written code to graph Du Bois' literacy data, you can use that same code to make bar graphs of other data in the same style.
 
@@ -44,10 +42,223 @@ To see how this works, we will use data from an article in the Proceedings of th
 <img src="https://github.com/HigherEdData/Du-Bois-STEM/blob/main/readings-images/biodiversity_redlining.png?raw=true" width="700" />
 </div>
 
-To recreate the biodiversity graph in the style of Du Bois' literacy graph, we need to first import the biodiversity data for San Diego neighborhoods from a different **d_biodiversity_redlining.csv** file.
+To recreate the biodiversity graph in the style of Du Bois' literacy graph, we need to first import the biodiversity data for San Diego neighborhoods from a different **d_biodiversity_redlining.csv** file
+into or **df** data drame.
 
-Do do this, fill in the blank in the **url** line of code below to use the **d_biodiversity_redlining.csv** file name when reading in the data from our website.
+Do do this, fill in the blank in the **read.csv** line of code below to use the **d_biodiversity_redlining.csv** file name when reading in the data from our website.
 
-Then the line of code **d_biodiversity_redlining** will display the diversity scores by neighborhood redlining grade from the graph above.
+Then the line of code **df** to display the diversity scores by neighborhood redlining grade from the graph above.
+
+```R
+df<- read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/_____________")
+  
+df
+ ```
+
+<details> <summary><strong>Hints:</strong></summary>
+
+Make sure that you include our **d_** prefix in the filename and the dataframe name along with .csv at the end of the file name.
+
+</details>
+
+<details> <summary><strong>Answer:</strong></summary>
+
+The first line of code should be:
+    
+
+``` r
+df<-read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
+
+df
+```
+
+``` output
+  grade biodiversity
+1     A           48
+2     B           24
+3     C           12
+4     D            4
+```
+
+</details>
+
+<br><br>
+
+### 2. Edit the Du Bois Graph Code to Plot the Biodiversity and Neighborhood Redlining Grade Data
+
+After reading in the **d_biodiversity_redlining.csv** data, you can edit the graph code you used for the literacy code to graph the biodiversity and redlining data. Unlike the original biodiversity bar graph in the PNAS article, your code will graph the data as a horizontal bar graph.
+
+Fill in the blanks below to:
+
+1. Change the name of the data frame you are graphing with ggplot to the **d_biodiversity_redlining** data frame.
+2. Change the x variable you are graphing from literacy to the **biodiversity** variable.
+3. Change the y variable you are graphing to the redlining **grade** variable.
+4. Add your own name for the **Adapted by** line.
+
+```R
+
+{r, fig.width=11, fig.height=14}
+
+df<- read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
+
+library(ggplot2)
+
+options(repr.plot.width=22/2, repr.plot.height=28/2)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+# above is code you learned in the Recreate episode for setting up R to plot Du Bois' literacy data
+
+# 1. fill in the blank below to change the dataframe you are plotting
+ggplot(____________, aes(
+# 2. fill in the blanks below to graph the biodiversity variable
+    x = _________,
+# 3. fill in the blanks to graph the grade variable
+    y = reorder(________, biodiversity),
+    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
+)) +
+    geom_col(width = .5) +
+    theme_dubois() +
+       theme(text = element_text('serif')) +
+    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) +
+    labs(
+        title = "\nSan Diego Neighborhood Biodiversity Score (0-100) by Neighborhood Redlining Grade.\n",
+        subtitle = "Adapted by ________from Du Bois' graph of literacy in 1900 and from\n
+         'Historical redlining is associated with disparities in wildlife biodiversity in four California cities' (2024)\n\n"
+         
+# 4. Fill in the blank above to show the graph is adapted by you!
+    )
+    
+```
+
+<details> <summary><strong>Hints:</strong></summary>
+
+The new dataframe name is ```d_biodiversity_redlining```.
+    
+The x variable name is ```biodiversity```.
+
+</details>
+
+<details> <summary><strong>Answer:</strong></summary>
+
+
+``` r
+df<- read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
+
+library(ggplot2)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+ggplot(df, aes(
+    x = biodiversity,
+    y = reorder(grade, biodiversity),
+    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
+)) +
+    geom_col(width = .5) +
+    theme_dubois() +
+       theme(text = element_text('serif')) +
+    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) +
+    labs(
+        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
+        by Neighborhood Redlining Grade. \n",
+        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
+        and from 'Historical redlining is associated with disparities
+        in wildlife biodiversity in four California cities' (2024) \n"
+    )
+```
+
+<img src="fig/biodiversity-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+
+</details>
+
+<br><br>
+
+### 3. Improve Accessibility by Adding X Axis Grid Lines and Removing the Use of Red and Green
+
+Some of Du Bois' graphing choices might not make sense for graphs you want to make. 
+For example, Du Bois doesn't provide labels or grid lines to make it easy to understand what the range of biodiversity scores are by neighborhood redlining grade. The code cell below adds two lines of code for adding the grid lines.
+
+In addition, red and green bars are difficult to differentiate for those with colorblindness. Try removing the line of code below that set the bar colors to red and green. This should change the bar colors back to default orange and teal ggplot colors that are colorblind accessible.
+
+If you want to customize the chart further to add your own style twist, try a google search or chatGPT query. For a chatGPT query, you could copy and paste the code from below and ask, **how could I change this R ggplot code to change the background color to beige?**
+
+```R
+{r, fig.width=5.5, fig.height=7}
+df<- read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
+
+library(ggplot2)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+ggplot(df, aes(
+    x = biodiversity,
+    y = reorder(grade, biodiversity),
+    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
+)) +
+    geom_col(width = .5) +
+    theme_dubois() +
+       theme(text = element_text('serif')) +
+    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) + ## delete this line
+    labs(
+        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
+        by Neighborhood Redlining Grade. \n",
+        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
+        and from 'Historical redlining is associated with disparities
+        in wildlife biodiversity in four California cities' (2024) \n"
+    ) +
+  # Below is code to add grid lines with labels
+  scale_x_continuous(
+        breaks = seq(0, 60, by = 10),  # Set tick positions every 10 units
+    ) +
+    theme(
+        axis.text.x = element_text(size = 12),
+        panel.grid.major.x = element_line(color = "lightgray")
+        )
+```
+
+<details> <summary><strong>Answer:</strong></summary>
+
+
+``` r
+df<- read.csv(
+  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
+
+library(ggplot2)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+ggplot(df, aes(
+    x = biodiversity,
+    y = reorder(grade, biodiversity),
+    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
+)) +
+    geom_col(width = .5) +
+    theme_dubois() +
+       theme(text = element_text('serif')) +
+    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) + ## delete this line
+    labs(
+        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
+        by Neighborhood Redlining Grade. \n",
+        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
+        and from 'Historical redlining is associated with disparities
+        in wildlife biodiversity in four California cities' (2024) \n"
+    ) +
+  # Below is code to add grid lines with labels
+  scale_x_continuous(
+        breaks = seq(0, 60, by = 10),  # Set tick positions every 10 units
+    ) +
+    theme(
+        axis.text.x = element_text(size = 12),
+        panel.grid.major.x = element_line(color = "lightgray")
+        )
+```
+
+<img src="fig/biodiversity-rendered-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+
+</details>
 
 [r-markdown]: https://rmarkdown.rstudio.com/
