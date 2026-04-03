@@ -9,7 +9,7 @@ title: Setup
 - Go very slowly in the "Getting set up" section. Make sure everyone is following
   along (remind learners to use the stickies). Plan with the helpers at this
   point to go around the room, and be available to help. It's important to make
-  sure that learners are in the correct working directory, and that they create
+  sure that learners are in the correct working directory, and that they crgeate
   a `data` (all lowercase) subfolder.
 
 ::::::::::::
@@ -25,21 +25,10 @@ FIXME: place any data you want learners to use in `episodes/data` and then use
 Links to data sets are provided within each episode to read them into R data
 frames directly from source urls.
 
-## Setup instructions
+## Setup instructions for R Studio
 
-Coding exercises for this lesson can either be done 1) on your own computer using 
-R and R studio, or 2) using a JupyterLite Notebook with an R kernel.
-
-The later option requires no installation. Just follow this 
-(JupyterLite)[https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html] link.
-
-If you are a beginner or an instructor who wants beginner students to be able to
-do exercises independently, we recommend that you use the R tutorials with
-guided JupyterLyte Notebooks at the
-[Du Bois Module Site](https://highereddata.github.io/STEM-Data-Visualization-and-Du-Bois/).
-
-For those who want to do more data visualization and work with R beyond this lesson,
-we recommend using R and R studio. If you have not yet installed R and R studio, you can do so by following the instructions below. 
+For students using R Studio on their own computers, follow these directions in 
+if you have not already installed R and R Studio.
 
 **R** and **RStudio** are separate downloads and installations. R is the
 underlying statistical computing environment, but using R alone is no

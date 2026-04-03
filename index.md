@@ -44,34 +44,14 @@ lesson learning objectives are:
 
 There are three ways to engage with the coding portions of this lesson:
 
-1. Use Jupyter Notebooks with an R Kernel on the Du Bois Cloud Jupyter Hub.
-2. Use Jupyter Notebooks with an R Kernel on students' own computers.
-3. Use R Studio on students' own computers.
-
-The Du Bois Cloud option can be done with any web browser and requires no
-installation. We recommend that option if students are not expecting to do further
-data visualization using R for their courses or research.
-
-#### Prerequisites for using students' own computers
-
-For options 2 and 3 using students' own computers, follow the directions in the 
-"[Setup](setup.html)".
-
-For option 2, students will need **Jupyter Lab**, **R**, and a Jupyter **R Kernel**.
-
-For option 3, students will need and **R** and **RStudio**.
-<br>To most effectively use these materials, please make sure to install
-everything *before* working through this lesson.
-
+1. Use R Studio or or your preferred R editor on your own computer. **Recommended 
+for students who already use R or plan to continue doing so.**
+2. Use a fresh [JupyterLite Notebook](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html)
+in your web browser with no installation. **Recommended for students who do not already use R buy may do so more in the future.**
+3. Use JupyterLite guided tutorials at the
+[Du Bois Module Site](https://highereddata.github.io/STEM-Data-Visualization-and-Du-Bois/).
+**Recommended when instructors wants beginner students to be able to do exercises independently with out an instructor present.**
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-**Resources**
-1. R-Social Sci Index Reference
-- https://github.com/datacarpentry/r-socialsci/blob/main/index.md
-
-2. Component Guide for Building Out Formatting Boxes for GitHub
-- https://carpentries.github.io/sandpaper-docs/instructor/component-guide.html
-
-[workbench]: https://carpentries.github.io/sandpaper-docs
 
