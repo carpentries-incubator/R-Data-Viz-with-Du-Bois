@@ -1,5 +1,5 @@
 ---
-title: 'Context: Why Learn Data Visualization from Du Bois?'
+title: 'Data Visualization Now'
 teaching: 10
 exercises: 10
 ---
@@ -17,12 +17,14 @@ of the Du Bois charts and the Paris World Expo, and 2) examples of Du Bois chart
 We provide these images within the lesson site so that you can open them in separate
 browser tabs for display while you lecture. 
 
-Alternatively, you can copy and modify [this Google Slides deck](https://docs.google.com/presentation/d/1mVh4c4bYjM5DDp6ix33fo1ZYS8NE15QdKYOUB1lx7H4/edit?slide=id.g2f60d06f563_0_22#slide=id.g2f60d06f563_0_22) with all of the images for this episode.
-
 Subsequent episodes will have links to separate Google Slide Decks with their 
 images.
 
 ::::::::::::
+
+### Learning from the Innovations of W.E.B. Du Bois
+
+This content is also available in [Google Slides](https://docs.google.com/presentation/d/1AeePkTUoLgjxTNNlPH3IoIfZ4z3fH_1JNuowaa914jU/edit?usp=sharing) that can be copied and edited.
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
@@ -43,10 +45,6 @@ images.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 # Context
-
-
-
-
 
 Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
 
