@@ -21,15 +21,25 @@ FIXME: place any data you want learners to use in `episodes/data` and then use
        a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
        link to it, replacing the example.com link.
 -->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
+
+Links to data sets are provided within each episode to read them into R data
+frames directly from source urls.
 
 ## Setup instructions
 
-Coding exercises for this lesson can either be done 1) on your own computer using R and R studio, or 2) using a Jupyter Notebook with an R Kernel on the Du Bois Cloud.
+Coding exercises for this lesson can either be done 1) on your own computer using 
+R and R studio, or 2) using a JupyterLite Notebook with an R kernel.
 
-Using Notebooks on the Du Bois cloud does not require any set up or installation. You can simply follow hyperlinks provided in this lesson that will open a Notebook in any web browser.
+The later option requires no installation. Just follow this 
+(JupyterLite)[https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html] link.
 
-For those who want to do more data visualization and work with R beyond this lesson, we recommend using R and R studio. If you have not yet installed R and R studio, you can do so by following the instructions below. 
+If you are a beginner or an instructor who wants beginner students to be able to
+do exercises independently, we recommend that you use the R tutorials with
+guided JupyterLyte Notebooks at the
+[Du Bois Module Site](https://highereddata.github.io/STEM-Data-Visualization-and-Du-Bois/).
+
+For those who want to do more data visualization and work with R beyond this lesson,
+we recommend using R and R studio. If you have not yet installed R and R studio, you can do so by following the instructions below. 
 
 **R** and **RStudio** are separate downloads and installations. R is the
 underlying statistical computing environment, but using R alone is no
