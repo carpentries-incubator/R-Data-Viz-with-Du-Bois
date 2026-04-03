@@ -22,7 +22,7 @@ entire lesson can be taught in a two day workshop. Alternatively, selected
 episodes from the lesson can be taught over a period of around 3 hours of lecture
 and lab within a STEM course.
 
-This lesson part of a series of **[Learning STEM Data Visualization with Du Bois](https://github.com/HigherEdData/Du-Bois-STEM/tree/main)**
+This lesson part of a series of **[Learning STEM Data Visualization with Du Bois](https://highereddata.github.io/STEM-Data-Visualization-and-Du-Bois/)**
 modules for learning data visualization in R, Python, Stata, and more. 
 Development and testing of the modules is funded by the National Science Foundation.
 

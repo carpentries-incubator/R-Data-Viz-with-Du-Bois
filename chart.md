@@ -113,10 +113,6 @@ within categories for another variable (race).
 
 ![](files/fanchart.jpg){width=500px}
 
-This diagram about many variations of (chart types for different types of data and analyses:)[https://github.com/HigherEdData/Du-Bois-STEM]
-
-![](files/chart-types.png)
-
 
 
 ### Chart Types: Bar Charts
@@ -163,6 +159,12 @@ different ranges of continous measures (like Black population size)
 between geographic units.
 
 ![](files/statmap.jpg){width=500px}
+
+
+### Other chart variants
+This diagram offers a tool for choosing between additional variants of (chart types for different types of data and analyses:)[https://github.com/HigherEdData/Du-Bois-STEM]
+
+![](files/chart-types.png)
 
 
 
