@@ -12,6 +12,6 @@
 "episodes/ai.Rmd" "2363f234a9590ba008b9224490747f05" "site/built/ai.md" "2026-04-01"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2026-03-31"
 "learners/reference.md" "1c7cc4e229304d9806a13f69ca1b8ba4" "site/built/reference.md" "2026-03-31"
-"learners/setup.md" "6e9273bfab536c9c471b34a606d8d6a0" "site/built/setup.md" "2026-03-31"
+"learners/setup.md" "cfb39f21a049e03aa0d95408162c9870" "site/built/setup.md" "2026-04-03"
 "profiles/learner-profiles.md" "60b93493cf1da06dfd63255d73854461" "site/built/learner-profiles.md" "2026-03-31"
 "renv/profiles/lesson-requirements/renv.lock" "0e89a254b2cc06859075090860fa8580" "site/built/renv.lock" "2026-03-31"
