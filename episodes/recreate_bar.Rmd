@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### INSTRUCTOR NOTE (`on creativity in this exercise`)
 
-Part of this work will invovle creative attempts at making changes to data visualizations. While the first few exercises are intended to help students become familiar with the basic steps, the final independent exercise is meant to introduce more gaps. If possible, emphasize to students that if they struggle on the final independent exercise it is not about making a perfect graph, but learning how to make changes on their own terms..
+Part of this work will invovle creative attempts at making changes to data visualizations. While the first few exercises are intended to help students become familiar with the basic steps, the final independent exercise is meant to introduce more gaps. If possible, emphasize to students that if they struggle on the final independent exercise it is not about making a perfect graph, but learning how to make changes on their own terms.
 
 ::::::::::::::::::::::::::::::
 
@@ -91,10 +91,13 @@ Typing just the name of the dataframe will list all of the data in the data fram
 The web address of the data is: https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv
 Update the code below using the web address above.
 
-```d_literacy_country <- reading.csv("web_address_with_data/data_file_name.csv")
+```
+d_literacy_country <- reading.csv("web_address_with_data/data_file_name.csv")
 
 d_literacy_country
 ```
+
+:::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::: solution
 
@@ -105,8 +108,6 @@ d_literacy_country
 ```
 
 :::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::
 
 ## Recreating a Bar Graph
 
