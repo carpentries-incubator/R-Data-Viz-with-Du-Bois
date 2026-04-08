@@ -170,7 +170,7 @@ ggplot(df, aes(
     )
 ```
 
-<img src="fig/biodiversity-rendered-unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
+<img src="fig/biodiversity-rendered-unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" />
 
 </details>
 
@@ -257,7 +257,7 @@ ggplot(df, aes(
         )
 ```
 
-<img src="fig/biodiversity-rendered-unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="fig/biodiversity-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
 
 </details>
 

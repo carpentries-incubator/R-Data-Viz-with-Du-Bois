@@ -149,7 +149,7 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-1-1.png" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" />
 
 Within this expression, we set the parameters of which variable to be placed across the horizonal (using ```x=variable```) and vertical axes (using ```y=variable```). Typically, bar graphs have categories on the horizonal axis and the values as the vertical axis. However, there are instances where we want to create a horizonal bar graph where categorical values are on the vertical axis and the values are on the horizonal axis. Which bar graph did Du Bois used in Plate 47 presented at the top of the page?
 
