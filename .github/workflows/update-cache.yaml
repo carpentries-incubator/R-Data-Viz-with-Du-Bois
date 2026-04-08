@@ -73,6 +73,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       RENV_PATHS_ROOT: ~/.local/share/renv/
+      RENV_CONFIG_CACHE_ENABLED: false
+      RENV_CONFIG_SNAPSHOT_VALIDATE: false
     steps:
 
       - name: "Checkout Lesson"
