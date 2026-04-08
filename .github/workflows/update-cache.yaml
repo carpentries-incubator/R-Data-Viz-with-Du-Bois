@@ -7,9 +7,6 @@ on:
         description: 'Who triggered this build (enter github username to tag yourself)?'
         required: true
         default: 'monthly run'
-  schedule:
-    # Run every tuesday
-    - cron: '0 0 * * 2'
 
 jobs:
   preflight:
@@ -67,8 +64,8 @@ jobs:
 
   update_cache:
     name: "Update Package Cache"
+    if: ${{ false }}
     needs: check_token
-    if: ${{ needs.check_token.outputs.repo== 'true' }}
     runs-on: ubuntu-22.04
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
