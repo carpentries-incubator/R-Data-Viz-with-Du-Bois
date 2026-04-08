@@ -91,7 +91,7 @@ jobs:
         id: update
         uses: carpentries/actions/update-lockfile@main
         with:
-          cache-version: ${{ secrets.CACHE_VERSION }}
+          cache-version: 2026-04-08-renv-reset
 
       - name: Create Pull Request
         id: cpr
