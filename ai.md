@@ -8,13 +8,13 @@ exercises: 1
 
 ::::::::::::::::::: instructor
 
-### INSTRUCTOR NOTE
+## INSTRUCTOR NOTE
 
 ::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- Why would you use AI to assist with visualization in R?
+- What are potential accessibility benefits of AI for data visualization?
 - How can you use AI in ways that improve your comprehension of visualizations and code?
 - What are risks of using AI to help you do visualizations?
 
@@ -23,21 +23,22 @@ exercises: 1
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Recreate the biodiversity and racial redlining bar chart from PNAS.
-- Use AI to help you write R code for the visualization.
+- Use key statistical and visualization concepts when employing AI to help you write R code
 - Test and save the code using R Studio or Jupyter Lite.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Biodiversity and redlining bar chart revisited.
+## A. Biodiversity and redlining bar chart revisited.
 
 In the previous episode, we learned how to adapt the code we wrote for the Du Bois
 literacy bar chart to recreate a bar chart of biodiversity data in the Du Bois style.
 
 We're going to recreate the bar chart again by using AI to:
-* write R code for generating the chart in the Du Boisian style.
-* gain an understanding of the chart by deleting portions of the code to make the
+
+1. write R code for generating the chart in the Du Boisian style.
+2. write comments explaining the code in the chart.
+3. gain an understanding of the chart by manually deleting portions of the code to make the
 graph simpler, and debugging problems that arise when we delete necessary parts of the code.
-* write comments explaining the code in the chart.
 
 As noted in the prior episode, the biodiversity bar chart below comes from an article in the Proceedings of the National Academy of Science (PNAS) **[here](https://www.pnas.org/doi/pdf/10.1073/pnas.2321441121)**  The bar chart shows lower biodiversity in San Diego neighborhoods that were redlined in the middle of the 20th century because they had large numbers of non-white residents. The home owners loan corporation (HOLC) tracked neighborhoods that would have been redlined by the Federal Housing Adminsation and local lenders, making it harder to get affordable homeloans in the neighborhood and "serving as a proxy for numerous prior and existing racialized policies at the federal, state, and local level that reinforced racial segregation, discrimination, and disinvestment" (Estian et al. 2024). The chart shows lower biodersity scores (0-100) in neighborhoods with lower A to D HOLC letter grades (indicating worse redlining treatment of neighborhoods).
 
@@ -45,34 +46,51 @@ As noted in the prior episode, the biodiversity bar chart below comes from an ar
 <img src="https://github.com/HigherEdData/Du-Bois-STEM/blob/main/readings-images/biodiversity_redlining.png?raw=true" width="700" />
 </div>
 
-The latest AI tools allow us to write commands for AI models using natural language.
+## B. Potential benefits and risks in AI assisted visualization
+
+**Potential benefits** from AI are possible from ways it can make
+computational visualization more accessible to beginners who do not yet know
+a language like R:
+
+* The latest AI tools allow us to write commands for AI models using **natural language.**
 So when we write an AI prompt, it's like writing code but in the language we use
 in everyday discussion.
+* AI will often carry out natural language prompts using the same languages we use
+for data visualization like **R** and **Python**.
 
-If we save and consistently reuse the natural language commands we write for AI models,
-we will tend to get reproduceable results (but not always for reasons you can read
-about elsewhere).
+**Major risks** also exist when using AI for data visualization:
 
-So our first step is to write a natural language prompt (i.e. command) asking an AI tool to recreate
-the biodiversity chart in the Du Bois style. So:
+* While AI models can generate reproduceable visualizations, they require consistent natural
+language commands based in an understanding of visualization practices and statistics.
+Even then, AI can produce inconsistent and incorrect results.
+* It's always important to check results from AI by requesting
+and reviewing code in **R** that shows how a visualization is created.
+* If one does not know fundamental statistical or programming concepts, it is difficult
+or impossible to check the reliability of AI generated code and charts.
 
-1. Open ChatGPT or Claude in another browser window.
-2. Write the command below in the chat field and submit it.
+<br><br>
 
-```ChatGPT
-give me code for recreating this figure in R
-using only the tidyverse library:
-https://github.com/HigherEdData/Du-Bois-STEM/blob/main/readings-images/biodiversity_redlining.png?raw=true
- ```
+## C. An epic fail without fundamental concepts
 
-Next, copy and paste the code into an .Rmd file or your a [JupyterLite Notebook cell].
+To see the risk of using AI without knowledge of key concepts, we'll ask AI tools to help recreate
+the biodiversity chart:
 
-After running the code, click the  dropdown below to see if you get the same
-code and results we did.
+1. Open ChatGPT, Claude, or Gemini in another browser window.
+2. Right click the image above and paste it into the AI chat.
+3. Write and submit the command below in the chat, copy and past the url for our data.
+
+**AI Prompt:** *give me code for generating a bar chart in R using only the tidyverse library with this data:*
+*https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv*
+ 
+Next, copy and paste the code into an .Rmd file or your [JupyterLite Notebook](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html).
+
+After running the code, click the dropdown below to see if you get the same
+code and epic failure of a result that we did.
+
+Note, if you are using Jupyter Lite and AI suggests using ```read_csv```, instead
+use ```read.csv.```
 
 <details> <summary><strong>Code and results ChatGPT gave the authors:</strong></summary>
-
-Here's the code we co
     
 
 ``` r
@@ -93,53 +111,14 @@ library(tidyverse)
 ```
 
 ``` r
-# ---- Example data (replace with actual values from figure) ----
-df <- tibble(
-  group = c("A", "B", "C", "D", "E"),
-  value = c(10, 25, 40, 30, 15)
-)
+df <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv")
 
-# ---- Order factor to match visual (important!) ----
-df <- df %>%
-  mutate(group = fct_reorder(group, value))
-
-# ---- Plot ----
-ggplot(df, aes(x = value, y = group)) +
-  
-  # bars
-  geom_col(
-    fill = "#b2182b",   # deep red (Du Bois style)
-    width = 0.8
-  ) +
-  
-  # value labels inside bars
-  geom_text(
-    aes(label = value),
-    hjust = 1.2,
-    color = "white",
-    size = 5
-  ) +
-  
-  # expand limits so labels fit
-  scale_x_continuous(expand = expansion(mult = c(0, 0.05))) +
-  
-  # titles
-  labs(
-    title = "Biodiversity and Redlining",
-    x = NULL,
-    y = NULL
-  ) +
-  
-  # minimal theme
-  theme_minimal(base_size = 14) +
-  
-  theme(
-    panel.grid = element_blank(),
-    axis.text.y = element_text(face = "bold"),
-    axis.text.x = element_blank(),
-    axis.ticks = element_blank(),
-    plot.title = element_text(face = "bold", hjust = 0.5)
-  )
+df %>%
+  count(grade) %>%
+  ggplot(aes(x = grade, y = n)) +
+  geom_col(fill = "steelblue") +
+  labs(x = "Grade", y = "Count") +
+  theme_minimal()
 ```
 
 <img src="fig/ai-rendered-unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" />
@@ -148,338 +127,384 @@ ggplot(df, aes(x = value, y = group)) +
 
 <br><br>
 
-### 2. Correct the values for each bar
+## D. Using concepts for better natural language prompts
 
-ChatGPT gave us code that used made up values and 5 letter grades instead of 4.
+To use AI to reproduce the original graph, we need to write a natural language prompt
+that better communicates the content of our data. This requires some key concepts
+in statistics and graphing, namely that bar heights typically represent a statistical
+measure of a variable within different categories. But what statistical measure?
 
-Can you correct that in the code yourself?
+Look at the data from the csv as reported in the ChatGPT output. Or check it yourself by using ```df```
+to print the full data frame. Then think about these questions:
 
-Here are the correct biodiversity scores by letter grade:
+* What data is contained in each row of the **grade** column and the 
+**biodiversity** column?
+* How does the original chart represent this data?
+* How does the ChatGPT chart treat the data differently than the original chart above?
+* What clue does the R code from ChatGPT provide about the statistic it is plotting?
+* What is a better AI prompt for generating R code?
 
-A - 48
-B - 24
-C - 12
-D - 4
+<details> <summary><strong>Click here for some answers:</strong></summary>
 
-<details> <summary><strong>Click here you can't figure it out yourself:</strong></summary>
-    
+The data in the csv collapses the author's original data into four observations,
+one for each HOLC redlining letter grade. The biodiversity column then contains
+the **mean biodiversity score** for each neighborhood receiving one of the four letter
+grades.
+
+The original bar chart plots a bar with a 
+**bar height corresponding to the mean biodiversity score** for each letter grade.
+
+ChatGPT instead assumed that we were plotting bars that represent a **count** of how
+many observations there were for each letter grade -- 1 for each letter grade.
+
+Try a revised prompt that communicates the form of the data and the statistics
+that bars should represent.
+
+**AI prompt:** *treat the biodiversity column values as the the height of the bar. they represent*
+*the mean biodiversity score.*
+
+Don't just try the code AI gives you back, but also read its supporting explanations
+to see if they make sense.
+
+ChatGPT provided the authors with this code and result that more closely resembles
+the original graph:
+
 
 ``` r
 library(tidyverse)
-   # ---- this puts actual biodiversity values in the dataframe by grade ----
-df <- tibble(
-  group = c("A", "B", "C", "D"),
-  value = c(48, 24, 12, 4)
-)
-df
+
+# load data
+df <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv")
+
+# check column names
+glimpse(df)
 ```
 
 ``` output
-# A tibble: 4 × 2
-  group value
-  <chr> <dbl>
-1 A        48
-2 B        24
-3 C        12
-4 D         4
+Rows: 4
+Columns: 2
+$ grade        <chr> "A", "B", "C", "D"
+$ biodiversity <int> 48, 24, 12, 4
 ```
+
+``` r
+# bar chart: biodiversity values as bar height
+df %>%
+  ggplot(aes(
+    x = reorder(grade, biodiversity),  # grouping variable
+    y = biodiversity                   # mean biodiversity score
+  )) +
+  geom_col(fill = "steelblue") +
+  labs(
+    title = "Mean Biodiversity Score by Redlining Grade",
+    x = "Redlining Grade",
+    y = "Mean Biodiversity Score"
+  ) +
+  theme_minimal()
+```
+
+<img src="fig/ai-rendered-unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" />
+
 </details>
 
 <br><br>
 
-3. Add comments that explain what the code does
+## E. Add comments that explain what the code does
 
-AI tends to be good at adding comments to code that explain what each line of code
-does.
+Once you think the code has the fundamentals right, you can use AI to help explain
+what each line of code does to help you read through the code and make sure
+you understand what it's doing.
 
-Try this by copy and pasting your revised code into your AI chat with the prompt:
+Let's combine this with a small fix to the bar ordering in the prior graph:
 
-```
-Add comments that explain what is done by each line of this R code.
-```
+**AI Prompt:** *Change the order of the bars so that they are in order of grade from A to D. Add commentsthat explain what is*
+*done by each line R code for the graph.*
 
 <details> <summary><strong>Click to see the commented code ChatGPT gave us back:</strong></summary>
     
 
 ``` r
+# load the tidyverse (includes ggplot2, dplyr, readr, etc.)
 library(tidyverse)
-   # ---- this puts actual biodiversity values in the dataframe by grade ----
-df <- tibble(
-  group = c("A", "B", "C", "D"),
-  value = c(48, 24, 12, 4)
-)
-df
+
+# read the CSV file directly from the provided URL into a dataframe
+df <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv")
+
+# inspect the structure of the dataset to confirm column names and types
+glimpse(df)
 ```
 
 ``` output
-# A tibble: 4 × 2
-  group value
-  <chr> <dbl>
-1 A        48
-2 B        24
-3 C        12
-4 D         4
+Rows: 4
+Columns: 2
+$ grade        <chr> "A", "B", "C", "D"
+$ biodiversity <int> 48, 24, 12, 4
 ```
+
+``` r
+# convert the grade column into an ordered factor so bars appear A → D
+df <- df %>%
+  mutate(
+    grade = factor(grade, levels = c("A", "B", "C", "D"))
+  )
+
+# create the bar chart
+df %>%
+  ggplot(aes(
+    x = grade,          # place redlining grade on the x-axis
+    y = biodiversity    # use biodiversity values as bar height (mean scores)
+  )) +
+  geom_col(             # create bars with heights equal to y values
+    fill = "steelblue"  # set bar color
+  ) +
+  labs(
+    title = "Mean Biodiversity Score by Redlining Grade",  # chart title
+    x = "Redlining Grade",                                 # x-axis label
+    y = "Mean Biodiversity Score"                          # y-axis label
+  ) +
+  theme_minimal()      # apply a clean, minimal theme
+```
+
+<img src="fig/ai-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
 </details>
 
-4. Learn by commenting out unnecessary code.
+<br><br>
 
-Legible code is succinct code. You can learn what different parts of this code
+## F. Learn by commenting out unnecessary code.
+
+**Legible code is succinct code.** You can better learn what different parts of this code
 do by commenting out lines that you think are unnecessary. In R, we do this
 by adding the **#** comment symbol before a line of code.
 
 Then you can debug errors this creates or delete the **#** to restore the code.
 
-Sometimes, different lines of code are connected to each other. So if comment out
+Sometimes, different lines of code are connected to each other. So if you comment out
 or change a line of code, you have to change another.
 
-What do you think can be just commented out
+What do you think can be just commented out without breaking other essential code?
 
-<details> <summary><strong>What we comment out and its output:</strong></summary>
+<details> <summary><strong>What we comment out:</strong></summary>
+If you try commenting out this code, you'll find it's totally unnecessary.
+
+```r
+# convert the grade column into an ordered factor so bars appear A → D
+ df <- df %>%
+  mutate(
+    grade = factor(grade, levels = c("A", "B", "C", "D"))
+  )
+```
+
+</details>
+
+<br><br>
+
+## G. Using AI for stylization
+
+Once you have R code for a chart with fundamentals you understand, you will be
+on stronger footing to ask AI to help modify your code and graph in a particular style.
+
+Copy and paste your code into the prompt and try this:
+
+**AI prompt:** *revise this code to make the chart in the Du Bois style described in*
+*the Du Bois visualization tool kit.*
+
+**AI prompt:** *revise this code to make the chart according to Kieran Healy's*
+*best practices of making figures*
+
+<details> <summary><strong>ChatGPT response authors got for Du Bois style:</strong></summary>
+
+Chat GPT really wants to put back in extraneous mutation code. 
+
+To get more Du Boisian, you would need to direct AI to make more changes like
+using horizontal bars and the tall poster aspect ratio of Du Bois' original
+posters.
+
 
 ``` r
+# load tidyverse
 library(tidyverse)
 
-# ---- Example data (replace with actual values from figure) ----
-df <- tibble(
-  group = c("A", "B", "C", "D"),
-  value = c(48, 24, 12, 4)
-)
+# read data (use read_csv for tidyverse consistency)
+df <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv")
 
-# ---- Order factor to match visual (important!) ----
+# inspect structure
+glimpse(df)
+```
+
+``` output
+Rows: 4
+Columns: 2
+$ grade        <chr> "A", "B", "C", "D"
+$ biodiversity <int> 48, 24, 12, 4
+```
+
+``` r
+# ensure grade is ordered
 df <- df %>%
-  mutate(group = fct_reorder(group, value))
+  mutate(grade = factor(grade, levels = c("A", "B", "C", "D")))
 
-# ---- Plot ----
-ggplot(df, aes(x = value, y = group)) +
-  
-  # bars
+# summarize biodiversity by grade (important!)
+summary_df <- df %>%
+  group_by(grade) %>%
+  summarize(mean_biodiversity = mean(biodiversity, na.rm = TRUE))
+
+# Du Bois–style bar chart
+ggplot(summary_df, aes(x = grade, y = mean_biodiversity, fill = grade)) +
   geom_col(
-    fill = "#b2182b",   # deep red (Du Bois style)
-    width = 0.8
+    width = 0.65,
+    color = "black",
+    linewidth = 1.2
   ) +
-  
-  # value labels inside bars
   geom_text(
-    aes(label = value),
-    hjust = 1.2,
-    color = "white",
+    aes(label = round(mean_biodiversity, 1)),
+    vjust = -0.6,
+    family = "serif",
     size = 5
   ) +
-  
-  # expand limits so labels fit
-  scale_x_continuous(expand = expansion(mult = c(0, 0.05))) +
-  
-  # titles
+  scale_fill_manual(values = c(
+    "A" = "#2A9D8F",   # teal
+    "B" = "#E9C46A",   # gold
+    "C" = "#F4A261",   # orange
+    "D" = "#E63946"    # red
+  )) +
   labs(
-    title = "Biodiversity and Redlining",
+    title = "Biodiversity by Redlining Grade",
+    subtitle = "A Du Bois–Inspired Visualization",
     x = NULL,
     y = NULL
   ) +
-  
-  # minimal theme
-  theme_minimal(base_size = 14) +
-  
   theme(
+    # warm background (key Du Bois look)
+    plot.background = element_rect(fill = "#F5E6C8", color = NA),
+    panel.background = element_rect(fill = "#F5E6C8", color = NA),
+
+    # remove gridlines completely
     panel.grid = element_blank(),
-    axis.text.y = element_text(face = "bold"),
-    axis.text.x = element_blank(),
+
+    # bold, centered titles
+    plot.title = element_text(
+      family = "serif",
+      face = "bold",
+      size = 20,
+      hjust = 0.5
+    ),
+    plot.subtitle = element_text(
+      family = "serif",
+      size = 13,
+      hjust = 0.5
+    ),
+
+    # x-axis styling (bold category labels)
+    axis.text.x = element_text(
+      family = "serif",
+      face = "bold",
+      size = 14
+    ),
+
+    # remove y-axis text/ticks for cleaner look
+    axis.text.y = element_blank(),
     axis.ticks = element_blank(),
-    plot.title = element_text(face = "bold", hjust = 0.5)
+
+    # emphasize baseline only
+    axis.line.x = element_line(color = "black", linewidth = 1.2),
+
+    # remove legend (color already encoded in x)
+    legend.position = "none"
   )
 ```
 
 <img src="fig/ai-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" />
+</details>
 
-<details> <summary><strong>Revised code and output:</strong></summary>
+<br><br>
+
+<details> <summary><strong>ChatGPT response authors got for Healy style::</strong></summary>
+
+Healy prompt adds some notes on sourcing and explanation. ChatGPT again adds unnecessary code
+to summarize the data rather than plot the data as is.
+
 
 ``` r
+# load tidyverse
 library(tidyverse)
 
-# Example data (replace with your actual dataset)
-df <- tibble(
-  grade = factor(c("A", "B", "C", "D"), levels = c("A","B","C","D")),
-  biodiversity = c(120, 95, 70, 45)
-)
+# read data
+df <- read_csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv")
+```
 
-# Du Bois–inspired palette (closer to typical redlining colors)
-du_bois_palette <- c(
-  "A" = "#2E8B57",  # green
-  "B" = "#F2C94C",  # yellow/gold
-  "C" = "#E67E22",  # orange
-  "D" = "#C0392B"   # red
-)
+``` output
+Rows: 4 Columns: 2
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (1): grade
+dbl (1): biodiversity
 
-ggplot(df, aes(x = grade, y = biodiversity, fill = grade)) +
-  
-  # Bars with strong outline
-  geom_col(width = 0.7, color = "black", linewidth = 1.2) +
-  
-  # Value labels above bars
-  geom_text(aes(label = biodiversity),
-            vjust = -0.6,
-            size = 5,
-            fontface = "bold") +
-  
-  # Custom colors
-  scale_fill_manual(values = du_bois_palette) +
-  
-  # Add space above bars
-  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
-  
-  # Labels (Du Bois style = bold, declarative)
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+```
+
+``` r
+# check structure
+glimpse(df)
+```
+
+``` output
+Rows: 4
+Columns: 2
+$ grade        <chr> "A", "B", "C", "D"
+$ biodiversity <dbl> 48, 24, 12, 4
+```
+
+``` r
+# clean + summarize data properly
+summary_df <- df %>%
+  mutate(grade = factor(grade, levels = c("A", "B", "C", "D"))) %>%
+  group_by(grade) %>%
+  summarize(
+    mean_biodiversity = mean(biodiversity, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# plot using Healy-style best practices
+ggplot(summary_df, aes(x = grade, y = mean_biodiversity)) +
+  geom_col(fill = "gray30", width = 0.7) +
   labs(
-    title = "BIODIVERSITY BY REDLINING GRADE",
-    subtitle = "Mean species richness across HOLC categories",
-    x = NULL,
-    y = "SPECIES COUNT"
+    title = "Mean Biodiversity Score by Redlining Grade",
+    subtitle = "Average biodiversity decreases from A to D graded neighborhoods",
+    x = "HOLC Redlining Grade",
+    y = "Mean Biodiversity Score",
+    caption = "Source: HigherEdData Du Bois STEM dataset"
   ) +
-  
-  # Du Bois–style theme
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 12) +
   theme(
-    legend.position = "none",
+    # improve readability
+    plot.title = element_text(face = "bold"),
+    plot.subtitle = element_text(margin = margin(b = 10)),
     
-    # Remove all gridlines
-    panel.grid = element_blank(),
+    # keep useful gridlines, remove clutter
+    panel.grid.minor = element_blank(),
     
-    # Strong axis lines
-    axis.line = element_line(linewidth = 1.2, color = "black"),
+    # clearer axis text
+    axis.text.x = element_text(face = "bold"),
     
-    # Bold axis text
-    axis.text = element_text(face = "bold", color = "black"),
-    
-    # Centered, bold titles
-    plot.title = element_text(face = "bold", size = 20, hjust = 0.5),
-    plot.subtitle = element_text(size = 13, hjust = 0.5),
-    
-    # Light paper-like background
-    plot.background = element_rect(fill = "#F4F1E6", color = NA),
-    panel.background = element_rect(fill = "#F4F1E6", color = NA)
+    # better spacing
+    plot.caption = element_text(size = 9, color = "gray40")
   )
 ```
 
 <img src="fig/ai-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" />
-</details>
-
-<br><br>
-
-<details> <summary><strong>Fix aspect ratio:</strong></summary>
-
-
-``` r
-df<- read.csv(
-  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
-
-library(ggplot2)
-
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
-ggplot(df, aes(
-    x = biodiversity,
-    y = reorder(grade, biodiversity),
-    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
-)) +
-    geom_col(width = .5) +
-    theme_dubois() +
-       theme(text = element_text('serif')) +
-    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) +
-    labs(
-        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
-        by Neighborhood Redlining Grade. \n",
-        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
-        and from 'Historical redlining is associated with disparities
-        in wildlife biodiversity in four California cities' (2024) \n"
-    )
-```
-
-<img src="fig/ai-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" />
 
 </details>
 
 <br><br>
 
-### 3. Improve Accessibility by Adding X Axis Grid Lines and Removing the Use of Red and Green
+::::::::::::::::::::::::::::::::::::: keypoints
 
-Some of Du Bois' graphing choices might not make sense for graphs you want to make. 
-For example, Du Bois doesn't provide labels or grid lines to make it easy to understand what the range of biodiversity scores are by neighborhood redlining grade. The code cell below adds two lines of code for adding the grid lines.
+- Using AI without fundamental statistics and visualization concepts can lead to epic fails
+- Using key visualization and statistics concepts for better natural language prompts
+- AI can add comments that explain what the code does - read them
+- Delete code that might be unnecessary to simplify code and only use code you can understand
 
-In addition, red and green bars are difficult to differentiate for those with colorblindness. Try removing the line of code below that set the bar colors to red and green. This should change the bar colors back to default orange and teal ggplot colors that are colorblind accessible.
-
-If you want to customize the chart further to add your own style twist, try a google search or chatGPT query. For a chatGPT query, you could copy and paste the code from below and ask, **how could I change this R ggplot code to change the background color to beige?**
-
-```R
-{r, fig.width=5.5, fig.height=7}
-df<- read.csv(
-  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
-
-library(ggplot2)
-
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
-ggplot(df, aes(
-    x = biodiversity,
-    y = reorder(grade, biodiversity),
-    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
-)) +
-    geom_col(width = .5) +
-    theme_dubois() +
-       theme(text = element_text('serif')) +
-    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) + ## delete this line
-    labs(
-        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
-        by Neighborhood Redlining Grade. \n",
-        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
-        and from 'Historical redlining is associated with disparities
-        in wildlife biodiversity in four California cities' (2024) \n"
-    ) +
-  # Below is code to add grid lines with labels
-  scale_x_continuous(
-        breaks = seq(0, 60, by = 10),  # Set tick positions every 10 units
-    ) +
-    theme(
-        axis.text.x = element_text(size = 12),
-        panel.grid.major.x = element_line(color = "lightgray")
-        )
-```
-
-<details> <summary><strong>Answer:</strong></summary>
-
-
-``` r
-df<- read.csv(
-  "https://raw.github.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_biodiversity_redlining.csv")
-
-library(ggplot2)
-
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
-ggplot(df, aes(
-    x = biodiversity,
-    y = reorder(grade, biodiversity),
-    fill = grade == "D" # this changes the fill statement to graph the D grade bar in Red
-)) +
-    geom_col(width = .5) +
-    theme_dubois() +
-       theme(text = element_text('serif')) +
-    scale_fill_manual(values = c("TRUE" = "red", "FALSE" = "darkgreen")) + ## delete this line
-    labs(
-        title = "\nSan Diego Neighborhood Biodiversity Score (0-100)
-        by Neighborhood Redlining Grade. \n",
-        subtitle = "Adapted by YOUR NAME from Du Bois' graph of literacy in 1900
-        and from 'Historical redlining is associated with disparities
-        in wildlife biodiversity in four California cities' (2024) \n"
-    ) +
-  # Below is code to add grid lines with labels
-  scale_x_continuous(
-        breaks = seq(0, 60, by = 10),  # Set tick positions every 10 units
-    ) +
-    theme(
-        axis.text.x = element_text(size = 12),
-        panel.grid.major.x = element_line(color = "lightgray")
-        )
-```
-
-<img src="fig/ai-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" />
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 [r-markdown]: https://rmarkdown.rstudio.com/
