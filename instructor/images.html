@@ -477,85 +477,167 @@
 <figure><img src="../fig/ai-rendered-unnamed-chunk-1-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
 <h3 id="ai-figure-3">Figure 3</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="../fig/ai-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<figure><img src="../fig/ai-rendered-unnamed-chunk-2-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
 <h3 id="ai-figure-4">Figure 4</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<details><summary><strong>Revised code and output:</strong>
-</summary><div class="codewrapper sourceCode" id="cb11">
+<details><summary><strong>Click to see the commented code ChatGPT gave us back:</strong>
+</summary><div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co"># load the tidyverse (includes ggplot2, dplyr, readr, etc.)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Example data (replace with your actual dataset)</span></span>
-<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span></span>
-<span>  grade <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="fu">c</span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span><span class="op">)</span>, levels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"A"</span>,<span class="st">"B"</span>,<span class="st">"C"</span>,<span class="st">"D"</span><span class="op">)</span><span class="op">)</span>,</span>
-<span>  biodiversity <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">120</span>, <span class="fl">95</span>, <span class="fl">70</span>, <span class="fl">45</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
+<span><span class="co"># read the CSV file directly from the provided URL into a dataframe</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Du Bois–inspired palette (closer to typical redlining colors)</span></span>
-<span><span class="va">du_bois_palette</span> <span class="op">&lt;-</span> <span class="fu">c</span><span class="op">(</span></span>
-<span>  <span class="st">"A"</span> <span class="op">=</span> <span class="st">"#2E8B57"</span>,  <span class="co"># green</span></span>
-<span>  <span class="st">"B"</span> <span class="op">=</span> <span class="st">"#F2C94C"</span>,  <span class="co"># yellow/gold</span></span>
-<span>  <span class="st">"C"</span> <span class="op">=</span> <span class="st">"#E67E22"</span>,  <span class="co"># orange</span></span>
-<span>  <span class="st">"D"</span> <span class="op">=</span> <span class="st">"#C0392B"</span>   <span class="co"># red</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">grade</span>, y <span class="op">=</span> <span class="va">biodiversity</span>, fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Bars with strong outline</span></span>
-<span>  <span class="fu">geom_col</span><span class="op">(</span>width <span class="op">=</span> <span class="fl">0.7</span>, color <span class="op">=</span> <span class="st">"black"</span>, linewidth <span class="op">=</span> <span class="fl">1.2</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Value labels above bars</span></span>
-<span>  <span class="fu">geom_text</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="va">biodiversity</span><span class="op">)</span>,</span>
-<span>            vjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.6</span>,</span>
-<span>            size <span class="op">=</span> <span class="fl">5</span>,</span>
-<span>            fontface <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Custom colors</span></span>
-<span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="va">du_bois_palette</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Add space above bars</span></span>
-<span>  <span class="fu">scale_y_continuous</span><span class="op">(</span>expand <span class="op">=</span> <span class="fu">expansion</span><span class="op">(</span>mult <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.12</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Labels (Du Bois style = bold, declarative)</span></span>
-<span>  <span class="fu">labs</span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"BIODIVERSITY BY REDLINING GRADE"</span>,</span>
-<span>    subtitle <span class="op">=</span> <span class="st">"Mean species richness across HOLC categories"</span>,</span>
-<span>    x <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"SPECIES COUNT"</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co"># Du Bois–style theme</span></span>
-<span>  <span class="fu">theme_minimal</span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">16</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">theme</span><span class="op">(</span></span>
-<span>    legend.position <span class="op">=</span> <span class="st">"none"</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Remove all gridlines</span></span>
-<span>    panel.grid <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Strong axis lines</span></span>
-<span>    axis.line <span class="op">=</span> <span class="fu">element_line</span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">1.2</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Bold axis text</span></span>
-<span>    axis.text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>, color <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Centered, bold titles</span></span>
-<span>    plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>face <span class="op">=</span> <span class="st">"bold"</span>, size <span class="op">=</span> <span class="fl">20</span>, hjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,</span>
-<span>    plot.subtitle <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">13</span>, hjust <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>,</span>
-<span>    </span>
-<span>    <span class="co"># Light paper-like background</span></span>
-<span>    plot.background <span class="op">=</span> <span class="fu">element_rect</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#F4F1E6"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span>,</span>
-<span>    panel.background <span class="op">=</span> <span class="fu">element_rect</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#F4F1E6"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span></span>
-<span>  <span class="op">)</span></span></code></pre>
+<span><span class="co"># inspect the structure of the dataset to confirm column names and types</span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre>
 </div>
-<img src="../fig/ai-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" class="figure"></details><hr>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Rows: 4
+Columns: 2
+$ grade        &lt;chr&gt; "A", "B", "C", "D"
+$ biodiversity &lt;int&gt; 48, 24, 12, 4</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># convert the grade column into an ordered factor so bars appear A → D</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span></span>
+<span>    grade <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">grade</span>, levels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span><span class="op">)</span><span class="op">)</span></span>
+<span>  <span class="op">)</span></span>
+<span></span>
+<span><span class="co"># create the bar chart</span></span>
+<span><span class="va">df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span></span>
+<span>    x <span class="op">=</span> <span class="va">grade</span>,          <span class="co"># place redlining grade on the x-axis</span></span>
+<span>    y <span class="op">=</span> <span class="va">biodiversity</span>    <span class="co"># use biodiversity values as bar height (mean scores)</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span>             <span class="co"># create bars with heights equal to y values</span></span>
+<span>    fill <span class="op">=</span> <span class="st">"steelblue"</span>  <span class="co"># set bar color</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Mean Biodiversity Score by Redlining Grade"</span>,  <span class="co"># chart title</span></span>
+<span>    x <span class="op">=</span> <span class="st">"Redlining Grade"</span>,                                 <span class="co"># x-axis label</span></span>
+<span>    y <span class="op">=</span> <span class="st">"Mean Biodiversity Score"</span>                          <span class="co"># y-axis label</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme_minimal</span><span class="op">(</span><span class="op">)</span>      <span class="co"># apply a clean, minimal theme</span></span></code></pre>
+</div>
+<img src="../fig/ai-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" class="figure"></details><hr>
 <h3 id="ai-figure-5">Figure 5</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="../fig/ai-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr>
+<details><summary><strong>ChatGPT response authors got for Du Bois style:</strong>
+</summary><p>Chat GPT really wants to put back in extraneous mutation code.</p>
+<p>To get more Du Boisian, you would need to direct AI to make more
+changes like using horizontal bars and the tall poster aspect ratio of
+Du Bois’ original posters.</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># load tidyverse</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">tidyverse</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># read data (use read_csv for tidyverse consistency)</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># inspect structure</span></span>
+<span><span class="fu">glimpse</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Rows: 4
+Columns: 2
+$ grade        &lt;chr&gt; "A", "B", "C", "D"
+$ biodiversity &lt;int&gt; 48, 24, 12, 4</code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># ensure grade is ordered</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">mutate</span><span class="op">(</span>grade <span class="op">=</span> <span class="fu">factor</span><span class="op">(</span><span class="va">grade</span>, levels <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># summarize biodiversity by grade (important!)</span></span>
+<span><span class="va">summary_df</span> <span class="op">&lt;-</span> <span class="va">df</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">group_by</span><span class="op">(</span><span class="va">grade</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
+<span>  <span class="fu">summarize</span><span class="op">(</span>mean_biodiversity <span class="op">=</span> <span class="fu">mean</span><span class="op">(</span><span class="va">biodiversity</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Du Bois–style bar chart</span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">summary_df</span>, <span class="fu">aes</span><span class="op">(</span>x <span class="op">=</span> <span class="va">grade</span>, y <span class="op">=</span> <span class="va">mean_biodiversity</span>, fill <span class="op">=</span> <span class="va">grade</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_col</span><span class="op">(</span></span>
+<span>    width <span class="op">=</span> <span class="fl">0.65</span>,</span>
+<span>    color <span class="op">=</span> <span class="st">"black"</span>,</span>
+<span>    linewidth <span class="op">=</span> <span class="fl">1.2</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">geom_text</span><span class="op">(</span></span>
+<span>    <span class="fu">aes</span><span class="op">(</span>label <span class="op">=</span> <span class="fu">round</span><span class="op">(</span><span class="va">mean_biodiversity</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>    vjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.6</span>,</span>
+<span>    family <span class="op">=</span> <span class="st">"serif"</span>,</span>
+<span>    size <span class="op">=</span> <span class="fl">5</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span></span>
+<span>    <span class="st">"A"</span> <span class="op">=</span> <span class="st">"#2A9D8F"</span>,   <span class="co"># teal</span></span>
+<span>    <span class="st">"B"</span> <span class="op">=</span> <span class="st">"#E9C46A"</span>,   <span class="co"># gold</span></span>
+<span>    <span class="st">"C"</span> <span class="op">=</span> <span class="st">"#F4A261"</span>,   <span class="co"># orange</span></span>
+<span>    <span class="st">"D"</span> <span class="op">=</span> <span class="st">"#E63946"</span>    <span class="co"># red</span></span>
+<span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>    title <span class="op">=</span> <span class="st">"Biodiversity by Redlining Grade"</span>,</span>
+<span>    subtitle <span class="op">=</span> <span class="st">"A Du Bois–Inspired Visualization"</span>,</span>
+<span>    x <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>    y <span class="op">=</span> <span class="cn">NULL</span></span>
+<span>  <span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">theme</span><span class="op">(</span></span>
+<span>    <span class="co"># warm background (key Du Bois look)</span></span>
+<span>    plot.background <span class="op">=</span> <span class="fu">element_rect</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#F5E6C8"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span>,</span>
+<span>    panel.background <span class="op">=</span> <span class="fu">element_rect</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"#F5E6C8"</span>, color <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># remove gridlines completely</span></span>
+<span>    panel.grid <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># bold, centered titles</span></span>
+<span>    plot.title <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span></span>
+<span>      family <span class="op">=</span> <span class="st">"serif"</span>,</span>
+<span>      face <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      size <span class="op">=</span> <span class="fl">20</span>,</span>
+<span>      hjust <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>    <span class="op">)</span>,</span>
+<span>    plot.subtitle <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span></span>
+<span>      family <span class="op">=</span> <span class="st">"serif"</span>,</span>
+<span>      size <span class="op">=</span> <span class="fl">13</span>,</span>
+<span>      hjust <span class="op">=</span> <span class="fl">0.5</span></span>
+<span>    <span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># x-axis styling (bold category labels)</span></span>
+<span>    axis.text.x <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span></span>
+<span>      family <span class="op">=</span> <span class="st">"serif"</span>,</span>
+<span>      face <span class="op">=</span> <span class="st">"bold"</span>,</span>
+<span>      size <span class="op">=</span> <span class="fl">14</span></span>
+<span>    <span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># remove y-axis text/ticks for cleaner look</span></span>
+<span>    axis.text.y <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>    axis.ticks <span class="op">=</span> <span class="fu">element_blank</span><span class="op">(</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># emphasize baseline only</span></span>
+<span>    axis.line.x <span class="op">=</span> <span class="fu">element_line</span><span class="op">(</span>color <span class="op">=</span> <span class="st">"black"</span>, linewidth <span class="op">=</span> <span class="fl">1.2</span><span class="op">)</span>,</span>
+<span></span>
+<span>    <span class="co"># remove legend (color already encoded in x)</span></span>
+<span>    legend.position <span class="op">=</span> <span class="st">"none"</span></span>
+<span>  <span class="op">)</span></span></code></pre>
+</div>
+<img src="../fig/ai-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" class="figure"></details><hr>
 <h3 id="ai-figure-6">Figure 6</h3>
 <p aria-hidden="true">Image 1 of 1: ‘[decorative]’</p>
-<figure><img src="../fig/ai-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr></section>
+<figure><img src="../fig/ai-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><hr></section>
 </div>
     </main>
 </div>
@@ -604,9 +686,9 @@
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/instructor/images.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/instructor/images.html",
-  "dateCreated": "2026-04-08",
-  "dateModified": "2026-04-08",
-  "datePublished": "2026-04-08"
+  "dateCreated": "2026-04-09",
+  "dateModified": "2026-04-09",
+  "datePublished": "2026-04-09"
 }
 
   </script><script>
