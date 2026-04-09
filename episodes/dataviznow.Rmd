@@ -75,6 +75,11 @@ For example, health researcher Florence Nightingale used data visualization earl
 The social scientist W.E.B. Du Bois 
 provided one of the *earliest models* for effectively developing data visualizations, demonstrating how science matters for the most critical material and moral issues of the day
 
+<figure>
+<div>
+	<image src="file/dubois-mono.png" width="30%"/>
+</div>
+</figure>
 ![Du Bois in Profile](files/dubois-mono.png)
 
 # What Motivated DuBois?
@@ -85,13 +90,13 @@ Du Bois asked, instead, how discriminatory policies and the material consequence
 
 <figure>
 <div>
-<img src="files/TJCalloway.jpg" width="30%"/>
-<img src="files/dubois-1900.png" width="30%"/>
-<img src="files/au-women01.jpg" width="30%"/>
+<img src="files/TJCalloway.jpg" width="15%"/>
+<img src="files/dubois-1900.png" width="16%"/>
+<img src="files/au-women01.jpg" width="33%"/>
 </div>
 </figure>
 
-The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the oranizer of the “Exhibition of the American Negro”, [Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
+The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the oranizer of the “Exhibition of the American Negro”, Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
 
 # Data Visualization as a Scientific Concern for the Du Bois Lab
 
@@ -105,11 +110,13 @@ The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Callo
 
 The 1900 World Fair in Paris provided a venue for Du Bois to challenge erroneous theories about racial difference and inequality. The exposition showcased the latest scientific discoveries and inventions to 50 million attendees from around the world.
 
+The figures show the Expostion Poster, a vew of Paris, and the venue for the Exposition of the American Negro.
+
 <figure>
 <div>
-<img src="files/expo-poster.jpg" width="30%"/>
-<img src="files/paris-expo.jpg" width="30%"/>
-<img src="files/expo0.jpg" width="30%"/>
+<img src="files/expo-poster.jpg" width="20%"/>
+<img src="files/paris-expo.jpg" width="40%"/>
+<img src="files/expo0.jpg" width="21%"/>
 </div>
 </figure>
 
@@ -141,11 +148,11 @@ The Lab even found that Black illiteracy had declined to lower levels than found
 
 The Du Bois Lab used a range of charts that combined different kinds of data with visual art, including maps, photographs, and drawings, to detail change over time.
 
-![expo-plate-31](original-plate-31.jpg)
+![expo-plate-31](files/original-plate-31.jpg)
 
 # Picture This: Getting Creative With Data
 
-![picture-this](picture-this.png)
+![picture-this](files/picture-this.png)
 
 # Praised and Preserved
 
