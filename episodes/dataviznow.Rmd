@@ -75,11 +75,8 @@ For example, health researcher Florence Nightingale used data visualization earl
 The social scientist W.E.B. Du Bois 
 provided one of the *earliest models* for effectively developing data visualizations, demonstrating how science matters for the most critical material and moral issues of the day
 
-<figure>
-<div>
-	<img src="files/dubois-mono.png" width="50%"/>
-</div>
-</figure>
+
+![Du Bois, 1911](files/dubois-mono-small.png)
 
 
 # What Motivated DuBois?
