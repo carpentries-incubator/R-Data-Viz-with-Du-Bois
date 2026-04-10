@@ -77,7 +77,7 @@ provided one of the *earliest models* for effectively developing data visualizat
 
 <figure>
 <div>
-	<img src="file/dubois-mono.png" width="50%"/>
+	<img src="files/dubois-mono.png" width="50%"/>
 </div>
 </figure>
 
@@ -138,7 +138,7 @@ In your potential career, how might you visualize data?
 
 # Turning Data into Art
 
-![Illiteracy](files/original-plate-14.jpg)
+![Illitercy](files/original-plate-14.jpg)
 
 The Du Bois Lab creatively used charts to depict data about racial inequality.
 
