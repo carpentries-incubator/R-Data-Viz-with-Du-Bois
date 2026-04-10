@@ -77,10 +77,10 @@ provided one of the *earliest models* for effectively developing data visualizat
 
 <figure>
 <div>
-	<image src="file/dubois-mono.png" width="30%"/>
+	<img src="file/dubois-mono.png" width="50%"/>
 </div>
 </figure>
-![Du Bois in Profile](files/dubois-mono.png)
+
 
 # What Motivated DuBois?
 
@@ -110,7 +110,6 @@ The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Callo
 
 The 1900 World Fair in Paris provided a venue for Du Bois to challenge erroneous theories about racial difference and inequality. The exposition showcased the latest scientific discoveries and inventions to 50 million attendees from around the world.
 
-The figures show the Expostion Poster, a vew of Paris, and the venue for the Exposition of the American Negro.
 
 <figure>
 <div>
@@ -119,6 +118,9 @@ The figures show the Expostion Poster, a vew of Paris, and the venue for the Exp
 <img src="files/expo0.jpg" width="21%"/>
 </div>
 </figure>
+
+The figures show the Expostion Poster, a vew of Paris, and the venue for the Exposition of the American Negro.
+
 
 # Motivation: What could a scientist do?
 
@@ -136,7 +138,7 @@ In your potential career, how might you visualize data?
 
 # Turning Data into Art
 
-![expo-plate-14](files/original-plate-14.jpg)
+![Illiteracy](files/original-plate-14.jpg)
 
 The Du Bois Lab creatively used charts to depict data about racial inequality.
 
@@ -148,7 +150,7 @@ The Lab even found that Black illiteracy had declined to lower levels than found
 
 The Du Bois Lab used a range of charts that combined different kinds of data with visual art, including maps, photographs, and drawings, to detail change over time.
 
-![expo-plate-31](files/original-plate-31.jpg)
+![Income and Expenditure of 150 Negro Families in Atlanta](files/original-plate-31.jpg)
 
 # Picture This: Getting Creative With Data
 
