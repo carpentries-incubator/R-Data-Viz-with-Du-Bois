@@ -86,16 +86,15 @@ Typing just the name of the dataframe will list all of the data in the data fram
 
 ## Challenge 1: Reading the data
 
-The web address of the data is: https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv
+The web address of the data is: 
+https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv
 Update the code below using the web address above.
 
 ```
-d_literacy_country <- reading.csv("web_address_with_data/data_file_name.csv")
+d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")
 
 d_literacy_country
 ```
-
-:::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::: solution
 
@@ -106,6 +105,8 @@ d_literacy_country
 ```
 
 :::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
 
 ## Recreating a Bar Graph
 
