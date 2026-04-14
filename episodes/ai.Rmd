@@ -84,7 +84,8 @@ the biodiversity chart:
 **AI Prompt:** *give me code for generating a bar chart in R using only the tidyverse library with this data:*
 *https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/main/data/d_biodiversity_redlining.csv*
  
-Next, copy and paste the code into an .Rmd file or your [JupyterLite Notebook](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html).
+Next, copy and paste the code into an .Rmd file or a [JupyterLite Du Bois Notebook](https://highereddata.github.io/dubois-jupyterlite/). Or use another
+[Jupyter Lite tool with R](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html).
 
 After running the code, click the dropdown below to see if you get the same
 code and epic failure of a result that we did.
