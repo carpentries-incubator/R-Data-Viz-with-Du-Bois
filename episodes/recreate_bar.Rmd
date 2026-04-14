@@ -193,7 +193,7 @@ In the challenge code above, we add a ```ggplot``` function followed by open par
 
 After the close parentheses ```)``` that tells ggplot we want to plot ```d_literacy_country``` data with one variable on the x axis, and another on the y axis, we add a ```+``` notation. When using multi-line code with ```ggplot```, the ```+``` tells R we have more code to read. Specifically here, the ```geom_col()``` function tells ```ggplot``` we want a bar graph based on summary statistics in the dataframe.
 
-## Sorting the Values & Adding Color
+## Sorting the Values & Highlighting a value 
 
 In the bar graph you created above, can you tell what order the bars for each country are sorted by?...
 
@@ -210,6 +210,8 @@ ggplot(d_literacy_country, aes(
 
 Compare the code above with challenge 2, what do you notice? The code above uses the ```reorder``` function to reorganize the country names on the vertical axis based on illiteracy.
 
+Next, we the ```fill``` function to highlight a specific country: Ireland.
+
 ```{r}
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
@@ -219,13 +221,11 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-Next, we the ```fill``` function to highlight a specific country: Ireland.
-
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 3: Reorder and specify bar color
+## Challenge 3: Reorder and highlighting a value
 
-Observing Plate 47, what name is suppose to stand out? Update the below.
+Observing Plate 47, what country or value is suppose to stand out? Update the below.
 
 ```
 library(ggplot2)
@@ -259,23 +259,7 @@ ggplot(d_literacy_country, aes(
 
 :::::::::::::::::::::::::::::::::::::
 
-## Adding Du Bois Theme
-
-The style of our current figure does not quite match the original <b>Plate 47</b>. Can you identify 1-2 style characteristics missing?...
-
-A few features missing are: dimensions, bar colors, background color, and title. Next, we will adapt the code to match the style, specifically: dimensions, bar width, background color, legend, and other default ```ggplot``` elements.
-
-```r
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-```
-
-Depending on our intention or circumstance, we adapt the size of a graph. The first line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
-
-The second line tells R to use a specific Du Bois style. Examining Du Bois data portraits, we can see a style of format, color, and font text.
-
-## Bar width
+## Bar width and bar colors
 
 We can easily edit the bar width by inputting numeric values within the 
 ```r
@@ -292,6 +276,7 @@ ggplot(d_literacy_country, aes(
   geom_col(width=.1)
 ```
 Below is the code with width 1.
+
 ```{r}
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
@@ -300,73 +285,80 @@ ggplot(d_literacy_country, aes(
   )) +
   geom_col(width=1)
 ```
-Notice the differences?
 
-Additionally, we can add ```theme_dubois()``` within ```geom_col(width = #) + theme_dubois()```. However, make sure to include ```source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")``` prior to using ```theme_dubois()```
+<b>Notice the differences?</b>
 
-::::::::::::::::::::::::::::::::::::: challenge 
-
-## Challenge 4: Bar width and Du Bois theme
-
-Edit the code to include an appropriate width size and ```theme_dubois()```
-
-```
-library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
-d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
-
-ggplot(d_literacy_country, aes( 
-  x = illiteracy, 
-  y = reorder(country, illiteracy),
-  fill = country == "Negroes, U.S.A."
-)) +
-  geom_col()
-```
-
-::::::::::::::::: solution
- 
-```{r}
-library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
-d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
-
-ggplot(d_literacy_country, aes( 
-  x = illiteracy, 
-  y = reorder(country, illiteracy),
-  fill = country == "Negroes, U.S.A."
-)) +
-  geom_col(width=.5) +
-  theme_dubois()
-```
-
-:::::::::::::::::
-
-:::::::::::::::::::::::::::::::::::::
-
-## Changing bar color and font to match Du Bois theme
-
-The function ```scale_fill_manual()``` allows users to adapt the colors of the fill based on values. Remember earlier, the legend printed colors based on TRUE/FALSE of country == "Negroes, U.S.A.". We will build on that previous knowledge to adapt the code:
+Additionally, the function ```scale_fill_manual()``` allows users to adapt the colors of the fill based on values. Remember earlier, the legend printed colors based on TRUE/FALSE of country == "Negroes, U.S.A.". We will build on that previous knowledge to adapt the code:
 
 ```r
 scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "orange"))
 ```
 
 ```{r}
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
-
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
   fill = country == "Ireland"
 )) +
   geom_col(width=.5) +
-  theme_dubois() +
   scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "orange"))
 ```
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 4: Bar width and bar color
+
+Edit the code to include an appropriate width size. Below the bar graph uses purple to high Black Americans and the other countries are orange. In the original <b>Plate 47</b>, red is used for Black Americans and darkgreen for the other countries? Update the code.
+
+```
+library(ggplot2)
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "orange"))
+  geom_col(width=.1)
+```
+
+::::::::::::::::: solution
+ 
+```{r}
+library(ggplot2)
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
+ggplot(d_literacy_country, aes( 
+  x = illiteracy, 
+  y = reorder(country, illiteracy),
+  fill = country == "Negroes, U.S.A."
+)) +
+  scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen")) +
+  geom_col(width=.5)
+```
+
+:::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::
+
+##Adding Du Bois Theme
+
+The style of our current figure does not quite match the original <b>Plate 47</b>. Can you identify 1-2 style characteristics missing?...
+
+A few features missing are: dimensions, background color, and title. Next, we will adapt the code to match the style, specifically: dimensions, background color, legend, and other default ```ggplot``` elements.
+
+```r
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+```
+Depending on our intention or circumstance, we adapt the size of a graph. The first line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
+
+The second line tells R to use a specific Du Bois style. We can add ```theme_dubois()``` within ```geom_col(width = #) + theme_dubois()```. However, make sure to include ```source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")``` in order to use ```theme_dubois()```
+
 Changing the font to ```theme(text = element_text('serif'))```
 
 ```{r}
@@ -385,14 +377,12 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 5: Changing colors and font style
+## Challenge 5: Using Du Bois style
 
-Below the bar graph uses purple to high Black Americans and the other countries are orange. In the original <b>Plate 47</b>, red is used for Black Americans and darkgreen for the other countries? Update the code.
+Update the code with the ```options``` and the ```theme_dubois()```.
 
 ```
 library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 
 d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
@@ -402,9 +392,8 @@ ggplot(d_literacy_country, aes(
   fill = country == "Negroes, U.S.A."
 )) +
   geom_col(width=.5) +
-  theme_dubois() +
-  scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "orange"))+
-  theme(text = element_text('serif'))
+  scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen")) +
+  theme(text = element_text('FONT'))
 ```
 
 ::::::::::::::::: solution
