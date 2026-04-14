@@ -62,7 +62,7 @@ An important context of Du Bois’s graph of Black illiteracy is that literacy w
 
 For this exercise, we’re going to read in data from a website. And we’re going to place the data into a dataframe named d_literacy_country.
 
-d_literacy_country
+<b>d_literacy_country</b>
 
 | column_name | Description |
 | --- | --- |
@@ -186,6 +186,12 @@ Within this expression, we set the parameters of which variable to be placed acr
 Below is the code to make a traditional bar graph. How can you modify the code in order to make it a horizontal bar graph?
 
 ```
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = country, 
   y = illiteracy)) +
@@ -194,12 +200,21 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::: solution
 
-```
+
+``` r
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes(
     x = illiteracy,
     y = country)) +
     geom_col() 
 ```
+
+<img src="fig/recreate_bar-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::
 
@@ -238,7 +253,7 @@ ggplot(d_literacy_country, aes(
   geom_col()
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" />
 
 Next, we the ```fill``` function to highlight a specific country: Ireland.
 
@@ -249,6 +264,12 @@ Next, we the ```fill``` function to highlight a specific country: Ireland.
 Observing Plate 47, what name is suppose to stand out? Update the below.
 
 ```
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -259,7 +280,14 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::: solution
  
-```
+
+``` r
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -267,6 +295,8 @@ ggplot(d_literacy_country, aes(
   )) +
   geom_col()
 ```
+
+<img src="fig/recreate_bar-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::
 
@@ -296,7 +326,7 @@ ggplot(d_literacy_country, aes(
   geom_col(width=.1)
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" />
 Below is the code with width 1.
 
 ``` r
@@ -308,7 +338,7 @@ ggplot(d_literacy_country, aes(
   geom_col(width=1)
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" />
 Notice the differences?
 
 Additionally, we can add ```theme_dubois()``` within ```geom_col(width = #) + theme_dubois()```. However, make sure to include ```source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")``` prior to using ```theme_dubois()```
@@ -320,6 +350,12 @@ Additionally, we can add ```theme_dubois()``` within ```geom_col(width = #) + th
 Edit the code to include an appropriate width size and ```theme_dubois()```
 
 ```
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -330,8 +366,13 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::: solution
  
-```
+
+``` r
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
 source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
@@ -341,6 +382,8 @@ ggplot(d_literacy_country, aes(
   geom_col(width=.5) +
   theme_dubois()
 ```
+
+<img src="fig/recreate_bar-rendered-unnamed-chunk-8-1.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::
 
@@ -368,11 +411,13 @@ ggplot(d_literacy_country, aes(
   scale_fill_manual(values = c("TRUE"= "purple", "FALSE" = "orange"))
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-9-1.png" alt="" style="display: block; margin: auto;" />
 Changing the font to ```theme(text = element_text('serif'))```
 
 
 ``` r
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -384,7 +429,7 @@ ggplot(d_literacy_country, aes(
   theme(text = element_text('serif'))
 ```
 
-<img src="fig/recreate_bar-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" />
+<img src="fig/recreate_bar-rendered-unnamed-chunk-10-1.png" alt="" style="display: block; margin: auto;" />
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -393,6 +438,12 @@ ggplot(d_literacy_country, aes(
 Below the bar graph uses purple to high Black Americans and the other countries are orange. In the original <b>Plate 47</b>, red is used for Black Americans and darkgreen for the other countries? Update the code.
 
 ```
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -406,7 +457,14 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::: solution
  
-```
+
+``` r
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -417,6 +475,8 @@ ggplot(d_literacy_country, aes(
   scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
   theme(text = element_text('serif'))
 ```
+
+<img src="fig/recreate_bar-rendered-unnamed-chunk-11-1.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::
 
@@ -444,6 +504,12 @@ labs(
 Based on the <b>Plate 47</b>, update with your name.
 
 ```
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -463,7 +529,14 @@ ggplot(d_literacy_country, aes(
 
 ::::::::::::::::: solution
 
-```
+
+``` r
+library(ggplot2)
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+
+d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
+
 ggplot(d_literacy_country, aes( 
   x = illiteracy, 
   y = reorder(country, illiteracy),
@@ -473,13 +546,16 @@ ggplot(d_literacy_country, aes(
   theme_dubois() +
   scale_fill_manual(values = c("TRUE"= "red", "FALSE" = "darkgreen"))+
   theme(text = element_text('serif')) +
-    labs(
-        title = "\nIlliteracy of the American Negroes compared with that of other nations.\n",
-        subtitle = "Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n
-        Done by Atlanta University.\n\ngit ad
-        Recreated by STUDENT NAME HERE\n\n"
+  
+  labs(
+      title = "\nIlliteracy of the American Negroes compared with that of other nations.\n",
+      subtitle = "Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n
+      Done by Atlanta University.\n\n
+      Recreated by STUDENT NAME HERE\n\n"
     )
 ```
+
+<img src="fig/recreate_bar-rendered-unnamed-chunk-12-1.png" alt="" style="display: block; margin: auto;" />
 
 :::::::::::::::::
 
