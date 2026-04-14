@@ -46,8 +46,10 @@ There are three ways to engage with the coding portions of this lesson:
 
 1. Use R Studio or or your preferred R editor on your own computer. **Recommended 
 for students who already use R or plan to continue doing so.**
-2. Use a fresh [JupyterLite Notebook](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html)
-in your web browser with no installation. **Recommended for students who do not already use R buy may do so more in the future.**
+2. Use a [Jupyter Lite Du Bois Notebook](https://highereddata.github.io/dubois-jupyterlite/)
+with an R kernel in your web browser with no installation. Or use another
+[Jupyter Lite tool with R](https://r-wasm.github.io/jupyterlite-webr-kernel/lab/index.html)
+**Recommended for students who do not already use R buy may do so more in the future.**
 3. Use JupyterLite guided tutorials at the
 [Du Bois Module Site](https://highereddata.github.io/STEM-Data-Visualization-and-Du-Bois/).
 **Recommended when instructors wants beginner students to be able to do exercises independently with out an instructor present.**
