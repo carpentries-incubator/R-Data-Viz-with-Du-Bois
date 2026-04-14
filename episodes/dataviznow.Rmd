@@ -75,7 +75,9 @@ For example, health researcher Florence Nightingale used data visualization earl
 The social scientist W.E.B. Du Bois 
 provided one of the *earliest models* for effectively developing data visualizations, demonstrating how science matters for the most critical material and moral issues of the day
 
-![Du Bois in Profile](files/dubois-mono.png)
+
+![Du Bois, 1911](files/dubois-mono-small.png)
+
 
 # What Motivated DuBois?
 
@@ -85,13 +87,13 @@ Du Bois asked, instead, how discriminatory policies and the material consequence
 
 <figure>
 <div>
-<img src="files/TJCalloway.jpg" width="30%"/>
-<img src="files/dubois-1900.png" width="30%"/>
-<img src="files/au-women01.jpg" width="30%"/>
+<img src="files/TJCalloway.jpg" width="15%"/>
+<img src="files/dubois-1900.png" width="16%"/>
+<img src="files/au-women01.jpg" width="33%"/>
 </div>
 </figure>
 
-The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the oranizer of the “Exhibition of the American Negro”, [Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
+The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the oranizer of the “Exhibition of the American Negro”, Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
 
 # Data Visualization as a Scientific Concern for the Du Bois Lab
 
@@ -105,13 +107,17 @@ The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Callo
 
 The 1900 World Fair in Paris provided a venue for Du Bois to challenge erroneous theories about racial difference and inequality. The exposition showcased the latest scientific discoveries and inventions to 50 million attendees from around the world.
 
+
 <figure>
 <div>
-<img src="files/expo-poster.jpg" width="30%"/>
-<img src="files/paris-expo.jpg" width="30%"/>
-<img src="files/expo0.jpg" width="30%"/>
+<img src="files/expo-poster.jpg" width="20%"/>
+<img src="files/paris-expo.jpg" width="40%"/>
+<img src="files/expo0.jpg" width="21%"/>
 </div>
 </figure>
+
+The figures show the Expostion Poster, a vew of Paris, and the venue for the Exposition of the American Negro.
+
 
 # Motivation: What could a scientist do?
 
@@ -129,7 +135,7 @@ In your potential career, how might you visualize data?
 
 # Turning Data into Art
 
-![expo-plate-14](files/original-plate-14.jpg)
+![Illitercy](files/original-plate-14.jpg)
 
 The Du Bois Lab creatively used charts to depict data about racial inequality.
 
@@ -141,11 +147,11 @@ The Lab even found that Black illiteracy had declined to lower levels than found
 
 The Du Bois Lab used a range of charts that combined different kinds of data with visual art, including maps, photographs, and drawings, to detail change over time.
 
-![expo-plate-31](original-plate-31.jpg)
+![Income and Expenditure of 150 Negro Families in Atlanta](files/original-plate-31.jpg)
 
 # Picture This: Getting Creative With Data
 
-![picture-this](picture-this.png)
+![picture-this](files/picture-this.png)
 
 # Praised and Preserved
 
@@ -167,28 +173,6 @@ What we remember and praise, we preserve. These charts have been praised for the
 2) It matters which type of chart or graph is used to depict a relationship, a cause, or a process. Some work better than others.
 
 3) Science requires creativity for discovery. Data visualizations help communicate relevant scientific findings to audiences effectively. 
-
-
-# Context
-
-Now let's begin with the context. The Context section provides background on the conception, motivation, and messaging of the data visuals. 
-
-Note the two images below: The first if Du Bois in Paris, and the second is the venue for the "Exposition of the American Negro", part of the Paris Expostion of 1900.
-
-<figure>
-<div>
-<img src="files/dubois-1900.png" width="50%"/>
-<img src="files/expo0.jpg" width="50%"/>
-</div>
-</figure>
-
- Du Bois was trained at Fisk University, a HBCU in Nashville, TN. 
-
-![Du Bois at Fisk](files/dubois-fisk.jpg)
-
-He was first Black American to earn a PhD from Harvard University, and studied internationally as well. As we will demonstrate, Du Bois was a canonical US social scientist who notably used innovative data visualizations to tell theoretically astute data stories about Black Americans and Black empowerment for broad audiences, we believe setting the foundation for what is now recognized as visualization and storytelling in STEM and other disciplines. Du Bois was also among the first professors in the nation to train students in sociological theory and empirical methodologies, including large scale quantitative surveys wherein they collected, analyzed, and visualized data.
-
-Also discussed is the venue where the visuals were first shown, the Exhibition of the American Negro, within the 1900 Paris Exposition. The Paris Exposition was a world fair that was supposed to showcase achievements of the last century and move into developments for the next century” To better understand the times when the visuals were created, influential events leading to the Exposition are discussed.
 
 
 
@@ -226,77 +210,6 @@ What effect did the venue have on the design of the visuals?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-# Context: Five Years Before Paris
-
-<figure>
-<div>
-<img src="files/BA-happy-days.jpg" width="20%"/>
-<img src="files/homer-plessy.jpg" width="10%"/>
-<img src="files/philly12.jpg" width="20%"/>
-<img src="files/white-mans-day.jpg" width="20%"/>
-<img src="files/mob.jpg" width="20%"/>
-</div>
-</figure>
-
-To provide context for the events that led up to the Paris exposition
-in 1900, here are several events that led to the event.
-
-
-During the summer of *1895*, in a Brooklyn park, there was a cotton
- plantation complete with five hundred Black workers reenacting
- slavery for the "pleasure" of the crowds. The show was called "Black
- America, 1985".
-
-In *1896* the Supreme Court of the US handed down the Plessey vs.
-Ferguson ruling that upheld the constitutionality of racial
-segregation under the "separate but equal" doctrine.
-
-*In 1897*, Du Bois embarked upon a study called "The Philadelphia
- Negro" he described it as "This inquiry extended over fifteen
- months, and sought to ascertain something of the geographical
- distribution of this race, their organizations, and above all their
- relation to their million white fellow-citizens"
-
-*In 1898* the duly elected people in Wilmington NC was violently
- overthrown by whites. The coup occurred after the state's white
- Southern Democrats conspired and led a mob of 2,000 white men to
- overthrow the legitimately-elected local Fusionist government. They
- expelled opposition black and white political leaders from the city,
- destroyed the property and businesses of black citizens built up
- since the Civil War, including the only black newspaper in the city,
- and killed an estimated 60 to more than 300 people
-
-*1899:* Georgia's toll of 458 lynch victims was exceeded only by
- Mississippi's toll of 538. During the 1880s and 1890s, instances of
- lethal mob violence increased steadily, peaking in 1899 when
- twenty-seven Georgians fell victim to lynch mobs. Between 1890 and
- 1900 Georgia averaged more than one mob killing per month.
-
-# 1900 Paris Exposition
-
-The Exposition Universelle of 1900, meant to to celebrate the achievements of the past century and to accelerate development into the next century, was the venue for Du Bois to tell the story of Black Americans advancement and achievements on an international stage.
-
-
-<figure>
-<div>
-<img src="files/expo-poster.jpg" width="25%"/>
-<img src="files/paris-expo.jpg" width="50%"/>
-<img src="files/expo0.jpg" width="25%"/>
-</div>
-</figure>
-
-# Background
-
-# Why Visualize Data?
-
-# The visuals
-
-<figure>
-<div>
-<img src="files/original-plate-01.jpg" width="50%"/>
-<img src="files/expo0.jpg" width="50%"/>
-</div>
-</figure>
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
