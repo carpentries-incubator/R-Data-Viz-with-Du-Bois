@@ -37,19 +37,18 @@ Part of this work will invovle creative attempts at making changes to data visua
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Black Literacy After Emancipation
-
-<div>
-<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg?raw=true" width="700" />
-</div>
-<b>Plate 47</b>
-
 ::::::::::::::::: callout
 
 This interactive exercise is inspired by the annual #DuBoisChallenge. The #DuBoisChallenge is a call to scientists, students, and community members to recreate, adapt, and share on social media the data visualzations created by W.E.B. Du Bois and his collaborators in 1900. Before doing the interactive exercise, please read this article about [the Du Bois Challenge](https://nightingaledvs.com/the-dubois-challenge/).
 
 :::::::::::::::::
 
+## Black Literacy After Emancipation
+
+<div>
+<img src="https://github.com/ajstarks/dubois-data-portraits/blob/master/plate47/original-plate-47.jpg?raw=true" width="700" />
+</div>
+<b>Plate 47</b>
 
 ## Presentation of the historical cross-national literacy data
 
@@ -62,15 +61,6 @@ An important context of Du Bois’s graph of Black illiteracy is that literacy w
 </div>
 <b>Plate 14</b>
 
-For this exercise, we’re going to read in data from a website. And we’re going to place the data into a dataframe named d_literacy_country.
-
-<b>d_literacy_country</b>
-
-| column_name | Description |
-| --- | --- |
-| country | Name of country |
-| illiteracy | illiteracy percentage |
-
 ## How can I input tabular data to plot a bar graph in R?
 
 The first step for data visualization in R is to read data into an R dataframe. This is like double clicking a file to open it in other computer programs. But with R, we use code.
@@ -82,12 +72,12 @@ There is no record of the exact data used by the Du Bois team for this bar graph
 The R code to read in this data uses an ```<-``` arrow pointed at the name of the data frame and the ```read.csv()``` function command followed by the web address within parentheses where a csv (comma separated values) data file is located. It looks like this:
 
 ```r
-d_literacy_country <- read.csv("web_address_with_data/data_file_name.csv")
+df <- read.csv("web_address_with_data.csv")
 ```
 After writing this code, we can write the name of the data frame 
 
 ```r
-d_literacy_country
+df
 ```
 Typing just the name of the dataframe will list all of the data in the data frame.
 
@@ -122,6 +112,13 @@ d_literacy_country
 
 After successfully reading the data above, you should be able to see that the data has two columns. 
 
+<b>d_literacy_country</b>
+
+| column_name | Description |
+| --- | --- |
+| country | Name of country |
+| illiteracy | illiteracy percentage |
+
 Each column is a variable:
 
 * country is a country name for 10 countries and with Black people in the U.S. treated as a country.
@@ -132,22 +129,15 @@ Before creating a bar graph of the data, we need to read the library ```ggplot2`
 
 ```r
 library(ggplot2)
-
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 ```
 
-The first line of code opens the library of ```ggplot2```. 
-
-Depending on our intention or circumstance, we adapt the size of a graph. The second line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
-
-The third line tells R to use a specific Du Bois style. Examining Du Bois data portraits, we can see a style of format, color, and font text.
+The line of code opens the library of ```ggplot2```. 
 
 The following code creates a simple bar graph using ```ggplot2``` where ```df``` represents the dataframe.
 
 ```r
-ggplot(df, aes(x=horizon_variable, y=vertical_variable)) + geom_col()
+ggplot(df, aes(x=horizon_variable, y=vertical_variable)) +
+  geom_col()
 ```
 
 ```{r}
@@ -171,8 +161,6 @@ Below is the code to make a traditional bar graph. How can you modify the code i
 
 ```
 library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 
 d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
@@ -186,8 +174,6 @@ ggplot(d_literacy_country, aes(
 
 ```{r}
 library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 
 d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
@@ -243,8 +229,6 @@ Observing Plate 47, what name is suppose to stand out? Update the below.
 
 ```
 library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 
 d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
@@ -260,8 +244,6 @@ ggplot(d_literacy_country, aes(
  
 ```{r}
 library(ggplot2)
-options(repr.plot.width=22/3, repr.plot.height=28/3)
-source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
 
 d_literacy_country <- read.csv("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv")
 
@@ -281,7 +263,17 @@ ggplot(d_literacy_country, aes(
 
 The style of our current figure does not quite match the original <b>Plate 47</b>. Can you identify 1-2 style characteristics missing?...
 
-A few features missing are: bar colors, background color, and title. Next, we will adapt the code to match the style, specifically: bar width, background color, legend, and other default ```ggplot``` elements.
+A few features missing are: dimensions, bar colors, background color, and title. Next, we will adapt the code to match the style, specifically: dimensions, bar width, background color, legend, and other default ```ggplot``` elements.
+
+```r
+options(repr.plot.width=22/3, repr.plot.height=28/3)
+
+source("https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R")
+```
+
+Depending on our intention or circumstance, we adapt the size of a graph. The first line of code tells R that we want the width and height of the graph to have the same ratio that Du Bois used, 22 inches wide by 28 inches tall, with each divided by 3 so that it doesn’t display too big.
+
+The second line tells R to use a specific Du Bois style. Examining Du Bois data portraits, we can see a style of format, color, and font text.
 
 ## Bar width
 
