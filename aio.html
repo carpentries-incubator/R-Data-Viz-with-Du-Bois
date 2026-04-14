@@ -1479,7 +1479,7 @@ provide an audio description of images.</p></li>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Give me a hint </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>How does Black illiteracy (the red bar) compare with other
 countries</p>
@@ -1492,7 +1492,7 @@ countries</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Answers </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>What variables are plotted: Country, Illiteracy rate</li>
@@ -1640,7 +1640,7 @@ any links that you are not going to use.
  -->
 </div></section><section id="aio-recreate_bar"><p>Content from <a href="recreate_bar.html">Recreate a Du Bois Bar Chart</a></p>
 <hr>
-<p>Last updated on 2026-04-13 |
+<p>Last updated on 2026-04-14 |
 
         <a href="https://github.com/HigherEdData/DuBois_R/edit/main/episodes/recreate_bar.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1731,7 +1731,7 @@ here) until several months after the Paris Exposition.</p>
 <p>For this exercise, we’re going to read in data from a website. And
 we’re going to place the data into a dataframe named
 d_literacy_country.</p>
-<p>d_literacy_country</p>
+<p><b>d_literacy_country</b></p>
 <table class="table">
 <thead><tr class="header">
 <th>column_name</th>
@@ -1911,7 +1911,13 @@ values are on the horizontal axis. Which bar graph did Du Bois used in
 <div class="callout-content">
 <p>Below is the code to make a traditional bar graph. How can you modify
 the code in order to make it a horizontal bar graph?</p>
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<pre><code><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">country</span>,</span>
 <span>  y <span class="op">=</span> <span class="va">illiteracy</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
@@ -1925,10 +1931,22 @@ the code in order to make it a horizontal bar graph?</p>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>    x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
 <span>    y <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>    <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span> </span></code></pre>
+</div>
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -1986,7 +2004,7 @@ names on the vertical axis based on illiteracy.</p>
 <span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-3-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Next, we the <code>fill</code> function to highlight a specific
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><p>Next, we the <code>fill</code> function to highlight a specific
 country: Ireland.</p>
 <div id="challenge-3-reorder-and-specify-bar-color" class="callout challenge">
 <div class="callout-square">
@@ -1999,7 +2017,13 @@ color</h3>
 <div class="callout-content">
 <p>Observing Plate 47, what name is suppose to stand out? Update the
 below.</p>
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<pre><code><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Ireland"</span></span>
@@ -2015,12 +2039,24 @@ below.</p>
 </button>
 <div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
-<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>, </span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
 <span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -2057,7 +2093,7 @@ the</p>
 <span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.1</span><span class="op">)</span></span></code></pre>
 </div>
-<p><img src="fig/recreate_bar-rendered-unnamed-chunk-4-1.png" alt="" style="display: block; margin: auto;" class="figure">
+<p><img src="fig/recreate_bar-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" class="figure">
 Below is the code with width 1.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2070,7 +2106,7 @@ Below is the code with width 1.</p>
 <span>  <span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span></code></pre>
 </div>
-<p><img src="fig/recreate_bar-rendered-unnamed-chunk-5-1.png" alt="" style="display: block; margin: auto;" class="figure">
+<p><img src="fig/recreate_bar-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" class="figure">
 Notice the differences?</p>
 <p>Additionally, we can add <code>theme_dubois()</code> within
 <code>geom_col(width = #) + theme_dubois()</code>. However, make sure to
@@ -2087,7 +2123,13 @@ prior to using <code>theme_dubois()</code></p>
 <div class="callout-content">
 <p>Edit the code to include an appropriate width size and
 <code>theme_dubois()</code></p>
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<pre><code><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
@@ -2103,15 +2145,25 @@ prior to using <code>theme_dubois()</code></p>
 </button>
 <div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
-<pre><code><span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<div class="codewrapper sourceCode" id="cb19">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
-<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>, </span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
 <span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">geom_col</span><span class="op">(</span>width<span class="op">=</span><span class="fl">.5</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-8-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -2144,14 +2196,16 @@ will build on that previous knowledge to adapt the code:</p>
 <span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"purple"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"orange"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<p><img src="fig/recreate_bar-rendered-unnamed-chunk-6-1.png" alt="" style="display: block; margin: auto;" class="figure">
+<p><img src="fig/recreate_bar-rendered-unnamed-chunk-9-1.png" alt="" style="display: block; margin: auto;" class="figure">
 Changing the font to
 <code>theme(text = element_text('serif'))</code></p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
+<code class="sourceCode R"><span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>, </span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Ireland"</span></span>
@@ -2161,7 +2215,7 @@ Changing the font to
 <span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"purple"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"orange"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
-<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-7-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-5-changing-colors-and-font-style" class="callout challenge">
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-10-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure><div id="challenge-5-changing-colors-and-font-style" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
@@ -2174,7 +2228,13 @@ style</h3>
 countries are orange. In the original <b>Plate 47</b>, red is used for
 Black Americans and darkgreen for the other countries? Update the
 code.</p>
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<pre><code><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
@@ -2193,8 +2253,18 @@ code.</p>
 </button>
 <div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
-<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<div class="codewrapper sourceCode" id="cb24">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>, </span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
 <span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -2202,6 +2272,8 @@ code.</p>
 <span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"red"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"darkgreen"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-11-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -2230,7 +2302,13 @@ the graph was recreated by you?</p>
 <h3 class="callout-title">Challenge 6: Adding labels</h3>
 <div class="callout-content">
 <p>Based on the <b>Plate 47</b>, update with your name.</p>
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
+<pre><code><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
 <span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
@@ -2255,8 +2333,18 @@ the graph was recreated by you?</p>
 </button>
 <div id="collapseSolution6" class="accordion-collapse collapse" data-bs-parent="#accordionSolution6" aria-labelledby="headingSolution6">
 <div class="accordion-body">
-<pre><code><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span></span>
-<span>  x <span class="op">=</span> <span class="va">illiteracy</span>,</span>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="fu">options</span><span class="op">(</span>repr.plot.width<span class="op">=</span><span class="fl">22</span><span class="op">/</span><span class="fl">3</span>, repr.plot.height<span class="op">=</span><span class="fl">28</span><span class="op">/</span><span class="fl">3</span><span class="op">)</span></span>
+<span><span class="kw">source</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/theme_dubois.R"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d_literacy_country</span> <span class="op">&lt;-</span> <span class="fu">read.csv</span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/HigherEdData/Du-Bois-STEM/refs/heads/main/data/d_literacy_country.csv"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">ggplot</span><span class="op">(</span><span class="va">d_literacy_country</span>, <span class="fu">aes</span><span class="op">(</span> </span>
+<span>  x <span class="op">=</span> <span class="va">illiteracy</span>, </span>
 <span>  y <span class="op">=</span> <span class="fu">reorder</span><span class="op">(</span><span class="va">country</span>, <span class="va">illiteracy</span><span class="op">)</span>,</span>
 <span>  fill <span class="op">=</span> <span class="va">country</span> <span class="op">==</span> <span class="st">"Negroes, U.S.A."</span></span>
 <span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -2264,12 +2352,15 @@ the graph was recreated by you?</p>
 <span>  <span class="fu">theme_dubois</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">scale_fill_manual</span><span class="op">(</span>values <span class="op">=</span> <span class="fu">c</span><span class="op">(</span><span class="st">"TRUE"</span><span class="op">=</span> <span class="st">"red"</span>, <span class="st">"FALSE"</span> <span class="op">=</span> <span class="st">"darkgreen"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">theme</span><span class="op">(</span>text <span class="op">=</span> <span class="fu">element_text</span><span class="op">(</span><span class="st">'serif'</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>    <span class="fu">labs</span><span class="op">(</span></span>
-<span>        title <span class="op">=</span> <span class="st">"\nIlliteracy of the American Negroes compared with that of other nations.\n"</span>,</span>
-<span>        subtitle <span class="op">=</span> <span class="st">"Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n</span></span>
-<span><span class="st">        Done by Atlanta University.\n\ngit ad</span></span>
-<span><span class="st">        Recreated by STUDENT NAME HERE\n\n"</span></span>
+<span>  </span>
+<span>  <span class="fu">labs</span><span class="op">(</span></span>
+<span>      title <span class="op">=</span> <span class="st">"\nIlliteracy of the American Negroes compared with that of other nations.\n"</span>,</span>
+<span>      subtitle <span class="op">=</span> <span class="st">"Proportion d' illettrés parmi les Nègres Americains comparée à celle des autres nations.\n\n</span></span>
+<span><span class="st">      Done by Atlanta University.\n\n</span></span>
+<span><span class="st">      Recreated by STUDENT NAME HERE\n\n"</span></span>
 <span>    <span class="op">)</span></span></code></pre>
+</div>
+<figure><img src="fig/recreate_bar-rendered-unnamed-chunk-12-1.png" alt="" style="display: block; margin: auto;" class="figure mx-auto d-block"></figure>
 </div>
 </div>
 </div>
@@ -3183,9 +3274,9 @@ any links that you are not going to use.
   "creativeWorkStatus": "active",
   "url": "https://HigherEdData.github.io/DuBois_R/aio.html",
   "identifier": "https://HigherEdData.github.io/DuBois_R/aio.html",
-  "dateCreated": "2026-04-13",
-  "dateModified": "2026-04-13",
-  "datePublished": "2026-04-13"
+  "dateCreated": "2026-04-14",
+  "dateModified": "2026-04-14",
+  "datePublished": "2026-04-14"
 }
 
   </script><script>
