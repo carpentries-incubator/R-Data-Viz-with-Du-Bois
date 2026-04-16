@@ -13,7 +13,7 @@ This combination of text, activity prompts, and verbal narration tends to exceed
 
 But this lesson works best with slides that include 1) photos from the production of the Du Bois charts and the Paris World Expo, and 2) examples of Du Bois charts. We provide these images within the lesson site so that you can open them in separate browser tabs for display while you lecture. 
 
-Alternatively, you can copy and modify [Google Slides deck](https://docs.google.com/presentation/d/1D9f5neRZ0fPNMgI4RHjipco_vGyvu26wZqU-LI34RgQ/edit?slide=id.g3bce95e4b79_2_28#slide=id.g3bce95e4b79_2_28) with all of the images for this episode.
+Alternatively, you can copy and modify [Google Slides deck](https://docs.google.com/presentation/d/1D9f5neRZ0fPNMgI4RHjipco_vGyvu26wZqU-LI34RgQ/) with all of the images for this episode.
 
 Subsequent episodes will have links to separate Google Slide Decks with their 
 images.
@@ -21,6 +21,8 @@ images.
 
 
 ::::::::::::
+
+This content is also available in [Google Slides](https://docs.google.com/presentation/d/1D9f5neRZ0fPNMgI4RHjipco_vGyvu26wZqU-LI34RgQ/) that can be copied and edited.
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
