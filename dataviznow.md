@@ -83,17 +83,12 @@ provided one of the *earliest models* for effectively developing data visualizat
 
 Du Bois cared about the truth. He lived during a time when biological explanations were popular among scientist to explain racial inequality. 
 
-Du Bois asked, instead, how discriminatory policies and the material consequences of slavery created unequal outcomes in wealth, literacy, and wellbeing.  Du Bois and the Atlanta University Laboratory developed new questions for the US Census and conducted scientific surveys of the population. His Lab included investigators of different racial/ethnic backgrounds and it included women, which was not the norm at that time.
+Du Bois asked, instead, how discriminatory policies and the material consequences of slavery created unequal outcomes in wealth, literacy, and well being.  Du Bois and the Atlanta University Laboratory developed new questions for the US Census and conducted scientific surveys of the population. His Lab included investigators of different racial/ethnic backgrounds and it included women, which was not the norm at that time.
 
-<figure>
-<div>
-<img src="files/TJCalloway.jpg" width="15%"/>
-<img src="files/dubois-1900.png" width="16%"/>
-<img src="files/au-women01.jpg" width="33%"/>
-</div>
-</figure>
 
-The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the oranizer of the “Exhibition of the American Negro”, Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
+![](files/trio2.png)
+
+The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Calloway), the organizer of the “Exhibition of the American Negro”, Du Bois during the [Paris Exposition in 1900](https://en.wikipedia.org/wiki/Exposition_Universelle_%281900%29), and [Atlanta University Students](https://umbrasearch.org/catalog/026e2cfa26b78a7312d66757e7606dc01c7236bd), circa 1900.
 
 # Data Visualization as a Scientific Concern for the Du Bois Lab
 
@@ -108,15 +103,10 @@ The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Callo
 The 1900 World Fair in Paris provided a venue for Du Bois to challenge erroneous theories about racial difference and inequality. The exposition showcased the latest scientific discoveries and inventions to 50 million attendees from around the world.
 
 
-<figure>
-<div>
-<img src="files/expo-poster.jpg" width="20%"/>
-<img src="files/paris-expo.jpg" width="40%"/>
-<img src="files/expo0.jpg" width="21%"/>
-</div>
-</figure>
 
-The figures show the Expostion Poster, a vew of Paris, and the venue for the Exposition of the American Negro.
+![](files/paris-expo-trio.png)
+
+The figures show the Exposition Poster, a view of Paris, and the venue for the Exposition of the American Negro.
 
 
 # Motivation: What could a scientist do?
@@ -151,7 +141,7 @@ The Du Bois Lab used a range of charts that combined different kinds of data wit
 
 # Picture This: Getting Creative With Data
 
-![picture-this](files/picture-this.png)
+![](files/picture-this.png)
 
 # Praised and Preserved
 
@@ -196,19 +186,10 @@ Du Bois used rigorous yet accessible methods to challenge subsequently discredit
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: discussion
 
 ### Discussion
 
 What effect did the venue have on the design of the visuals?
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- This is a place for writing key points that students have learned in this episode.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ::::::::::::::::::::::::::::::::::::: discussion
