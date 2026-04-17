@@ -1,0 +1,32 @@
+deck
+	slide
+		cimage "TJCalloway.jpg" "Thomas Calloway" 20 50 20 0 100 "" 1.2
+		cimage "dubois-1900.png" "Du Bois in Paris, 1900" 50 50 30 0
+		cimage "au-women01.jpg"  "Atlanta University Students, ca. 1900" 80 50 25 0 100 "" 1.2
+	eslide
+
+	slide
+		image "TJCalloway.jpg"   25 50 19 0 
+		image "dubois-1900.png"  50 50 20 0
+		image "au-women01.jpg"   80 50 33 0
+
+		cy=28
+		cs=1.5
+		ctext "T.J. Calloway" 25 cy cs
+		ctext "Du Bois in Paris, 1900" 50  cy cs
+		ctext "Atlanta University Students, ca. 1900" 80  cy cs
+	eslide
+
+
+	slide
+		image "TJCalloway.jpg"   25 50 19 0 
+		image "dubois-1900.png"  50 50 20 0
+		image "au-women01.jpg"   80 50 33 0
+	eslide
+
+	slide
+		image "expo-poster.jpg" 20 50 19 0
+		image "paris-expo.jpg"  50 50 38 0
+		image "expo0.jpg"       80 50 20 0
+	eslide
+edeck
