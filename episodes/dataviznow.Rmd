@@ -85,15 +85,6 @@ Du Bois cared about the truth. He lived during a time when biological explanatio
 
 Du Bois asked, instead, how discriminatory policies and the material consequences of slavery created unequal outcomes in wealth, literacy, and well being.  Du Bois and the Atlanta University Laboratory developed new questions for the US Census and conducted scientific surveys of the population. His Lab included investigators of different racial/ethnic backgrounds and it included women, which was not the norm at that time.
 
-<!--
-<figure>
-<div>
-<img src="files/TJCalloway.jpg" width="15%"/>
-<img src="files/dubois-1900.png" width="16%"/>
-<img src="files/au-women01.jpg" width="33%"/>
-</div>
-</figure>
--->
 
 ![](files/trio2.png)
 
@@ -111,15 +102,7 @@ The figures show [Thomas Calloway](https://en.wikipedia.org/wiki/Thomas_J._Callo
 
 The 1900 World Fair in Paris provided a venue for Du Bois to challenge erroneous theories about racial difference and inequality. The exposition showcased the latest scientific discoveries and inventions to 50 million attendees from around the world.
 
-<!--
-<figure>
-<div>
-<img src="files/expo-poster.jpg" width="20%"/>
-<img src="files/paris-expo.jpg" width="40%"/>
-<img src="files/expo0.jpg" width="21%"/>
-</div>
-</figure>
--->
+
 
 ![](files/paris-expo-trio.png)
 
